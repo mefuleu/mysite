@@ -26,7 +26,7 @@
                 <h3>{{ article.title }}</h3>
                 <ul class="blog-info-description">
                     <li>作者：{{ article.author }}</li>
-                    <li>分类：<a href="#">{{ article.articletype }}</a></li>
+                    <li>分类：<a href="{% url 'typeArticle' article.articletype %}">{{ article.articletype }}</a></li>
                     <li>发表日期：{{ article.create|date:"Y-m-d H:n:s" }}</li>
                 </ul>
                 <div class="blog-content">{{ article.content }}</div>

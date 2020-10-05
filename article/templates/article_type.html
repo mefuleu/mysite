@@ -75,8 +75,16 @@
                             {% endif %}
                         </li>
                         {# 全部页码 #}
-                        {% for page_num in page_of_articles.paginator.page_range %}
-                            <li><a href="?page={{ page_num }}">{{ page_num }}</a></li>
+                        {% for page_num in page_range %}
+                            {% if page_num == page_of_articles.number %}
+                                <li class="active"><span>{{ page_num }}</span></li>
+                            {% else %}
+                                {% if page_num == '...' %}
+                                    <li><span>{{ page_num }}</span></li>
+                                {% else %}
+                                    <li><a href="?page={{ page_num }}">{{ page_num }}</a></li>
+                                {% endif %}
+                            {% endif %}
                         {% endfor %}
                         {# 下一页 #}
                         <li>
@@ -93,7 +101,11 @@
 				<div class="col-md-4">
 					<p>文章分类</p>
                     {% for type in types %}
-                        <p><a href="{% url 'typeArticle' type.typename %}">{{ type.typename }}</a></p>
+                        {% if type == articletype  %}
+                            <p>{{ type.typename }}</p>
+                        {% else %}
+                            <p><a href="{% url 'typeArticle' type.typename %}">{{ type.typename }}</a></p>
+                        {% endif %}
                     {% empty %}
                         暂无分类
                     {% endfor %}
