@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>听音乐</title>
+    <title>{% block headtitle %}{% endblock %}</title>
 
     <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static 'base.css' %}">
     <link rel="stylesheet" href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.min.css' %}">
-      <link rel="stylesheet" href="{% static 'home.css' %}">
+
 
     <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
     <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
@@ -26,49 +27,34 @@
 			<div class="row-fluid">
 				<div class="span12">
 					<h3>
-						美妙的音乐，一起听
+                        {% block bodytitle %}{% endblock %}
 					</h3>
 				</div>
 			</div>
 			<div class="row-fluid">
 				<div class="col-md-6">
 					<ul class="breadcrumb">
-						<li>
-							<a href="/">主页</a>
-						</li>
-						<li>
-							<a href="{% url 'showArticle' %}">看文章</a>
-						</li>
+                        {% block leftnav %}{% endblock %}
 					</ul>
 				</div>
 				<div class="col-md-6">
-					<ul class="breadcrumb">
-						<li>
-							<a class="btn btn-default" href="#" role="button">登录</a>
-						</li>
-						<li>
-							<a class="btn btn-default" href="#" role="button">注册</a>
-						</li>
-					</ul>
+                        {% block rightnav %}{% endblock %}
 				</div>
 			</div>
 			<div class="row-fluid">
 				<div class="col-md-8">
-					<p>
-						音乐播放主要内容
-					</p>
+                    {% block leftcontent %}{% endblock %}
 				</div>
 				<div class="col-md-4">
-					<p>
-						过滤器
-					</p>
+                    {% block filter %}{% endblock %}
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+<script type="text/javascript" src="{% static 'jquery-1.12.4.min.js' %}"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script type="text/javascript" src="{% static 'bootstrap-3.3.7-dist/js/bootstrap.min.js' %}"></script>
+
 </body>
-</html>
-
-
 </html>

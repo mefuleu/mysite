@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 
 {% block headtitle %}
-    article of {{ articletype.typename }}
+    music of {{ musictype.name }}
 {% endblock %}
 
 {% block bodytitle %}
-    有关{{ articletype.typename }}的文章
+    有关{{ musictype.name }}的音乐
 {% endblock %}
 
 {% block leftnav %}
@@ -13,7 +13,7 @@
 		<a href="{% url 'showHome' %}">首页</a>
     </li>
     <li>
-        <a href="{% url 'showMusic' %}">listen listen</a>
+        <a href="{% url 'showMusic' %}">look look</a>
     </li>
 {% endblock %}
 
@@ -29,20 +29,20 @@
 {% endblock %}
 
 {% block leftcontent %}
-    <p>一共有{{ articles|length }}篇博客</p>
-    {% for eacharticle in page_of_articles %}
-        <a href="{% url 'detailArticle' eacharticle.pk %}">
-            <h3>{{ eacharticle.title }}</h3>
+    <p>在{{ musictype.name }}分类下一共有{{ music|length }}首音乐</p>
+    {% for eachmusic in page_of_music %}
+        <a href="{% url 'detailMusic' eachmusic.name %}">
+            <h3>{{ eachmusic.name }}</h3>
         </a>
-        <p>{{ eacharticle.content|truncatechars:15 }}...</p>
+        <p>{{ eachmusic.singer }}...</p>
     {% empty %}
-        暂无文章，敬请期待
+        暂无音乐，敬请期待
     {% endfor %}
     <ul class="pagination">
         {# 上一页 #}
         <li>
-            {% if page_of_articles.has_previous %}
-                <a href="?page={{ page_of_articles.pageprevious_page_number }}" aria-label="Previous">
+            {% if page_of_music.has_previous %}
+                <a href="?page={{ page_of_music.pageprevious_page_number }}" aria-label="Previous">
                     <span aria-hidden="true">&laquo;</span>
                 </a>
             {% else %}
@@ -51,7 +51,7 @@
         </li>
         {# 全部页码 #}
         {% for page_num in page_range %}
-            {% if page_num == page_of_articles.number %}
+            {% if page_num == page_of_music.number %}
                 <li class="active"><span>{{ page_num }}</span></li>
             {% else %}
                 {% if page_num == '...' %}
@@ -63,8 +63,8 @@
         {% endfor %}
         {# 下一页 #}
         <li>
-            {% if page_of_articles.has_next %}
-                <a href="?page={{ page_of_articles.next_page_number }}" aria-label="Next">
+            {% if page_of_music.has_next %}
+                <a href="?page={{ page_of_music.next_page_number }}" aria-label="Next">
                     <span aria-hidden="true">&raquo;</span>
                 </a>
             {% else %}
@@ -77,10 +77,10 @@
 {% block filter %}
     <p>文章分类</p>
     {% for type in types %}
-        {% if type == articletype %}
-            <p>{{ type.typename }}</p>
+        {% if type == musictype %}
+            <p>{{ type.name }}</p>
         {% else %}
-            <p><a href="{% url 'typeArticle' type.typename %}">{{ type.typename }}</a></p>
+            <p><a href="{% url 'typeMusic' type.name %}">{{ type.name }}</a></p>
         {% endif %}
     {% empty %}
         暂无分类

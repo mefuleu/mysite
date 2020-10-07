@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>{{ article.title }}</title>
+    <title>{{ currentSong.name}}</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.min.css' %}">
@@ -22,13 +22,12 @@
         <div class="container">
         <div class="row">
             <div class="col-xs-10 col-xs-offset-1">
-                <h3>{{ article.title }}</h3>
+                <h3>{{ currentSong.name }}</h3>
                 <ul class="blog-info-description">
-                    <li>作者：{{ article.author }}</li>
-                    <li>分类：<a href="{% url 'typeArticle' article.articletype %}">{{ article.articletype }}</a></li>
-                    <li>发表日期：{{ article.create|date:"Y-m-d H:n:s" }}</li>
+                    <li>演唱者：{{ currentSong.singer }}</li>
+                    <li>分类：<a href="{% url 'typeMusic' currentSong.label.name %}">{{ currentSong.label }}</a></li>
                 </ul>
-                <div class="blog-content">{{ article.content }}</div>
+{#                <div class="blog-content">{{ article.content }}</div>#}
             </div>
         </div>
     </div>
