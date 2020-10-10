@@ -27,7 +27,10 @@
                     <li>演唱者：{{ currentSong.singer }}</li>
                     <li>分类：<a href="{% url 'typeMusic' currentSong.label.name %}">{{ currentSong.label }}</a></li>
                 </ul>
-{#                <div class="blog-content">{{ article.content }}</div>#}
+                <audio controls>
+                    <source src=" {{ currentSong.file.url }}">
+                    您的浏览器不支持 audio 元素。
+                </audio>
             </div>
         </div>
     </div>
