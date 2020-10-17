@@ -35,9 +35,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'home',
-    'article',
-    'music',
 ]
 
 MIDDLEWARE = [
@@ -125,3 +122,15 @@ EACH_PAGE_BLOGS_NUMBER=10
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# 邮件配置信息
+EMAIL_USE_SSL = True
+# 邮件服务器，如果是 163就改成 smtp.163.com
+EMAIL_HOST = 'smtp.qq.com'
+# 邮件服务器端口
+EMAIL_PORT = 465
+# 发送邮件的账号
+EMAIL_HOST_USER = '1217654940@qq.com'
+# SMTP服务密码
+EMAIL_HOST_PASSWORD = 'cmnaofcplsszgach'
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
