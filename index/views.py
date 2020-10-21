@@ -1,5 +1,12 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-# Create your views here.
+from django.utils.translation import gettext
+from django.utils.translation import gettext_lazy
+
 def index(request):
-    return HttpResponse('首页')
+    if request.LANGUAGE_CODE == 'ja':
+        language = gettext('Japanese')
+    else:
+        language = gettext('English')
+        # language = gettext_lazy('English')
+    return render(request, 'index.html', locals())
+

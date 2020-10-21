@@ -1,0 +1,54 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="zh-lang">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>{% translate "Choice language" %}</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.min.css' %}">
+
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="{% static 'bootstrap-3.3.7-dist/js/html5shiv.min.js' %}"></script>
+      <script src="{% static 'bootstrap-3.3.7-dist/js/respond.min.js' %}"></script>
+    <![endif]-->
+  </head>
+<body>
+
+<div>
+    {#将配置属性LANGUAGES进行列举，显示网站支持的语言#}
+    {% get_available_languages as languages %}
+    {% trans "Choice language" %}
+    {% for lang_code, lang_name in languages %}
+        {% language lang_code %}
+            <a href="{% url 'index:index'%}"><img src="../../static/images/{{ lang_code }}.jpg" />{{ lang_name }}</a>
+        {% endlanguage %}
+    {% endfor %}
+</div>
+<br>
+<div>
+{% blocktrans %}
+    The language is {{ language }}
+{% endblocktrans %}
+<br>
+{% blocktranslate %}
+    <p>Articles are words that define a noun as specific or unspecific. Consider the following examples: After the long day, the cup of tea tasted particularly good. ... English has two types of articles: definite and indefinite.</p>
+{% endblocktranslate %}
+</div>
+<div><a href="https://www.jackdaydayup.com/">hello</a></div>
+
+
+<script type="text/javascript" src="{% static 'jquery-1.12.4.min.js' %}"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script type="text/javascript" src="{% static 'bootstrap-3.3.7-dist/js/bootstrap.min.js' %}"></script>
+
+
+</body>
+</html>

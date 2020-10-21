@@ -16,12 +16,19 @@ Including another URLconf
 from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include, re_path
-from django.views.static import serve
 from django.conf.urls.i18n import i18n_patterns
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('index.urls')),
+
 ]
+
+urlpatterns+=i18n_patterns(
+    re_path(r'^i18n/', include('django.conf.urls.i18n')),
+    path('', include(('index.urls', 'index'), namespace='index')),
+)
+
+
 
 
 
