@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import os
 from pathlib import Path
 
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_noop
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
@@ -115,9 +115,10 @@ LOCALE_PATHS = (
 
 # 指定支持语言。这里为了简化只支持  简体中文和英文
 LANGUAGES = (
-    ('en', _('English')),
-    ('zh-hans', _('Simplified Chinese')),
-    ('ja', _('Japanese')),
+    ('en', ('English')),
+    ('zh-hans', ('Simplified Chinese')),
+    ('ja', ('Japanese')),
+    ('ko', ('Korean')),
 )
 
 TIME_ZONE = 'UTC'

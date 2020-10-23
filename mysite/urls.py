@@ -24,8 +24,8 @@ urlpatterns = [
 ]
 
 urlpatterns+=i18n_patterns(
-    re_path(r'^i18n/', include('django.conf.urls.i18n')),
-    path('', include(('index.urls', 'index'), namespace='index')),
+    # re_path(r'^i18n/', include('django.conf.urls.i18n')),
+    path('', include(('index.urls', 'index'), namespace='index')),prefix_default_language=False
 )
 
 

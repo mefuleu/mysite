@@ -21,19 +21,15 @@ msgstr ""
 #: .\index\templates\index.html:10 .\index\templates\index.html:28
 #: .\index\templates\test.html:13
 msgid "Choice language"
-msgstr "選択言語"
+msgstr "선택 언어"
 
 #: .\index\templates\index.html:42
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "    The language is %(language)s\n"
 msgid ""
 "\n"
 "    The language is English\n"
 msgstr ""
 "\n"
-"    言語は %(language)s\n"
+"    언어는 영어입니다\n"
 
 #: .\index\templates\index.html:46 .\index\templates\test.html:23
 msgid ""
@@ -44,16 +40,10 @@ msgid ""
 "indefinite.</p>\n"
 msgstr ""
 "\n"
-"    <p>冠詞は、名詞を特定または非特定として定義する単語です。 次の例を考えて"
-"みましょう。長い一日の後、お茶は特に美味しかったです。 ...英語には、定冠詞と"
-"不定冠詞の2種類の冠詞があります。</p>\n"
+"    <p>기사는 명사를 구체적이거나 불특정 한 것으로 정의하는 단어입니다. 다음 "
+"예를 고려하십시오. 긴 하루를 보낸 후 차 한 잔 맛이났습니다.특히 좋습니"
+"다. ... 영어에는 두 가지 유형의 관사가 있습니다.무기한.</p>\n"
 
 #: .\index\templates\index.html:49
 msgid "about products"
-msgstr "製品について"
-
-#~ msgid "Japanese"
-#~ msgstr "日本語です"
-
-#~ msgid "English"
-#~ msgstr "English"
+msgstr "제품에 대해"

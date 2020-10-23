@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>{% translate "Choice language" %}</title>
+    <title>Shangde Amusement-Outdoor indoor amusement equipment and kindergarten furniture manufacturing custom manufacturer, outdoor slide, children's playground</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.min.css' %}">
@@ -21,34 +21,38 @@
     <![endif]-->
   </head>
 <body>
-
-<div>
-    {#将配置属性LANGUAGES进行列举，显示网站支持的语言#}
-    {% get_available_languages as languages %}
-    {% trans "Choice language" %}
-    {% for lang_code, lang_name in languages %}
-        {% language lang_code %}
-            <a href="{% url 'index:index'%}"><img src="../../static/images/{{ lang_code }}.jpg" />{{ lang_name }}</a>
-        {% endlanguage %}
-    {% endfor %}
+<div class="container-fluid">
+    <div class="row text-center" style="background-color: #0f0f0f;height: 40px" >
+        <ul class="list-inline list-unstyled" style="line-height: 40px">
+            {#将配置属性LANGUAGES进行列举，显示网站支持的语言#}
+            {% get_available_languages as languages %}
+            <li style="color: white">{% trans "Choice language" %}</li>
+            {% for lang_code, lang_name in languages %}
+                {% get_current_language as LANGUAGE_CODE %}
+                {% if lang_code == 'zh-hans' %}
+                    <li><a href="http://www.sdplay.com/" style="color: white;" ><img src="../../static/images/{{ lang_code }}.jpg" />{{ lang_name }}</a></li>
+                {% else %}
+                {% language lang_code %}
+                    <li><a href="{% url 'index:index'%}" style="color:white;display: {% if lang_code == LANGUAGE_CODE %}none{% else %}inline-block{% endif %}"><img src="../../static/images/{{ lang_code }}.jpg" />{{ lang_name }}</a></li>
+                {% endlanguage %}
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
 </div>
-<br>
-<div>
+
 {% blocktrans %}
-    The language is {{ language }}
+    The language is English
 {% endblocktrans %}
 <br>
 {% blocktranslate %}
     <p>Articles are words that define a noun as specific or unspecific. Consider the following examples: After the long day, the cup of tea tasted particularly good. ... English has two types of articles: definite and indefinite.</p>
 {% endblocktranslate %}
-</div>
-<div><a href="https://www.jackdaydayup.com/">hello</a></div>
+<div><a href="{% url 'index:test' %}">{% translate "about products" %}</a></div>
 
 
 <script type="text/javascript" src="{% static 'jquery-1.12.4.min.js' %}"></script>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
 <script type="text/javascript" src="{% static 'bootstrap-3.3.7-dist/js/bootstrap.min.js' %}"></script>
-
-
 </body>
 </html>
