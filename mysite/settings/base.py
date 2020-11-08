@@ -30,6 +30,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 # Application definition
 
 INSTALLED_APPS = [
+    # 'grappelli',
+    'simpleui',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -37,6 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'index',
+    'product',
+    'ckeditor',
+    'ckeditor_uploader',
+    'locale',
 ]
 
 MIDDLEWARE = [
@@ -99,15 +105,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-# LANGUAGE_CODE = 'zh-hans'
-#
-# TIME_ZONE = 'Asia/Shanghai'
-#
-# USE_I18N = True
-#
-# USE_L10N = True
-#
-# USE_TZ = True
+
 LANGUAGE_CODE = 'en'
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),
@@ -119,6 +117,11 @@ LANGUAGES = (
     ('zh-hans', _('Simplified Chinese')),
     ('ja', _('Japanese')),
     ('ko', _('Korean')),
+    ('ru', _('Russian')),
+    ('ar', _('Arabic')),
+    ('es', _('Spanish')),
+    ('pt', _('Portuguese')),
+    ('de', _('German')),
 )
 
 TIME_ZONE = 'UTC'
@@ -129,8 +132,49 @@ USE_L10N = True
 
 USE_TZ = True
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+CKEDITOR_UPLOAD_PATH = 'upload'
+# CKEDITOR_IMAGE_BACKEND = 'pillow'
 
 
+CKEDITOR_CONFIGS = {
+    # django-ckeditor默认使用default配置
+    'default': {
+        # 编辑器宽度自适应
+        'width':'auto',
+        'height':'250px',
+        # tab键转换空格数
+        'tabSpaces': 4,
+        # 工具栏风格
+        'toolbar': 'Custom', # 指定数量工具栏
+        # 'toolbar':'full', # 完整工具条
+
+        # 自定义工具栏
+        # 工具栏按钮
+        'toolbar_Custom': [
+            # 表情 代码块
+            ['Smiley', 'CodeSnippet'],
+            # 字体风格
+            ['Bold', 'Italic', 'Underline', 'RemoveFormat', 'Blockquote'],
+            # 字体颜色
+            ['TextColor', 'BGColor'],
+            # 链接
+            ['Link', 'Unlink'],
+            # 列表
+            ['NumberedList', 'BulletedList'],
+            # 图片
+            ['Image', 'Link', 'Unlink'],
+            # 最大化
+            ['Maximize']
+        ],
+        # 加入代码块插件
+        'extraPlugins': ','.join(['codesnippet','widget','lineutils',]),
+    }
+}
+
+CKEDITOR_ALLOW_NONIMAGE_FILES = False
+CKEDITOR_BROWSE_SHOW_DIRS = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
@@ -140,13 +184,12 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
+    'product/static',
 ]
 
 #设定每页多少篇文章
-EACH_PAGE_BLOGS_NUMBER=10
+EACH_PAGE_PRODUCTS_NUMBER=12
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # 邮件配置信息
 EMAIL_USE_SSL = True
@@ -157,5 +200,13 @@ EMAIL_PORT = 465
 # 发送邮件的账号
 EMAIL_HOST_USER = '1217654940@qq.com'
 # SMTP服务密码
-EMAIL_HOST_PASSWORD = 'cmnaofcplsszgach'
+EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD']
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+#默认开启，统计分析信息只是为了更好的帮助simpleui改进，并不会读取敏感信息。并且分析数据不会分享至任何第三方。
+SIMPLEUI_ANALYSIS = False
+#服务器信息
+SIMPLEUI_HOME_INFO = False
+
+SIMPLEUI_LOGO = '../../static/logo.png'
+

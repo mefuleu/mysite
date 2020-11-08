@@ -3,57 +3,95 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-22 20:18+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2020-11-04 17:37+0800\n"
+"PO-Revision-Date: 2020-10-25 23:12:21.878792\n"
+"Last-Translator: potranslator 1.1.5\n"
+"Language-Team: \n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"Translated-By: potranslator 1.1.5\n"
+"X-Generator: Poedit 2.4.1\n"
 
-#: .\index\templates\index.html:10 .\index\templates\index.html:28
-#: .\index\templates\test.html:13
-msgid "Choice language"
-msgstr "選択言語"
+#: .\mysite\settings\base.py:122
+msgid "English"
+msgstr "英語"
 
-#: .\index\templates\index.html:42
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "    The language is %(language)s\n"
-msgid ""
-"\n"
-"    The language is English\n"
-msgstr ""
-"\n"
-"    言語は %(language)s\n"
+#: .\mysite\settings\base.py:123
+msgid "Simplified Chinese"
+msgstr "簡体字中国語"
 
-#: .\index\templates\index.html:46 .\index\templates\test.html:23
-msgid ""
-"\n"
-"    <p>Articles are words that define a noun as specific or unspecific. "
-"Consider the following examples: After the long day, the cup of tea tasted "
-"particularly good. ... English has two types of articles: definite and "
-"indefinite.</p>\n"
-msgstr ""
-"\n"
-"    <p>冠詞は、名詞を特定または非特定として定義する単語です。 次の例を考えて"
-"みましょう。長い一日の後、お茶は特に美味しかったです。 ...英語には、定冠詞と"
-"不定冠詞の2種類の冠詞があります。</p>\n"
+#: .\mysite\settings\base.py:124
+msgid "Japanese"
+msgstr "日本語"
 
-#: .\index\templates\index.html:49
-msgid "about products"
-msgstr "製品について"
+#: .\mysite\settings\base.py:125
+msgid "Korean"
+msgstr "韓国語"
 
-#~ msgid "Japanese"
-#~ msgstr "日本語です"
+#: .\mysite\settings\base.py:126
+msgid "Russian"
+msgstr "ロシア"
 
-#~ msgid "English"
-#~ msgstr "English"
+#: .\mysite\settings\base.py:127
+msgid "Arabic"
+msgstr "アラビア語"
+
+#: .\mysite\settings\base.py:128
+msgid "Spanish"
+msgstr "スペイン語"
+
+#: .\mysite\settings\base.py:129
+msgid "Portuguese"
+msgstr "ポルトガル語"
+
+#: .\mysite\settings\base.py:130
+msgid "German"
+msgstr "ドイツ人"
+
+#~ msgid ""
+#~ "Articles are words that define a noun as specific or unspecific. Consider "
+#~ "the following examples: Afterthe long day, the cup of tea tasted "
+#~ "particularly good. ... English has two types of articles: definite and "
+#~ "indefinite."
+#~ msgstr ""
+#~ "記事は名詞を特定または非固有として定義する単語です。次の例を考えてみましょ"
+#~ "う:長い一日の後、お茶のカップは特においしいです。...英語には、明確な記事と"
+#~ "無期限の2種類の記事があります。"
+
+#~ msgid ""
+#~ "\n"
+#~ "        Let’s faceit. Many of us have felt the miserable feeling that "
+#~ "stress andtension related to our jobs can cause on\n"
+#~ "        a daily basis. Aside fromfeeling bad from a mental perspective "
+#~ "there are serious healthissues that can develop\n"
+#~ "        if you don’t do something and make somechanges to reduce your "
+#~ "stress levels.\n"
+#~ "    "
+#~ msgstr ""
+#~ "\n"
+#~ "向き合いましょう。私たちの多くは、私たちの仕事に関連するストレスと緊張が引"
+#~ "き起こす可能性があるという悲惨な気持ちを感じています\n"
+#~ "        日常的に。精神的な観点から悪い感じとは別に、発症する可能性のある深"
+#~ "刻な健康問題があります\n"
+#~ "        あなたが何かをしない場合は、あなたのストレスレベルを減らすためにい"
+#~ "くつかの変更を加えます。\n"
+#~ "    "
+
+#~ msgid ""
+#~ "<p>Many of us have felt the miserable feeling that stress andtension "
+#~ "related to our jobs can cause ona daily basis. Aside from feeling bad "
+#~ "from a mental perspective there are serious healthissues that can develop "
+#~ "if you don’t do something and make somechanges to reduce your stress "
+#~ "levels.</p>"
+#~ msgstr ""
+#~ "私たちの多くは、仕事に関するストレスや緊張が日常的に引き起こす悲惨な気持ち"
+#~ "を感じています。精神的な観点から悪い感じから離れ、あなたが何かをしないとあ"
+#~ "なたのストレスレベルを減らすためにいくつかの変更を加える場合に発症すること"
+#~ "ができる深刻な健康問題があります。"

@@ -1,0 +1,98 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-04 17:37+0800\n"
+"PO-Revision-Date: 2020-10-25 15:00+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#: .\mysite\settings\base.py:122
+msgid "English"
+msgstr "Inglés"
+
+#: .\mysite\settings\base.py:123
+msgid "Simplified Chinese"
+msgstr "Chino simplificado"
+
+#: .\mysite\settings\base.py:124
+msgid "Japanese"
+msgstr "Japonés"
+
+#: .\mysite\settings\base.py:125
+msgid "Korean"
+msgstr "Koreano"
+
+#: .\mysite\settings\base.py:126
+msgid "Russian"
+msgstr "Ruso"
+
+#: .\mysite\settings\base.py:127
+msgid "Arabic"
+msgstr "Árabe"
+
+#: .\mysite\settings\base.py:128
+msgid "Spanish"
+msgstr "Español"
+
+#: .\mysite\settings\base.py:129
+msgid "Portuguese"
+msgstr "Portugués"
+
+#: .\mysite\settings\base.py:130
+msgid "German"
+msgstr "Alemán"
+
+#~ msgid ""
+#~ "Articles are words that define a noun as specific or unspecific. Consider "
+#~ "the following examples: Afterthe long day, the cup of tea tasted "
+#~ "particularly good. ... English has two types of articles: definite and "
+#~ "indefinite."
+#~ msgstr ""
+#~ "Los artículos son palabras que definen un sustantivo como específico o no "
+#~ "específico. Considere los siguientes ejemplos: Después del largo día, la "
+#~ "taza de té se probó particularmente bien. ... El inglés tiene dos tipos "
+#~ "de artículos: definidos e indefinidos."
+
+#~ msgid ""
+#~ "\n"
+#~ "        Let’s faceit. Many of us have felt the miserable feeling that "
+#~ "stress andtension related to our jobs can cause on\n"
+#~ "        a daily basis. Aside fromfeeling bad from a mental perspective "
+#~ "there are serious healthissues that can develop\n"
+#~ "        if you don’t do something and make somechanges to reduce your "
+#~ "stress levels.\n"
+#~ "    "
+#~ msgstr ""
+#~ "\n"
+#~ "Seamos sinceros. Muchos de nosotros hemos sentido la miserable sensación "
+#~ "de que el estrés y latensión relacionada con nuestros trabajos\n"
+#~ "        una base diaria. Aparte de sentir mal desde una perspectiva "
+#~ "mental hay graves beneficios de salud que pueden desarrollarse\n"
+#~ "        si no haces algo y haces algunos cambios para reducir tus niveles "
+#~ "de estrés.\n"
+#~ "    "
+
+#~ msgid ""
+#~ "<p>Many of us have felt the miserable feeling that stress andtension "
+#~ "related to our jobs can cause ona daily basis. Aside from feeling bad "
+#~ "from a mental perspective there are serious healthissues that can develop "
+#~ "if you don’t do something and make somechanges to reduce your stress "
+#~ "levels.</p>"
+#~ msgstr ""
+#~ "<p>Muchos de nosotros hemos sentido la miserable sensación de que el "
+#~ "estrés y latensión relacionada con nuestros trabajos puede causar a "
+#~ "diario. Aparte de sentirse mal desde una perspectiva mental hay graves "
+#~ "beneficios de salud que pueden desarrollarse si no haces algo y haces "
+#~ "algunos cambios para reducir tus niveles de estrés.</p>"

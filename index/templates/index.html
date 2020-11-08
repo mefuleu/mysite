@@ -1,89 +1,42 @@
-{% load static %}
+{% extends 'base.html' %}
 {% load i18n %}
-<!DOCTYPE html>
-<html lang="zh-lang">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>Shangde Amusement-Outdoor indoor amusement equipment and kindergarten furniture manufacturing custom manufacturer, outdoor slide, children's playground</title>
+{% block leftnav %}
+        <li><a href="">Home</a></li>
+        <li><a href="">About SoundPlay</a></li>
+        <li><a href="{% url 'product:product_home' %}">Products</a></li>
+        <li><a href="">News</a></li>
+        <li><a href="">Typical Case</a></li>
+{% endblock %}
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.min.css' %}">
+{% block leftcontent %}
+            <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+            <input name="next" type="hidden" value="{{ redirect_to }}">
+            <select name="language">
+                {% get_current_language as LANGUAGE_CODE %}
+                {% get_available_languages as LANGUAGES %}
+                {% get_language_info_list for LANGUAGES as languages %}
+                {% for language in languages %}
+                    <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                        {{ language.name_local }} ({{ language.code }})
+                    </option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="Go">
+        </form>
+{% endblock %}
 
+{% block rightnav %}
+    <ul class="breadcrumb">
+        <li>
+            <a class="btn btn-default" href="#" role="button">登录</a>
+        </li>
+        <li>
+            <a class="btn btn-default" href="#" role="button">注册</a>
+        </li>
+    </ul>
+{% endblock %}
 
-    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
-    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
-    <!--[if lt IE 9]>
-      <script src="{% static 'bootstrap-3.3.7-dist/js/html5shiv.min.js' %}"></script>
-      <script src="{% static 'bootstrap-3.3.7-dist/js/respond.min.js' %}"></script>
-    <![endif]-->
-  </head>
-<body>
-<div class="container-fluid" style="margin-top: 20px">
-    <div class="row text-center navbar-fixed-top" role="navigation" >        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#"><a href="/"><img src="{% static 'images/logo.png' %}" alt="Sound Play"></a></a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="padding-top: 10px">
-            <ul class="nav navbar-nav" style="line-height: 50px">
-                <li><a href="/">首页</a></li>
-                <li><a href="/guanyushangde/" title="关于上德">关于上德</a></li>
-                <li class="mega-menu"><a href="/chanpinzhanshi/" title="产品展示">产品展示</a>
-                <li><a href="/news/" title="文章资讯">文章资讯</a></li>
-                <li><a href="/case/" title="典型案例">典型案例</a></li>
-            </ul>
-            <form class="navbar-form navbar-left">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
-                </div>
-                <button type="submit" class="btn btn-default">Submit</button>
-            </form>
-            <ul class="nav navbar-nav navbar-right" style="margin-right: 0px">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                       aria-haspopup="true" aria-expanded="false">Choose your language preference<span
-                            class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="http://www.sdplay.com/" style="color: black;"><img
-                                src="../../static/images/zh-hans.jpg"/>中文</a></li>
-                        {% language 'en' %}
-                            <li><a href="{% url 'index:index' %}" style="color:black;"><img
-                                    src="../../static/images/en.jpg"/>English</a></li>
-                        {% endlanguage %}
-                        {% language 'ko' %}
-                            <li><a href="{% url 'index:index' %}" style="color:black;"><img
-                                    src="../../static/images/ko.jpg"/>한국어</a></li>
-                        {% endlanguage %}
-                        {% language 'ja' %}
-                            <li><a href="{% url 'index:index' %}" style="color:black;"><img
-                                    src="../../static/images/ja.jpg"/>日本の</a></li>
-                        {% endlanguage %}
-                    </ul>
-                </li>
-            </ul>
-        </div><!-- /.navbar-collapse -->
-    </div>
-    <div class="row" style="padding-top: 30px">
-        <p></p>
-    </div>
-</div><!-- /.container-fluid -->
+{% block filter %}
+    过滤器使用在此
+{% endblock %}
 
-
-
-
-
-<br>
-{% blocktranslate %}
-    <p>Articles are words that define a noun as specific or unspecific. Consider the following examples: After the long day, the cup of tea tasted particularly good. ... English has two types of articles: definite and indefinite.</p>
-{% endblocktranslate %}
-<div><a href="{% url 'index:test' %}">{% translate "about products" %}</a></div>
-<p>{{ languagedict.lang }}</p>
-
-<script type="text/javascript" src="{% static 'jquery-1.12.4.min.js' %}"></script>
-    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
-<script type="text/javascript" src="{% static 'bootstrap-3.3.7-dist/js/bootstrap.min.js' %}"></script>
-</body>
-</html>

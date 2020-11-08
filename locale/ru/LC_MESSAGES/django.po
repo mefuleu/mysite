@@ -1,0 +1,101 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-04 17:37+0800\n"
+"PO-Revision-Date: 2020-10-25 14:52+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#: .\mysite\settings\base.py:122
+msgid "English"
+msgstr "Английский"
+
+#: .\mysite\settings\base.py:123
+msgid "Simplified Chinese"
+msgstr "Китайский Упрощенный"
+
+#: .\mysite\settings\base.py:124
+msgid "Japanese"
+msgstr "Японский"
+
+#: .\mysite\settings\base.py:125
+msgid "Korean"
+msgstr "Корейский"
+
+#: .\mysite\settings\base.py:126
+msgid "Russian"
+msgstr "Русский"
+
+#: .\mysite\settings\base.py:127
+msgid "Arabic"
+msgstr "Арабский"
+
+#: .\mysite\settings\base.py:128
+msgid "Spanish"
+msgstr "Испанский"
+
+#: .\mysite\settings\base.py:129
+msgid "Portuguese"
+msgstr "Португальский"
+
+#: .\mysite\settings\base.py:130
+msgid "German"
+msgstr "Немецкий"
+
+#~ msgid ""
+#~ "Articles are words that define a noun as specific or unspecific. Consider "
+#~ "the following examples: Afterthe long day, the cup of tea tasted "
+#~ "particularly good. ... English has two types of articles: definite and "
+#~ "indefinite."
+#~ msgstr ""
+#~ "Статьи — это слова, которые определяют существительное как конкретное или "
+#~ "неспецифическое. Рассмотрим следующие примеры: После долгого дня, чашка "
+#~ "чая на вкус особенно хорошо. ... Английский имеет два типа статей: "
+#~ "определенный и неопределенный."
+
+#~ msgid ""
+#~ "\n"
+#~ "        Let’s faceit. Many of us have felt the miserable feeling that "
+#~ "stress andtension related to our jobs can cause on\n"
+#~ "        a daily basis. Aside fromfeeling bad from a mental perspective "
+#~ "there are serious healthissues that can develop\n"
+#~ "        if you don’t do something and make somechanges to reduce your "
+#~ "stress levels.\n"
+#~ "    "
+#~ msgstr ""
+#~ "\n"
+#~ "Давайте посмотрим правде в лицо. Многие из нас почувствовали жалкое "
+#~ "чувство, что стресс и напряжение, связанные с нашей работой может "
+#~ "привести к\n"
+#~ "        ежедневно. Помимо того, что плохо с точки зрения психического "
+#~ "есть серьезные healthissues, которые могут развиваться\n"
+#~ "        если вы не делаете что-то и сделать somechanges уменьшить уровень "
+#~ "стресса.\n"
+#~ "    "
+
+#~ msgid ""
+#~ "<p>Many of us have felt the miserable feeling that stress andtension "
+#~ "related to our jobs can cause ona daily basis. Aside from feeling bad "
+#~ "from a mental perspective there are serious healthissues that can develop "
+#~ "if you don’t do something and make somechanges to reduce your stress "
+#~ "levels.</p>"
+#~ msgstr ""
+#~ "<p>Многие из нас почувствовали жалкое чувство, что стресс и напряжение, "
+#~ "связанные с нашей работой может вызвать ona ежедневно. Помимо чувствовать "
+#~ "себя плохо с точки зрения психического Есть серьезные healthissues, "
+#~ "которые могут развиваться, если вы не делаете что-то и сделать "
+#~ "somechanges уменьшить уровень стресса.</p>"
