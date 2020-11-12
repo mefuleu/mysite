@@ -13,9 +13,9 @@ import os
 from pathlib import Path
 
 from django.utils.translation import gettext_lazy as _
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -25,18 +25,21 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 
 
-
-
 # Application definition
 
 INSTALLED_APPS = [
-    # 'grappelli',
     'simpleui',
-    'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.messages',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.facebook',
+    'django_extensions',
+    'django.contrib.admin',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    'django.contrib.messages',
     'django.contrib.staticfiles',
     'index',
     'product',
@@ -44,7 +47,10 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'locale',
 ]
+# ACCOUNT_DEFAULT_HTTP_PROTOCOL = "https"
+SITE_ID = 1
 
+LOGIN_REDIRECT_URL = '/'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -78,7 +84,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
@@ -101,10 +106,45 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = [
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
 
-# Internationalization
-# https://docs.djangoproject.com/en/3.1/topics/i18n/
-
+# Provider specific settings
+SOCIALACCOUNT_PROVIDERS = {
+    'facebook': {
+        # For each OAuth based provider, either add a ``SocialApp``
+        # (``socialaccount`` app) containing the required client
+        # credentials, or list them here:
+        'Soundplay': {
+            'client_id': '476436510414105',
+            'secret': '8d9554ce76d605f7ed3715fa00e39b69',
+            'key': ''
+        },
+        'METHOD': 'oauth2',
+        'SDK_URL': '//connect.facebook.net/{locale}/sdk.js',
+        'SCOPE': ['email', 'public_profile'],
+        'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
+        'INIT_PARAMS': {'cookie': True},
+        'FIELDS': [
+            'id',
+            'first_name',
+            'last_name',
+            'middle_name',
+            'name',
+            'name_format',
+            'picture',
+            'short_name'
+        ],
+        'EXCHANGE_TOKEN': True,
+        'LOCALE_FUNC': 'path.to.callable',
+        'VERIFIED_EMAIL': False,
+        'VERSION': 'v7.0',
+    }
+}
 
 LANGUAGE_CODE = 'en'
 LOCALE_PATHS = (
@@ -142,12 +182,12 @@ CKEDITOR_CONFIGS = {
     # django-ckeditor默认使用default配置
     'default': {
         # 编辑器宽度自适应
-        'width':'auto',
-        'height':'250px',
+        'width': 'auto',
+        'height': '250px',
         # tab键转换空格数
         'tabSpaces': 4,
         # 工具栏风格
-        'toolbar': 'Custom', # 指定数量工具栏
+        'toolbar': 'Custom',  # 指定数量工具栏
         # 'toolbar':'full', # 完整工具条
 
         # 自定义工具栏
@@ -169,7 +209,7 @@ CKEDITOR_CONFIGS = {
             ['Maximize']
         ],
         # 加入代码块插件
-        'extraPlugins': ','.join(['codesnippet','widget','lineutils',]),
+        'extraPlugins': ','.join(['codesnippet', 'widget', 'lineutils', ]),
     }
 }
 
@@ -187,9 +227,8 @@ STATICFILES_DIRS = [
     'product/static',
 ]
 
-#设定每页多少篇文章
-EACH_PAGE_PRODUCTS_NUMBER=12
-
+# 设定每页多少篇文章
+EACH_PAGE_PRODUCTS_NUMBER = 12
 
 # 邮件配置信息
 EMAIL_USE_SSL = True
@@ -203,10 +242,9 @@ EMAIL_HOST_USER = '1217654940@qq.com'
 EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD']
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
-#默认开启，统计分析信息只是为了更好的帮助simpleui改进，并不会读取敏感信息。并且分析数据不会分享至任何第三方。
+# 默认开启，统计分析信息只是为了更好的帮助simpleui改进，并不会读取敏感信息。并且分析数据不会分享至任何第三方。
 SIMPLEUI_ANALYSIS = False
-#服务器信息
+# 服务器信息
 SIMPLEUI_HOME_INFO = False
 
 SIMPLEUI_LOGO = '../../static/logo.png'
-
