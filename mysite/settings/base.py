@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'locale',
 ]
-# ACCOUNT_DEFAULT_HTTP_PROTOCOL = "https"
+ACCOUNT_DEFAULT_HTTP_PROTOCOL = "https"
 SITE_ID = 1
 
 LOGIN_REDIRECT_URL = '/'
@@ -112,7 +112,8 @@ AUTHENTICATION_BACKENDS = [
     # `allauth` specific authentication methods, such as login by e-mail
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
-
+FB_CLIENT_ID = os.environ['CLIENT_ID']
+FB_SECRET = os.environ['SECRET']
 # Provider specific settings
 SOCIALACCOUNT_PROVIDERS = {
     'facebook': {
@@ -120,8 +121,8 @@ SOCIALACCOUNT_PROVIDERS = {
         # (``socialaccount`` app) containing the required client
         # credentials, or list them here:
         'Soundplay': {
-            'client_id': '476436510414105',
-            'secret': '8d9554ce76d605f7ed3715fa00e39b69',
+            'client_id': FB_CLIENT_ID,
+            'secret': FB_SECRET,
             'key': ''
         },
         'METHOD': 'oauth2',

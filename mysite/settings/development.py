@@ -7,20 +7,20 @@ from pathlib import Path
 
 
 
-SECRET_KEY = 'yp1ptnnq992n%e4=&4(1*-!kc7&h&2mm-gi5=xx9ctye!o+kun'
+SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: keep the secret key used in production secret!
 DEBUG = True
 # SECURITY WARNING: don't run with debug turned on in production!
 
 ALLOWED_HOSTS = ['*']
-
+DATABASE_PASSWORD =os.environ['DATABASE_PASSWORD']
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'myweb',
         'USER': 'root',
-        'PASSWORD': '123456',
+        'PASSWORD': DATABASE_PASSWORD,
         'HOST': 'localhost',
         'PORT': '3306',
     }
