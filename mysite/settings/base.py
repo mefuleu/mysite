@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.facebook',
-    'django_extensions',
+    # 'django_extensions',
     'django.contrib.admin',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
