@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.facebook',
-    # 'django_extensions',
+    'django_extensions',
     'django.contrib.admin',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -50,7 +50,7 @@ INSTALLED_APPS = [
 ACCOUNT_DEFAULT_HTTP_PROTOCOL = "https"
 SITE_ID = 1
 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = "/"
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -120,7 +120,7 @@ SOCIALACCOUNT_PROVIDERS = {
         # For each OAuth based provider, either add a ``SocialApp``
         # (``socialaccount`` app) containing the required client
         # credentials, or list them here:
-        'Soundplay': {
+        'SoundPlay': {
             'client_id': FB_CLIENT_ID,
             'secret': FB_SECRET,
             'key': ''
@@ -141,9 +141,10 @@ SOCIALACCOUNT_PROVIDERS = {
             'short_name'
         ],
         'EXCHANGE_TOKEN': True,
-        'LOCALE_FUNC': 'path.to.callable',
+        # 'LOCALE_FUNC': 'path.to.callable',
         'VERIFIED_EMAIL': False,
-        'VERSION': 'v7.0',
+        'VERSION': 'v9.0',
+        'LOCALE_FUNC': lambda request: 'en_US',
     }
 }
 
