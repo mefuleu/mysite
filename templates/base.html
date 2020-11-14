@@ -49,7 +49,7 @@
 
 {#<div class="fb-login-button" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false" data-width=""></div>#}
 <a href="{% provider_login_url "facebook" method="oauth2" %}">Facebook OAuth2</a>
-
+<a href="{% provider_login_url 'google' %}">Login with Google</a>
 {% if user.is_authenticated %}
     Hello,{{ user.username }}
 {% endif %}

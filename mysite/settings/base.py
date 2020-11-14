@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.google',
     'django_extensions',
     'django.contrib.admin',
     'django.contrib.contenttypes',
@@ -145,7 +146,14 @@ SOCIALACCOUNT_PROVIDERS = {
         'VERIFIED_EMAIL': False,
         'VERSION': 'v9.0',
         'LOCALE_FUNC': lambda request: 'en_US',
-    }
+    },
+    'google': {'SCOPE': [
+        'profile',
+        'email',
+    ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        }}
 }
 
 LANGUAGE_CODE = 'en'
