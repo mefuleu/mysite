@@ -1,12 +1,6 @@
 {% extends 'base.html' %}
 {% load i18n %}
-{% block leftnav %}
-        <li><a href="">Home</a></li>
-        <li><a href="">About SoundPlay</a></li>
-        <li><a href="{% url 'product:product_home' %}">Products</a></li>
-        <li><a href="">News</a></li>
-        <li><a href="">Typical Case</a></li>
-{% endblock %}
+
 
 {% block leftcontent %}
             <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
@@ -28,15 +22,15 @@
 {% block rightnav %}
     <ul class="breadcrumb">
         <li>
-            <a class="btn btn-default" href="#" role="button">登录</a>
+            <a class="btn btn-default" href="#" role="button">login</a>
         </li>
         <li>
-            <a class="btn btn-default" href="#" role="button">注册</a>
+            <a class="btn btn-default" href="#" role="button">register</a>
         </li>
     </ul>
 {% endblock %}
 
 {% block filter %}
-    过滤器使用在此
+    in this block use filter
 {% endblock %}
 

@@ -2,13 +2,7 @@
 {% load static %}
 {% load i18n %}
 
-{% block leftnav %}
-    <li><a href="/">Home</a></li>
-    <li><a href="">About SoundPlay</a></li>
-    <li><a href="{% url 'product:product_home' %}">Products</a></li>
-    <li><a href="">News</a></li>
-    <li><a href="">Typical Case</a></li>
-{% endblock %}
+
 
 {% block leftcontent %}
     <p>Total number of products:{{ products|length }}</p>

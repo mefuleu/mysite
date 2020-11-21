@@ -1,0 +1,14 @@
+{% extends 'admin/index.html' %}
+{% load static %}
+
+{% block logo %}
+    <div class="logo-wrap" v-if="!fold">
+        <div class="float-wrap">
+            <div class="left">
+            </div>
+            <div class="left">
+                <span>{{ site_header }}</span>
+            </div>
+        </div>
+    </div>
+{% endblock %}

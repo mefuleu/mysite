@@ -21,7 +21,7 @@ DATABASES = {
         'NAME': 'myweb',
         'USER': 'root',
         'PASSWORD': DATABASE_PASSWORD,
-        'HOST': 'localhost',
+        'HOST': '47.111.69.141',
         'PORT': '3306',
     }
 }

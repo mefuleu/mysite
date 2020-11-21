@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'locale',
+    'case',
 ]
 ACCOUNT_DEFAULT_HTTP_PROTOCOL = "https"
 SITE_ID = 1

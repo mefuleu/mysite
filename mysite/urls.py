@@ -33,6 +33,7 @@ urlpatterns+=i18n_patterns(
     path('i18n/', include('django.conf.urls.i18n')),
     path('', include(('index.urls', 'index'), namespace='index')),
     path('product/', include(('product.urls', 'product'), namespace='product')),
+    path('case/', include(('case.urls', 'case'), namespace='case')),
     prefix_default_language=False,
 )
 
