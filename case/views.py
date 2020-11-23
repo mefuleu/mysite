@@ -36,3 +36,8 @@ def show_case(request):
     context=fen_ye_qi(request, cases.order_by('create'))
     context['cases']=Case.objects.all()
     return render(request,'show_case.html',context=context)
+
+
+def detailCase(request, case_pk):
+    case = get_object_or_404(Case, pk=case_pk)
+    return render(request, 'case_detail.html', locals())
