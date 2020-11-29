@@ -29,6 +29,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 INSTALLED_APPS = [
     'simpleui',
+    'channels',
+    'chat',
     'django.contrib.auth',
     'django.contrib.messages',
     'django.contrib.sites',
@@ -259,3 +261,17 @@ SIMPLEUI_ANALYSIS = False
 SIMPLEUI_HOME_INFO = False
 
 SIMPLEUI_LOGO = '../../static/logo.png'
+
+ASGI_APPLICATION = 'mysite.asgi.application'
+
+
+# Channels
+ASGI_APPLICATION = 'mysite.asgi.application'
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
+        },
+    },
+}
