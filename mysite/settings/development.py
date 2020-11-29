@@ -7,7 +7,7 @@ from pathlib import Path
 
 
 
-SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
 # SECURITY WARNING: keep the secret key used in production secret!
 DEBUG = True
 # SECURITY WARNING: don't run with debug turned on in production!

@@ -9,7 +9,7 @@
     <div class="row">
         {% for eachcase in page_of_cases %}
             <div class="col-sm-6 col-md-3">
-                <a href="#">
+                <a href="{% url 'case:detailCase' eachcase.pk %}">
                     <img src="{% get_static_prefix %}sd_case_img/{{ eachcase.pk }}.jpg" height="200" width="200">
                     <h6>{{ eachcase.title|truncatechars:65 }}</h6>
                 </a>

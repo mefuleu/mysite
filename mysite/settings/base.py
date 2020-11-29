@@ -116,8 +116,8 @@ AUTHENTICATION_BACKENDS = [
     # `allauth` specific authentication methods, such as login by e-mail
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
-FB_CLIENT_ID = os.environ['CLIENT_ID']
-FB_SECRET = os.environ['SECRET']
+FB_CLIENT_ID = os.environ['FB_CLIENT_ID']
+FB_SECRET_KEY = os.environ['FB_SECRET_KEY']
 # Provider specific settings
 SOCIALACCOUNT_PROVIDERS = {
     'facebook': {
@@ -126,7 +126,7 @@ SOCIALACCOUNT_PROVIDERS = {
         # credentials, or list them here:
         'SoundPlay': {
             'client_id': FB_CLIENT_ID,
-            'secret': FB_SECRET,
+            'secret': FB_SECRET_KEY,
             'key': ''
         },
         'METHOD': 'oauth2',
