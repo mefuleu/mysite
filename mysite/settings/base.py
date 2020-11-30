@@ -262,7 +262,6 @@ SIMPLEUI_HOME_INFO = False
 
 SIMPLEUI_LOGO = '../../static/logo.png'
 
-ASGI_APPLICATION = 'mysite.asgi.application'
 
 
 # Channels
