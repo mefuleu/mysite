@@ -3,5 +3,5 @@
 venv/
 static_root/
 __pycache__/
-
+supervisor_log/
 
