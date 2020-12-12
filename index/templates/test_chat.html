@@ -1,47 +1,21 @@
-{% extends 'base.html' %}
-{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
 
-
-{% block leftcontent %}
-            <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
-            <input name="next" type="hidden" value="{{ redirect_to }}">
-            <select name="language">
-                {% get_current_language as LANGUAGE_CODE %}
-                {% get_available_languages as LANGUAGES %}
-                {% get_language_info_list for LANGUAGES as languages %}
-                {% for language in languages %}
-                    <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
-                        {{ language.name_local }} ({{ language.code }})
-                    </option>
-                {% endfor %}
-            </select>
-            <input type="submit" value="Go">
-        </form>
-{% endblock %}
-
-{% block rightnav %}
-    <ul class="breadcrumb">
-        <li>
-            <a class="btn btn-default" href="#" role="button">login</a>
-        </li>
-        <li>
-            <a class="btn btn-default" href="#" role="button">register</a>
-        </li>
-    </ul>
-{% endblock %}
-
-{% block filter %}
         <textarea id="chat-log" cols="100" rows="20"></textarea><br>
     <input id="chat-message-input" type="text" size="100"><br>
     <input id="chat-message-submit" type="button" value="Send">
-{#    {{ room_name|json_script:"room-name" }}#}
     <script>
-        {#const roomName = JSON.parse("index");#}
+        {#const roomName = JSON.parse(document.getElementById('room-name').textContent);#}
 
         const chatSocket = new WebSocket(
             'ws://'
             + window.location.host
-            + '/ws/'
+            + '/'
         );
 
         chatSocket.onmessage = function(e) {
@@ -69,5 +43,6 @@
             messageInputDom.value = '';
         };
     </script>
-{% endblock %}
 
+</body>
+</html>
