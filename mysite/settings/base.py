@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'simpleui',
     'channels',
     'chat',
+    'usercenter',
     'django.contrib.auth',
     'django.contrib.messages',
     'django.contrib.sites',
