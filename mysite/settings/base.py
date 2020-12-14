@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'simpleui',
     'channels',
     'chat',
+    'usercenter',
     'django.contrib.auth',
     'django.contrib.messages',
     'django.contrib.sites',
@@ -38,7 +39,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.facebook',
-    'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.github',
     'django_extensions',
     'django.contrib.admin',
     'django.contrib.contenttypes',
@@ -50,11 +51,21 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'locale',
     'case',
+    'werkzeug_debugger_runserver',
 ]
-ACCOUNT_DEFAULT_HTTP_PROTOCOL = "https"
-SITE_ID = 1
 
+#app django.contrib.sites需要的设置
+SITE_ID = 1
+# 指定要使用的登录方法(用户名、电子邮件地址或两者之一)
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+# 要求用户注册时必须填写email
+ACCOUNT_EMAIL_REQUIRED = True
+# 设置退出登录后跳转链接
+ACCOUNT_LOGOUT_REDIRECT_URL = "/"
+# 设置登录后跳转链接
 LOGIN_REDIRECT_URL = "/"
+# 用户登出是否需要确认确认(True表示直接退出，不用确认；False表示需要确认)
+ACCOUNT_LOGOUT_ON_GET = False
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -120,43 +131,7 @@ FB_CLIENT_ID = os.environ['FB_CLIENT_ID']
 FB_SECRET_KEY = os.environ['FB_SECRET_KEY']
 # Provider specific settings
 SOCIALACCOUNT_PROVIDERS = {
-    'facebook': {
-        # For each OAuth based provider, either add a ``SocialApp``
-        # (``socialaccount`` app) containing the required client
-        # credentials, or list them here:
-        'SoundPlay': {
-            'client_id': FB_CLIENT_ID,
-            'secret': FB_SECRET_KEY,
-            'key': ''
-        },
-        'METHOD': 'oauth2',
-        'SDK_URL': '//connect.facebook.net/{locale}/sdk.js',
-        'SCOPE': ['email', 'public_profile'],
-        'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
-        'INIT_PARAMS': {'cookie': True},
-        'FIELDS': [
-            'id',
-            'first_name',
-            'last_name',
-            'middle_name',
-            'name',
-            'name_format',
-            'picture',
-            'short_name'
-        ],
-        'EXCHANGE_TOKEN': True,
-        # 'LOCALE_FUNC': 'path.to.callable',
-        'VERIFIED_EMAIL': False,
-        'VERSION': 'v9.0',
-        'LOCALE_FUNC': lambda request: 'en_US',
-    },
-    'google': {'SCOPE': [
-        'profile',
-        'email',
-    ],
-        'AUTH_PARAMS': {
-            'access_type': 'online',
-        }}
+
 }
 
 LANGUAGE_CODE = 'en'
@@ -164,7 +139,7 @@ LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),
 )
 
-# 指定支持语言。这里为了简化只支持  简体中文和英文
+# 指定支持语言。
 LANGUAGES = (
     ('en', _('English')),
     ('zh-hans', _('Simplified Chinese')),

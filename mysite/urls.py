@@ -25,7 +25,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('ckeditor/',include('ckeditor_uploader.urls')),
     path('accounts/', include('allauth.urls')),
-    path('chat/', include('chat.urls')),
+    path('chat/', include(('chat.urls','chat'),namespace='chat')),
     re_path('media/(?P<path>.*)', serve, {'document_root': settings.MEDIA_ROOT}, name='media'),
     re_path('static/(?P<path>.*)', serve, {'document_root': settings.STATIC_ROOT}, name='static'),
 ]
@@ -35,6 +35,7 @@ urlpatterns+=i18n_patterns(
     path('', include(('index.urls', 'index'), namespace='index')),
     path('product/', include(('product.urls', 'product'), namespace='product')),
     path('case/', include(('case.urls', 'case'), namespace='case')),
+    path('usercenter/', include(('usercenter.urls', 'usercenter'), namespace='usercenter')),
     prefix_default_language=False,
 )
 
