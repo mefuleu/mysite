@@ -9,6 +9,5 @@ Deploy : Nginx+uWsgi+Supervisor+daphne
 
 Database:mysql,redis
 
-使用git clone拉取项目后需要
 
 
