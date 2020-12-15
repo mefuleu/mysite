@@ -33,6 +33,7 @@ def show_product(request):
     context=fen_ye_qi(request, products.order_by('create'))
     context['products']=Product.objects.all()
     context['first_types'] = ProductTypeFirst.objects.all()
+    context['host']=request.get_host()
     return render(request,'show_product.html',context=context)
 
 def detailProduct(request, product_pk):
@@ -42,7 +43,7 @@ def detailProduct(request, product_pk):
 
 
 
-def typeProduct(requset,first_typename,second_typename):
+def typeProduct(request,first_typename,second_typename):
     if second_typename==' ':
         type_first=get_object_or_404(ProductTypeFirst,typename=first_typename)
         types_second = type_first.producttypesecond_set.all()
@@ -50,14 +51,15 @@ def typeProduct(requset,first_typename,second_typename):
         for type_second in types_second[1:]:
             temp=type_second.product_set.all()
             products=products.union(temp)
-        context=fen_ye_qi(requset, products.order_by('create'))
+        context=fen_ye_qi(request, products.order_by('create'))
         context['products']=products
         # context['first_types'] = ProductTypeFirst.objects.all()
     else:
         type_second = ProductTypeSecond.objects.filter(second_typename=second_typename)
         products = Product.objects.filter(typename_second_id=type_second[0].id)
-        context=fen_ye_qi(requset, products.order_by('create'))
+        context=fen_ye_qi(request, products.order_by('create'))
         context['products']=products
         # context['producttype']=get_object_or_404(ProductTypeFirst,typename=first_typename)
     context['first_types'] = ProductTypeFirst.objects.all()
-    return render(requset,'product_type.html',context=context)
+    context['host'] = request.get_host()
+    return render(request,'product_type.html',context=context)

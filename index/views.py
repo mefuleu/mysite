@@ -14,15 +14,19 @@ def index(request):
     return render(request, 'index.html', locals())
 
 def tourist_land(request):
-    ran_str = ''.join(random.sample(string.ascii_letters + string.digits, 8))
-    visitor_name=ran_str
-    visitor_password=ran_str
-    visit_user=User.objects.create_user(username=visitor_name,password=visitor_password,is_active=1)
-    tourist=Tourist()
-    tourist.visitor_name=visitor_name
-    tourist.visitor_password=visitor_password
-    tourist.save()
-    login(request,visit_user,backend='django.contrib.auth.backends.ModelBackend')
+
+    if request.user.is_authenticated:
+        pass
+    else:
+        ran_str = ''.join(random.sample(string.ascii_letters + string.digits, 8))
+        visitor_name=ran_str
+        visitor_password=ran_str
+        visit_user=User.objects.create_user(username=visitor_name,password=visitor_password,is_active=1)
+        tourist=Tourist()
+        tourist.visitor_name=visitor_name
+        tourist.visitor_password=visitor_password
+        tourist.save()
+        login(request,visit_user,backend='django.contrib.auth.backends.ModelBackend')
     return render(request,'usercenter.html',locals())
 
 def tourist_logout(request):

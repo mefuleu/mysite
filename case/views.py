@@ -35,6 +35,7 @@ def show_case(request):
     cases=Case.objects.all()
     context=fen_ye_qi(request, cases.order_by('create'))
     context['cases']=Case.objects.all()
+    context['host'] = request.get_host()
     return render(request,'show_case.html',context=context)
 
 

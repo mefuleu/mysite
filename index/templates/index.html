@@ -18,20 +18,7 @@
         </form>
 {% endblock %}
 
-{% block rightnav %}
-    <ul class="breadcrumb">
-        <li>
-            <a class="btn btn-default" href="http://{{ host }}/accounts/login/" role="button">login</a>
-        </li>
-        <li>
-            <a class="btn btn-default" href="http://{{ host }}/accounts/signup/" role="button">register</a>
-        </li>
-        <li>
-            <a class="btn btn-default" href="http://{{ host }}/accounts/logout/" role="button">logout</a>
-        </li>
-        <li><a href="{% url 'index:tourist_landing' %}">Landing as tourists</a></li>
-    </ul>
-{% endblock %}
+
 
 {% block filter %}
         <textarea id="chat-log" cols="100" rows="20"></textarea><br>

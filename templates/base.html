@@ -52,7 +52,25 @@
                     </ul>
                 </div>
                 <div class="col-md-6">
-                    {% block rightnav %}{% endblock %}
+                    {% block rightnav %}
+                        <ul class="breadcrumb">
+                            {% if not user.is_authenticated %}
+                                <li>
+                                    <a class="btn btn-default" href="http://{{ host }}/accounts/login/"
+                                       role="button">login</a>
+                                </li>
+                                <li>
+                                    <a class="btn btn-default" href="http://{{ host }}/accounts/signup/" role="button">register</a>
+                                </li>
+                                <li><a href="{% url 'index:tourist_landing' %}">Landing as tourists</a></li>
+                            {% endif %}
+                            {% if user.is_authenticated %}
+                            <li>
+                                <a class="btn btn-default" href="http://{{ host }}/accounts/logout/" role="button">logout</a>
+                            </li>
+                            {% endif %}
+                        </ul>
+                    {% endblock %}
                 </div>
             </div>
             <div class="row-fluid">
