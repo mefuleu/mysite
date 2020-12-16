@@ -19,6 +19,7 @@
 4. 启动redis server
 5. 执行python manage.py migrate
 6. 执行python manage.py createsuperuser
-7. python manage.py runserver_plus --cert server.crt 127.0.0.1:8000
+7. 设置settings文件夹.py文件中的EMAIL_HOST_PASSWORD FB_CLIENT_ID FB_SECRET_KEY DJANGO_SECRET_KEY DATABASE_PASSWORD等环境变量
+8. python manage.py runserver_plus --cert server.crt 127.0.0.1:8000
 
 
