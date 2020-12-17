@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'werkzeug',
     'django.contrib.staticfiles',
     'index',
     'product',
@@ -51,11 +52,10 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'locale',
     'case',
-    'werkzeug_debugger_runserver',
 ]
 
 #app django.contrib.sites需要的设置
-SITE_ID = 1
+SITE_ID = 2
 # 指定要使用的登录方法(用户名、电子邮件地址或两者之一)
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 # 要求用户注册时必须填写email

@@ -19,7 +19,6 @@ django-ckeditor==6.0.0
 django-extensions==3.1.0
 django-js-asset==1.2.2
 django-simpleui==2021.1.1
-django-werkzeug-debugger-runserver==0.3.1
 hiredis==1.1.0
 hyperlink==20.0.1
 idna==2.10
