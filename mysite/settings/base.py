@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'locale',
     'case',
+    'news',
 ]
 
 #app django.contrib.sites需要的设置
@@ -235,7 +236,7 @@ SIMPLEUI_ANALYSIS = False
 # 服务器信息
 SIMPLEUI_HOME_INFO = False
 
-SIMPLEUI_LOGO = '../../static/logo.png'
+SIMPLEUI_LOGO = '../../static/adminlogo.png'
 
 
 

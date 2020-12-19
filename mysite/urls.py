@@ -36,6 +36,7 @@ urlpatterns+=i18n_patterns(
     path('product/', include(('product.urls', 'product'), namespace='product')),
     path('case/', include(('case.urls', 'case'), namespace='case')),
     path('usercenter/', include(('usercenter.urls', 'usercenter'), namespace='usercenter')),
+    path('news/', include(('news.urls', 'news'), namespace='news')),
     prefix_default_language=False,
 )
 

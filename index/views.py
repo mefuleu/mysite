@@ -13,6 +13,9 @@ def index(request):
     host=request.get_host()
     return render(request, 'index.html', locals())
 
+def show_sd(request):
+    return render(request,'show_sd.html',locals())
+
 def tourist_land(request):
 
     if request.user.is_authenticated:

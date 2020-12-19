@@ -1,6 +1,5 @@
 {% load static %}
 {% load i18n %}
-{% load socialaccount %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,9 +43,9 @@
                     <ul class="breadcrumb">
                         {% block leftnav %}
                             <li><a href="/">Home</a></li>
-                            <li><a href="#">About SoundPlay</a></li>
+                            <li><a href="{% url 'index:show_sd' %}">About SoundPlay</a></li>
                             <li><a href="{% url 'product:product_home' %}">Products</a></li>
-                            <li><a href="#">News</a></li>
+                            <li><a href="{% url 'news:news_home' %}">News</a></li>
                             <li><a href="{% url 'case:case_home' %}">Typical Case</a></li>
                         {% endblock %}
                     </ul>
