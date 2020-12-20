@@ -20,7 +20,8 @@
 5. 执行python manage.py migrate
 6. 执行python manage.py createsuperuser
 7. 设置settings文件夹.py文件中的EMAIL_HOST_PASSWORD FB_CLIENT_ID FB_SECRET_KEY DJANGO_SECRET_KEY DATABASE_PASSWORD等环境变量
-8. 将index.html以及chat.html中的wss链接换为ws,并将routing.py文件中的wss替换为ws
+8. 将index.html以及chat.html中的wss链接换为ws,并将routing.py文件中的wss替换为ws  
 9.当前项目目录下执行：python manage.py runserver 
+
 
 
