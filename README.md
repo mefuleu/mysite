@@ -9,7 +9,9 @@
 
 数据库:mysql,redis
 
-项目测试部署网站：www.jackdaydayup.com  测试用户名:root  测试密码：123456  网站后台：www.jackdaydayup.com/admin/
+项目测试部署网站：www.jackdaydayup.com  测试用户名:root  测试密码：123456  网站后台：www.jackdaydayup.com/admin/  
+
+首页在线客服测试：注册一个用户或使用landing as tourists ，打开两个不同浏览器，一个登录root账户，一个登录注册的用户。
 
 项目在本地运行步骤：
 
