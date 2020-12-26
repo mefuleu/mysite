@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'locale',
     'case',
     'news',
+    'rest_framework',
 ]
 
 #app django.contrib.sites需要的设置
@@ -250,3 +251,5 @@ CHANNEL_LAYERS = {
         },
     },
 }
+
+MESSAGES_TO_LOAD=15
