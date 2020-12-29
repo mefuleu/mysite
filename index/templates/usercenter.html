@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    hello,{{ user.username }}
+    {% if user.username in tourists_list %}
+        <p>you are tourists,Your password is the same as your user name</p>
+    {% endif %}
+    go,<a href="{% url 'index:index' %}">index</a>
+    <a href="{% url 'index:tourist_logout' %}">logout</a>
+</body>
+</html>

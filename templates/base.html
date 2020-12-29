@@ -1,6 +1,5 @@
 {% load static %}
 {% load i18n %}
-{% load socialaccount %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,9 +24,11 @@
 <body>
 
 
-<a href="{% url 'chat:chat_index' %}">chat me</a>
+{#<a href="{% url 'chat:chat_index' %}">chat me</a>#}
 {% if user.is_authenticated %}
-    <a href="{% url 'usercenter:detail_usercenter' %}">Hello,{{ user.username }}</a>
+    <a href="{% url 'index:tourist_landing' %}">Hello,
+        <checkroot id="checkroot">{{ user.username }}</checkroot>
+    </a>
 {% endif %}
 <div class="container-fluid">
     <div class="row-fluid">
@@ -44,9 +45,9 @@
                     <ul class="breadcrumb">
                         {% block leftnav %}
                             <li><a href="/">Home</a></li>
-                            <li><a href="#">About SoundPlay</a></li>
+                            <li><a href="{% url 'index:show_sd' %}">About SoundPlay</a></li>
                             <li><a href="{% url 'product:product_home' %}">Products</a></li>
-                            <li><a href="#">News</a></li>
+                            <li><a href="{% url 'news:news_home' %}">News</a></li>
                             <li><a href="{% url 'case:case_home' %}">Typical Case</a></li>
                         {% endblock %}
                     </ul>
@@ -65,9 +66,9 @@
                                 <li><a href="{% url 'index:tourist_landing' %}">Landing as tourists</a></li>
                             {% endif %}
                             {% if user.is_authenticated %}
-                            <li>
-                                <a class="btn btn-default" href="http://{{ host }}/accounts/logout/" role="button">logout</a>
-                            </li>
+                                <li>
+                                    <a class="btn btn-default" href="http://{{ host }}/accounts/logout/" role="button">logout</a>
+                                </li>
                             {% endif %}
                         </ul>
                     {% endblock %}
@@ -82,6 +83,24 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="row-fluid">
+        {% block chatapp %}
+        {% endblock %}
+    </div>
+    <div class="row">
+        <div style="width:300px;margin:0 auto; padding:20px 0;">
+            <a target="_blank" href="https://beian.miit.gov.cn/"
+               style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+                <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:black;">
+                    浙ICP备2020034485号-1</p></a>
+            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33032402002058"
+               style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img
+                    src="{% static 'images/备案图标.png' %}" style="float:left;"/>
+                <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:black;">浙公网安备
+                    33032402002058号</p></a>
+        </div>
+
     </div>
 </div>
 

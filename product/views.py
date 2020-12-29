@@ -1,4 +1,8 @@
+from django.contrib.contenttypes.models import ContentType
 from django.shortcuts import render,get_object_or_404
+
+from comments.forms import CommentForm
+from comments.models import Comment
 from .models import Product,ProductTypeSecond,ProductTypeFirst
 from django.conf import settings
 from django.core.paginator import Paginator
@@ -36,9 +40,24 @@ def show_product(request):
     context['host']=request.get_host()
     return render(request,'show_product.html',context=context)
 
+
+
+
 def detailProduct(request, product_pk):
+    context = {}
     product = get_object_or_404(Product, pk=product_pk)
-    return render(request, 'product_detail.html', locals())
+    # read_cookie_key = read_statistic_one_read(request, product)
+    product_content_type = ContentType.objects.get_for_model(product)
+    comments = Comment.objects.filter(content_type=product_content_type, object_id=product.pk, parent=None)
+    context['previous_product'] = Product.objects.filter(create__lt=product.create).last()
+    context['next_product'] = Product.objects.filter(create__gt=product.create).first()
+    context['product'] = product
+    context['comments'] = comments.order_by('-comment_time')
+    context['comment_form'] = CommentForm(
+        initial={'content_type': product_content_type.model, 'object_id': product_pk, 'reply_comment_id': 0})
+    context['host']=request.get_host()
+    # response.set_cookie(read_cookie_key, 'true')  # 关闭浏览器，cookie才无效
+    return render(request, 'product_detail.html', context)
 
 
 

@@ -31,7 +31,8 @@ INSTALLED_APPS = [
     'simpleui',
     'channels',
     'chat',
-    'usercenter',
+    'comments',
+    # 'usercenter',
     'django.contrib.auth',
     'django.contrib.messages',
     'django.contrib.sites',
@@ -44,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'werkzeug',
     'django.contrib.staticfiles',
     'index',
     'product',
@@ -51,11 +53,12 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'locale',
     'case',
-    'werkzeug_debugger_runserver',
+    'news',
+    'rest_framework',
 ]
 
 #app django.contrib.sites需要的设置
-SITE_ID = 1
+SITE_ID = 2
 # 指定要使用的登录方法(用户名、电子邮件地址或两者之一)
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 # 要求用户注册时必须填写email
@@ -162,42 +165,28 @@ USE_TZ = True
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-CKEDITOR_UPLOAD_PATH = 'upload'
+CKEDITOR_UPLOAD_PATH = 'upload/'
 # CKEDITOR_IMAGE_BACKEND = 'pillow'
 
 
-CKEDITOR_CONFIGS = {
-    # django-ckeditor默认使用default配置
-    'default': {
-        # 编辑器宽度自适应
-        'width': 'auto',
-        'height': '250px',
-        # tab键转换空格数
-        'tabSpaces': 4,
-        # 工具栏风格
-        'toolbar': 'Custom',  # 指定数量工具栏
-        # 'toolbar':'full', # 完整工具条
+# 配置ckeditor
+CKEDITOR_UPLOAD_PATH = 'upload/'
 
-        # 自定义工具栏
-        # 工具栏按钮
-        'toolbar_Custom': [
-            # 表情 代码块
-            ['Smiley', 'CodeSnippet'],
-            # 字体风格
-            ['Bold', 'Italic', 'Underline', 'RemoveFormat', 'Blockquote'],
-            # 字体颜色
-            ['TextColor', 'BGColor'],
-            # 链接
-            ['Link', 'Unlink'],
-            # 列表
+CKEDITOR_CONFIGS = {
+    'comment_ckeditor': {
+        'toolbar': 'custom',
+        'toolbar_custom': [
+            ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript'],
+            ["TextColor", "BGColor", 'RemoveFormat'],
             ['NumberedList', 'BulletedList'],
-            # 图片
-            ['Image', 'Link', 'Unlink'],
-            # 最大化
-            ['Maximize']
+            ['Link', 'Unlink'],
+            ["Smiley", "SpecialChar", 'Blockquote'],
         ],
-        # 加入代码块插件
-        'extraPlugins': ','.join(['codesnippet', 'widget', 'lineutils', ]),
+        'width': 'auto',
+        'height': '180',
+        'tabSpaces': 4,
+        'removePlugins': 'elementspath',
+        'resize_enabled': False,
     }
 }
 
@@ -235,7 +224,7 @@ SIMPLEUI_ANALYSIS = False
 # 服务器信息
 SIMPLEUI_HOME_INFO = False
 
-SIMPLEUI_LOGO = '../../static/logo.png'
+SIMPLEUI_LOGO = '../../static/adminlogo.png'
 
 
 
@@ -249,3 +238,5 @@ CHANNEL_LAYERS = {
         },
     },
 }
+
+MESSAGES_TO_LOAD=15

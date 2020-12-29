@@ -13,6 +13,9 @@ def index(request):
     host=request.get_host()
     return render(request, 'index.html', locals())
 
+def show_sd(request):
+    return render(request,'show_sd.html',locals())
+
 def tourist_land(request):
 
     if request.user.is_authenticated:
@@ -27,6 +30,11 @@ def tourist_land(request):
         tourist.visitor_password=visitor_password
         tourist.save()
         login(request,visit_user,backend='django.contrib.auth.backends.ModelBackend')
+    tourists = Tourist.objects.values('visitor_name')
+    tourists_init_list=list(tourists)
+    tourists_list=[]
+    for each_dict in tourists_init_list:
+        tourists_list.append(each_dict['visitor_name'])
     return render(request,'usercenter.html',locals())
 
 def tourist_logout(request):
