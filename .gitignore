@@ -6,4 +6,5 @@ __pycache__/
 supervisor_log/
 *.sql
 migrations/
+mysite/logs/
 
