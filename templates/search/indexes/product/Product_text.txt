@@ -1,0 +1,3 @@
+{{ object.title }}
+{{ object.use_age }}
+{{ object.typename_second }}
