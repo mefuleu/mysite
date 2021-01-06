@@ -1,0 +1,2 @@
+INFO 2020-12-29 10:44:07,313 autoreload 617 Watching for file changes with StatReloader
+INFO 2020-12-29 10:44:27,697 autoreload 240 C:\Users\jkwu3\Desktop\mysite1\mysite\settings\base.py changed, reloading.

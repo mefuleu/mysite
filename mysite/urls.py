@@ -20,14 +20,13 @@ from django.urls import path, include, re_path
 from django.conf.urls.i18n import i18n_patterns
 from django.views.i18n import JavaScriptCatalog
 from django.views.static import serve
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('ckeditor/',include('ckeditor_uploader.urls')),
     path('accounts/', include('allauth.urls')),
     path('chat/', include(('chat.urls','chat'),namespace='chat')),
     path('comment/', include('comments.urls')),
-    path('search/', include('haystack.urls')),
+    path('search/',include('haystack.urls')),
     re_path('media/(?P<path>.*)', serve, {'document_root': settings.MEDIA_ROOT}, name='media'),
     re_path('static/(?P<path>.*)', serve, {'document_root': settings.STATIC_ROOT}, name='static'),
 ]

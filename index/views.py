@@ -5,9 +5,12 @@ import random
 import string
 
 from django.urls import reverse
+from haystack.views import SearchView
 
 from .models import Tourist
 from django.contrib.auth import authenticate, login,logout
+
+
 
 def index(request):
     host=request.get_host()
@@ -40,3 +43,4 @@ def tourist_land(request):
 def tourist_logout(request):
     logout(request)
     return HttpResponseRedirect(reverse("index:index"))
+

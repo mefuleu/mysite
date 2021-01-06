@@ -31,7 +31,8 @@ class Product(models.Model):
     use_age = models.CharField(max_length=400, blank=True)
     ordering_hotline = models.CharField(max_length=400, blank=True)
     create = models.DateTimeField(default=timezone.now)
-    content = RichTextUploadingField()
+    content = RichTextUploadingField(config_name='comment_ckeditor')
+    modelname=models.CharField(default='product',max_length=50)
     typename_second = models.ForeignKey(ProductTypeSecond, on_delete=models.CASCADE, verbose_name='typename_second')
 
     def __str__(self):

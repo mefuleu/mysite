@@ -48,8 +48,13 @@
                             <li><a href="{% url 'index:show_sd' %}">About SoundPlay</a></li>
                             <li><a href="{% url 'product:product_home' %}">Products</a></li>
                             <li><a href="{% url 'news:news_home' %}">News</a></li>
-                            <li><a href="{% url 'case:case_home' %}">Typical Case</a></li>
-                            <li><a href="{% url 'haystack_search' %}">Global search</a></li>
+                            <li><a href="{% url 'case:case_home' %}"> Typical Case</a></li>
+                            <li>
+                                <form action="{% url 'haystack_search' %}" method="get">
+                                    <input type="text" name="q" placeholder="Key words please input">
+                                    <input type="submit" id="search" value="search">
+                                </form>
+                            </li>
                         {% endblock %}
                     </ul>
                 </div>
@@ -58,17 +63,17 @@
                         <ul class="breadcrumb">
                             {% if not user.is_authenticated %}
                                 <li>
-                                    <a class="btn btn-default" href="http://{{ host }}/accounts/login/"
+                                    <a class="btn btn-default" href="{% url 'account_login' %}"
                                        role="button">login</a>
                                 </li>
                                 <li>
-                                    <a class="btn btn-default" href="http://{{ host }}/accounts/signup/" role="button">register</a>
+                                    <a class="btn btn-default" href="{% url 'account_signup' %}" role="button">sign up</a>
                                 </li>
                                 <li><a href="{% url 'index:tourist_landing' %}">Landing as tourists</a></li>
                             {% endif %}
                             {% if user.is_authenticated %}
                                 <li>
-                                    <a class="btn btn-default" href="http://{{ host }}/accounts/logout/" role="button">logout</a>
+                                    <a class="btn btn-default" href="{% url 'account_signup' %}" role="button">logout</a>
                                 </li>
                             {% endif %}
                         </ul>
