@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block leftcontent %}
-
+{% load search_filters %}
     <h2>Search</h2>
 
     <form method="get" action=".">
@@ -35,11 +35,11 @@
             {% if page.has_previous or page.has_next %}
                 <div>
                     {% if page.has_previous %}
-                        {% if request.get_full_path|length >= 56 %}
-                            <a href="?q={{ query }}&amp;page={{ page.previous_page_number }}">
-                        {% elif request.get_full_path|slice:39 == '/search/?q=large&models=product.product' %}
+                        {% if request.get_full_path|suchsplit == 'choice all' %}
+                            <a href="?q={{ query }}&amp;models=case.case&models=product.product&amp;page={{ page.previous_page_number }}">
+                        {% elif request.get_full_path|suchsplit == 'choice product' %}
                             <a href="?q={{ query }}&amp;models=product.product&amp;page={{ page.previous_page_number }}">
-                        {% elif request.get_full_path|slice:33 == '/search/?q=large&models=case.case' %}
+                        {% elif request.get_full_path|suchsplit == 'choice case' %}
                             <a href="?q={{ query }}&amp;models=case.case&amp;page={{ page.previous_page_number }}">
                         {% else %}
                             <a href="?q={{ query }}&amp;page={{ page.previous_page_number }}">
@@ -49,11 +49,11 @@
                     {% if page.has_previous %}</a>{% endif %}
                     |
                     {% if page.has_next %}
-                        {% if request.get_full_path|length >= 56 %}
-                            <a href="?q={{ query }}&amp;page={{ page.next_page_number }}">
-                        {% elif request.get_full_path|slice:39 == '/search/?q=large&models=product.product' %}
+                        {% if request.get_full_path|suchsplit == 'choice all' %}
+                            <a href="?q={{ query }}&amp;models=case.case&models=product.product&amp;page={{ page.next_page_number }}">
+                        {% elif request.get_full_path|suchsplit == 'choice product' %}
                             <a href="?q={{ query }}&amp;models=product.product&amp;page={{ page.next_page_number }}">
-                        {% elif request.get_full_path|slice:33 == '/search/?q=large&models=case.case' %}
+                        {% elif request.get_full_path|suchsplit == 'choice case' %}
                             <a href="?q={{ query }}&amp;models=case.case&amp;page={{ page.next_page_number }}">
                         {% else %}
                             <a href="?q={{ query }}&amp;page={{ page.next_page_number }}">

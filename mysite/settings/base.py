@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'case',
     'news',
     'rest_framework',
+    'index.templatetags',
 ]
 
 #app django.contrib.sites需要的设置
@@ -166,7 +167,7 @@ USE_TZ = True
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-CKEDITOR_UPLOAD_PATH = 'upload/'
+# CKEDITOR_UPLOAD_PATH = 'upload/'
 # CKEDITOR_IMAGE_BACKEND = 'pillow'
 
 
