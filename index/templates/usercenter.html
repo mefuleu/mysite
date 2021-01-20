@@ -1,15 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    hello,{{ user.username }}
-    {% if user.username in tourists_list %}
-        <p>you are tourists,Your password is the same as your user name</p>
-    {% endif %}
-    go,<a href="{% url 'index:index' %}">index</a>
-    <a href="{% url 'index:tourist_logout' %}">logout</a>
-</body>
-</html>
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>Title</title>#}
+{#</head>#}
+{#<body>#}
+{#    hello,{{ user.username }}#}
+{#    {% if user.username in tourists_list %}#}
+{#        <p>you are tourists,Your password is the same as your user name</p>#}
+{#    {% endif %}#}
+{#    go,<a href="{% url 'index:index' %}">index</a>#}
+{#    <a href="{% url 'index:tourist_logout' %}">logout</a>#}
+{#</body>#}
+{#</html>#}
+{% extends 'base.html' %}
+
+{% block title %}usercenter{% endblock %}
+
+{% block nav_home_active %}active{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1">
+                {% if user.is_authenticated %}
+                    <h2>hello,{{ user.username }}</h2>
+                    {% if user.username in tourists_list %}
+                        <p>you are tourists,Your password is the same as your user name</p>
+                    {% endif %}
+                    go,<a href="{% url 'index:index' %}">index</a>
+                    <a href="{% url 'index:tourist_logout' %}">logout</a>
+                {% else %}
+                    <span>Not logged in, jump to home page</span>
+                    <script type="text/javascript">
+                        window.location.href = '/';
+                    </script>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,92 +1,183 @@
+{#{% extends 'base.html' %}#}
+{#{% load static %}#}
+{#{% load i18n %}#}
+{##}
+{##}
+{##}
+{#{% block content %}#}
+{#    <p>Total number of products:{{ products|length }}</p>#}
+{#    <div class="row">#}
+{#        {% for eachproduct in page_of_products %}#}
+{#            <div class="col-sm-6 col-md-3">#}
+{#                <a href="{% url 'product:detailProduct' eachproduct.pk %}">#}
+{#                    <img src="{% get_static_prefix %}sd_products_img/{{ eachproduct.pk }}.jpg" height="200" width="200">#}
+{#                    <h6>{{ eachproduct.title|truncatechars:65 }}</h6>#}
+{#                </a>#}
+{#            </div>#}
+{#        {% empty %}#}
+{#            暂无文章，敬请期待#}
+{#        {% endfor %}#}
+{#    </div>#}
+{#    <div class="row">#}
+{#        <ul class="pagination">#}
+{# 上一页 #}
+{#            <li>#}
+{#                {% if page_of_products.has_previous %}#}
+{#                    <a href="?page={{ page_of_products.pageprevious_page_number }}" aria-label="Previous">#}
+{#                        <span aria-hidden="true">&laquo;</span>#}
+{#                    </a>#}
+{#                {% else %}#}
+{#                    <span aria-hidden="true">&laquo;</span>#}
+{#                {% endif %}#}
+{#            </li>#}
+{# 全部页码 #}
+{#            {% for page_num in page_range %}#}
+{#                {% if page_num == page_of_products.number %}#}
+{#                    <li class="active"><span>{{ page_num }}</span></li>#}
+{#                {% else %}#}
+{#                    {% if page_num == '...' %}#}
+{#                        <li><span>{{ page_num }}</span></li>#}
+{#                    {% else %}#}
+{#                        <li><a href="?page={{ page_num }}">{{ page_num }}</a></li>#}
+{#                    {% endif %}#}
+{#                {% endif %}#}
+{#            {% endfor %}#}
+{# 下一页 #}
+{#            <li>#}
+{#                {% if page_of_products.has_next %}#}
+{#                    <a href="?page={{ page_of_products.next_page_number }}" aria-label="Next">#}
+{#                        <span aria-hidden="true">&raquo;</span>#}
+{#                    </a>#}
+{#                {% else %}#}
+{#                    <span aria-hidden="true">&raquo;</span>#}
+{#                {% endif %}#}
+{#            </li>#}
+{#        </ul>#}
+{#    </div>#}
+{##}
+{#{% endblock %}#}
+{##}
+{##}
+{##}
+{#{% block filter %}#}
+{#    <p>Product category</p>#}
+{#    {% for first_type in first_types %}#}
+{#        <div class="row">#}
+{#            <div class="btn-group">#}
+{#                <button type="button" class="btn"><a#}
+{#                        href="{% url 'product:typeProduct' first_type.typename ' ' %}">{{ first_type.typename }}</a>#}
+{#                </button>#}
+{#                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"#}
+{#                        aria-expanded="false">#}
+{#                    <span class="caret"></span>#}
+{#                    <span class="sr-only">Toggle Dropdown</span>#}
+{#                </button>#}
+{#                <ul class="dropdown-menu">#}
+{#                    {% for second_type in first_type.producttypesecond_set.all %}#}
+{#                        <li>#}
+{#                            <a href="{% url 'product:typeProduct' first_type.typename second_type.second_typename %}">{{ second_type.second_typename }} </a>#}
+{#                        </li>#}
+{#                    {% endfor %}#}
+{##}
+{#                </ul>#}
+{#            </div>#}
+{#        </div>#}
+{##}
+{#    {% empty %}#}
+{#        no category#}
+{#    {% endfor %}#}
+{#{% endblock %}#}
+{##}
+{##}
+{##}
 {% extends 'base.html' %}
+{% block title %}我的网站{% endblock %}
+{% block nav_product_active %}active{% endblock %}
 {% load static %}
-{% load i18n %}
 
-
-
-{% block leftcontent %}
-    <p>Total number of products:{{ products|length }}</p>
-    <div class="row">
-        {% for eachproduct in page_of_products %}
-            <div class="col-sm-6 col-md-3">
-                <a href="{% url 'product:detailProduct' eachproduct.pk %}">
-                    <img src="{% get_static_prefix %}sd_products_img/{{ eachproduct.pk }}.jpg" height="200" width="200">
-                    <h6>{{ eachproduct.title|truncatechars:65 }}</h6>
-                </a>
-            </div>
-        {% empty %}
-            暂无文章，敬请期待
-        {% endfor %}
-    </div>
-    <div class="row">
-        <ul class="pagination">
-            {# 上一页 #}
-            <li>
-                {% if page_of_products.has_previous %}
-                    <a href="?page={{ page_of_products.pageprevious_page_number }}" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                    </a>
-                {% else %}
-                    <span aria-hidden="true">&laquo;</span>
-                {% endif %}
-            </li>
-            {# 全部页码 #}
-            {% for page_num in page_range %}
-                {% if page_num == page_of_products.number %}
-                    <li class="active"><span>{{ page_num }}</span></li>
-                {% else %}
-                    {% if page_num == '...' %}
-                        <li><span>{{ page_num }}</span></li>
-                    {% else %}
-                        <li><a href="?page={{ page_num }}">{{ page_num }}</a></li>
-                    {% endif %}
-                {% endif %}
-            {% endfor %}
-            {# 下一页 #}
-            <li>
-                {% if page_of_products.has_next %}
-                    <a href="?page={{ page_of_products.next_page_number }}" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                    </a>
-                {% else %}
-                    <span aria-hidden="true">&raquo;</span>
-                {% endif %}
-            </li>
-        </ul>
-    </div>
-
+{% block header_extends %}
+    <link rel="stylesheet" href="{% static 'product/product.css' %}">
 {% endblock %}
 
-
-
-{% block filter %}
-    <p>Product category</p>
-    {% for first_type in first_types %}
-        <div class="row">
-            <div class="btn-group">
-                <button type="button" class="btn"><a
-                        href="{% url 'product:typeProduct' first_type.typename ' ' %}">{{ first_type.typename }}</a>
-                </button>
-                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">
-                    <span class="caret"></span>
-                    <span class="sr-only">Toggle Dropdown</span>
-                </button>
-                <ul class="dropdown-menu">
-                    {% for second_type in first_type.producttypesecond_set.all %}
-                        <li>
-                            <a href="{% url 'product:typeProduct' first_type.typename second_type.second_typename %}">{{ second_type.second_typename }} </a>
-                        </li>
+{# 页面内容 #}
+{% block content %}
+    <div class="row-fluid">
+        <div class="col-md-8">
+            <p>Total number of products:{{ products|length }}</p>
+            <div class="row">
+                {% for eachproduct in page_of_products %}
+                    <div class="col-sm-6 col-md-3">
+                        <a href="{% url 'product:detailProduct' eachproduct.pk %}">
+                            <img src="{% get_static_prefix %}sd_products_img/{{ eachproduct.pk }}.jpg" height="200"
+                                 width="200">
+                            <h6>{{ eachproduct.title|truncatechars:25 }}</h6>
+                        </a>
+                    </div>
+                {% empty %}
+                    No article, please look forward to it
+                {% endfor %}
+            </div>
+            <div class="row">
+                <ul class="pagination">
+                    <li>
+                        {% if page_of_products.has_previous %}
+                            <a href="?page={{ page_of_products.pageprevious_page_number }}" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        {% else %}
+                            <span aria-hidden="true">&laquo;</span>
+                        {% endif %}
+                    </li>
+                    {% for page_num in page_range %}
+                        {% if page_num == page_of_products.number %}
+                            <li class="active"><span>{{ page_num }}</span></li>
+                        {% else %}
+                            {% if page_num == '...' %}
+                                <li><span>{{ page_num }}</span></li>
+                            {% else %}
+                                <li><a href="?page={{ page_num }}">{{ page_num }}</a></li>
+                            {% endif %}
+                        {% endif %}
                     {% endfor %}
-
+                    <li>
+                        {% if page_of_products.has_next %}
+                            <a href="?page={{ page_of_products.next_page_number }}" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        {% else %}
+                            <span aria-hidden="true">&raquo;</span>
+                        {% endif %}
+                    </li>
                 </ul>
             </div>
         </div>
+        <div class="col-md-4 col-md-push-1">
+            <p>Product category</p>
+            {% for first_type in first_types %}
+                <div class="row">
+                    <div class="btn-group">
+                        <button type="button" class="btn"><a
+                                href="{% url 'product:typeProduct' first_type.typename ' ' %}">{{ first_type.typename }}</a>
+                        </button>
+                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            {% for second_type in first_type.producttypesecond_set.all %}
+                                <li>
+                                    <a href="{% url 'product:typeProduct' first_type.typename second_type.second_typename %}">{{ second_type.second_typename }} </a>
+                                </li>
+                            {% endfor %}
 
-    {% empty %}
-        no category
-    {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+
+            {% empty %}
+                no category
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}
-
-
-

@@ -58,8 +58,5 @@ class MessageModel(Model):
             self.notify_ws_clients()
 
     # Meta
-    # class Meta:
-    #     app_label = 'core'
-    #     verbose_name = 'message'
-    #     verbose_name_plural = 'messages'
-    #     ordering = ('-timestamp',)
+    class Meta:
+        ordering = ('-timestamp',)

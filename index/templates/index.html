@@ -1,86 +1,92 @@
-{% extends 'base.html' %}
-{% load i18n %}
-{% load static %}
-{% block leftcontent %}
-            <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
-            <input name="next" type="hidden" value="{{ redirect_to }}">
-            <select name="language">
-                {% get_current_language as LANGUAGE_CODE %}
-                {% get_available_languages as LANGUAGES %}
-                {% get_language_info_list for LANGUAGES as languages %}
-                {% for language in languages %}
-                    <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
-                        {{ language.name_local }} ({{ language.code }})
-                    </option>
-                {% endfor %}
-            </select>
-            <input type="submit" value="Go">
-        </form>
-{% endblock %}
+ {% extends 'base.html' %}
+    {% load i18n %}
+    {% load static %}
 
 
+    {% block header_extends %}
+        <link rel="stylesheet" href="{% static 'home.css' %}">
+    {% endblock %}
 
-{% block filter %}
-<p>首页在线客服实现逻辑：管理员root可以可以获取除自己外的用户列表，并与访问者点对点聊天。访问者无法看到用户列表，发送出去的消息默认由管理员root接受</p>
-{% endblock %}
+    {% block nav_home_active %}active{% endblock %}
 
-{% block chatapp %}
-
-        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <script src="{% static 'js/jquery.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
-    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}"/>
-<div class="container">
-        <div class="page-header">
-            <h1>Welcome to SoundPlay!What can I do for you？</h1>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                {% if request.user.username == 'root' %}
-                <div id="user-list" class="list-group">
-                    <a href="" class="list-group-item disabled">
-                        <h4 class="list-group-item-heading">Users</h4>
-                        {# Users go here #}
-                    </a>
-                </div>
-                {% endif %}
-            </div>
+    {% block content %}
+        <div class="container">
             <div class="col-md-8">
-                <div class="panel panel-info">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">Chat</h4>
-                    </div>
-                    <div>
-                        <ul id="messages" class="messages">
-                            {# Messages go here #}
-                        </ul>
-                    </div>
-                    <div class="panel-footer">
-                        <div class="input-group">
-                            <input id="chat-input" type="text"
-                                   class="form-control input"
-                                   placeholder="Type your message here ..."
-                                   maxlength="500">
-                            <span class="input-group-btn">
-                            <button class="btn btn-info btn"
-                                    id="btn-send">
-                                Send</button>
-                        </span>
+                <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                    <input name="next" type="hidden" value="{{ redirect_to }}">
+                    <select name="language">
+                        {% get_current_language as LANGUAGE_CODE %}
+                        {% get_available_languages as LANGUAGES %}
+                        {% get_language_info_list for LANGUAGES as languages %}
+                        {% for language in languages %}
+                            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                                {{ language.name_local }} ({{ language.code }})
+                            </option>
+                        {% endfor %}
+                    </select>
+                    <input type="submit" value="Go">
+                </form>
+            </div>
+            <div class="col-md-4">
+                <p>首页在线客服实现逻辑：管理员root可以可以获取除自己外的用户列表，并与访问者点对点聊天。访问者无法看到用户列表，发送出去的消息默认由管理员root接受</p>
+            </div>
+        </div>
+        <div class="container">
+            <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+            <script src="{% static 'js/jquery.min.js' %}"></script>
+            <script src="{% static 'js/bootstrap.min.js' %}"></script>
+            <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+            <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}"/>
+            <div class="page-header">
+                <h1>Welcome to SoundPlay!What can I do for you？</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    {% if request.user.username == 'root' %}
+                        <div id="user-list" class="list-group">
+                            <a href="" class="list-group-item disabled">
+                                <h4 class="list-group-item-heading">Users</h4>
+                                {# Users go here #}
+                            </a>
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="col-md-8">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Chat</h4>
+                        </div>
+                        <div>
+                            <ul id="messages" class="messages">
+                                {# Messages go here #}
+                            </ul>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="input-group">
+                                <input id="chat-input" type="text"
+                                       class="form-control input"
+                                       placeholder="Type your message here ..."
+                                       maxlength="500">
+                                <span class="input-group-btn">
+                                <button class="btn btn-info btn"
+                                        id="btn-send">
+                                    Send</button>
+                            </span>
+                            </div>
                         </div>
                     </div>
+
+
                 </div>
-
-
             </div>
         </div>
-    </div>
 
         <script>
-        let sessionKey = '{{ request.session.session_key }}';
-        let currentUser = '{{ request.user.username }}';
-    </script>
-{#    <script src="{% static 'js/app.js' %}"></script>#}
-    <script src="{% static 'js/apptest.js' %}"></script>
-{% endblock %}
+            let sessionKey = '{{ request.session.session_key }}';
+            let currentUser = '{{ request.user.username }}';
+        </script>
+        {#    <script src="{% static 'js/app.js' %}"></script>#}
+        <script src="{% static 'js/apptest.js' %}"></script>
+        </div>
 
+    {% endblock %}

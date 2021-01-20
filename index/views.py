@@ -1,5 +1,6 @@
+from django.contrib import auth
 from django.contrib.auth.models import User
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, JsonResponse
 from django.shortcuts import render
 import random
 import string
@@ -7,6 +8,7 @@ import string
 from django.urls import reverse
 from haystack.views import SearchView
 
+from like.forms import LoginForm
 from .models import Tourist
 from django.contrib.auth import authenticate, login,logout
 
@@ -20,10 +22,7 @@ def show_sd(request):
     return render(request,'show_sd.html',locals())
 
 def tourist_land(request):
-
-    if request.user.is_authenticated:
-        pass
-    else:
+    if not request.user.is_authenticated:
         ran_str = ''.join(random.sample(string.ascii_letters + string.digits, 8))
         visitor_name=ran_str
         visitor_password=ran_str
@@ -43,4 +42,15 @@ def tourist_land(request):
 def tourist_logout(request):
     logout(request)
     return HttpResponseRedirect(reverse("index:index"))
+
+def login_for_medal(request):
+    login_form = LoginForm(request.POST)
+    data = {}
+    if login_form.is_valid():
+        user = login_form.cleaned_data['user']
+        auth.login(request, user)
+        data['status'] = 'SUCCESS'
+    else:
+        data['status'] = 'ERROR'
+    return JsonResponse(data)
 

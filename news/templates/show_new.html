@@ -4,68 +4,72 @@
 
 
 
-{% block leftcontent %}
-    <p>Total number of news:{{ news|length }}</p>
-    <div class="row">
-        {% for eachnew in page_of_news %}
-            <div class="col-sm-6 col-md-3">
-                <a href="{% url 'news:detailNews' eachnew.pk %}">
-                    <img src="{% get_static_prefix %}sd_new_img/{{ eachnew.pk }}.jpg" height="200" width="200">
-                    <h6>{{ eachnew.title|truncatechars:65 }}</h6>
-                </a>
+{% block content %}
+
+
+
+    <div class="row-fluid">
+        <div class="col-md-8">
+            <p>Total number of news:{{ news|length }}</p>
+            <div class="row">
+                {% for eachnew in page_of_news %}
+                    <div class="col-sm-6 col-md-3">
+                        <a href="{% url 'news:detailNews' eachnew.pk %}">
+                            <img src="{% get_static_prefix %}sd_new_img/{{ eachnew.pk }}.jpg" height="200" width="200">
+                            <h6>{{ eachnew.title|truncatechars:65 }}</h6>
+                        </a>
+                    </div>
+                {% empty %}
+                    No article, please look forward to it
+                {% endfor %}
             </div>
-        {% empty %}
-            No article, please look forward to it
-        {% endfor %}
-    </div>
-    <div class="row">
-        <ul class="pagination">
-            {# 上一页 #}
-            <li>
-                {% if page_of_news.has_previous %}
-                    <a href="?page={{ page_of_news.pageprevious_page_number }}" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                    </a>
-                {% else %}
-                    <span aria-hidden="true">&laquo;</span>
-                {% endif %}
-            </li>
-            {# 全部页码 #}
-            {% for page_num in page_range %}
-                {% if page_num == page_of_news.number %}
-                    <li class="active"><span>{{ page_num }}</span></li>
-                {% else %}
-                    {% if page_num == '...' %}
-                        <li><span>{{ page_num }}</span></li>
-                    {% else %}
-                        <li><a href="?page={{ page_num }}">{{ page_num }}</a></li>
-                    {% endif %}
-                {% endif %}
-            {% endfor %}
-            {# 下一页 #}
-            <li>
-                {% if page_of_news.has_next %}
-                    <a href="?page={{ page_of_news.next_page_number }}" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                    </a>
-                {% else %}
-                    <span aria-hidden="true">&raquo;</span>
-                {% endif %}
-            </li>
-        </ul>
+            <div class="row">
+                <ul class="pagination">
+                    {# 上一页 #}
+                    <li>
+                        {% if page_of_news.has_previous %}
+                            <a href="?page={{ page_of_news.pageprevious_page_number }}" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        {% else %}
+                            <span aria-hidden="true">&laquo;</span>
+                        {% endif %}
+                    </li>
+                    {# 全部页码 #}
+                    {% for page_num in page_range %}
+                        {% if page_num == page_of_news.number %}
+                            <li class="active"><span>{{ page_num }}</span></li>
+                        {% else %}
+                            {% if page_num == '...' %}
+                                <li><span>{{ page_num }}</span></li>
+                            {% else %}
+                                <li><a href="?page={{ page_num }}">{{ page_num }}</a></li>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                    {# 下一页 #}
+                    <li>
+                        {% if page_of_news.has_next %}
+                            <a href="?page={{ page_of_news.next_page_number }}" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        {% else %}
+                            <span aria-hidden="true">&raquo;</span>
+                        {% endif %}
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4 col-md-push-1">
+        </div>
     </div>
 
 {% endblock %}
 
 
 
-{% block filter %}
-    <p>new category</p>
-    {% for first_type in first_types %}
-    {% empty %}
-        no category
-    {% endfor %}
-{% endblock %}
+
+
 
 
 

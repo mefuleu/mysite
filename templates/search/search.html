@@ -1,8 +1,18 @@
 {% extends 'base.html' %}
-{% block leftcontent %}
-{% load search_filters %}
-    <h2>Search</h2>
 
+{% load search_filters %}
+
+{% load highlight %}
+
+{% block content %}
+    <style>
+        /* 搜索关键词高亮 */
+        span.highlighted {
+            color: #ff0000;
+        }
+    </style>
+    <div class="container">
+        <h2>Search</h2>
     <form method="get" action=".">
         <table>
             {{ form.as_table }}
@@ -19,13 +29,13 @@
             {% for result in page.object_list %}
                 {% if result.object.modelname == 'product' %}
                     <p>
-                        <a href="{% url 'product:detailProduct' result.object.id %}">{{ result.object.title }}
-                            & {{ result.object.id }}&{{ result.object.modelname|capfirst }}</a>
+                        <a href="{% url 'product:detailProduct' result.object.id %}">{% highlight result.object.title with query %}
+                            & {{ result.object.id }}&{{ result.object.modelname|capfirst }}&</a>
                     </p>
                 {% else %}
                     <p>
-                        <a href="{% url 'case:detailCase' result.object.id %}">{{ result.object.title }}
-                            & {{ result.object.id }}&{{ result.object.modelname|capfirst }}</a>
+                        <a href="{% url 'case:detailCase' result.object.id %}">{% highlight result.object.title with query %}
+                            & {{ result.object.id }}&{{ result.object.modelname|capfirst }}&</a>
                     </p>
                 {% endif %}
             {% empty %}
@@ -67,4 +77,6 @@
             {# Show some example queries to run, maybe query syntax, something else? #}
         {% endif %}
     </form>
+    </div>
+
 {% endblock %}

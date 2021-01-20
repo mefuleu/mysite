@@ -33,7 +33,6 @@ INSTALLED_APPS = [
     'channels',
     'chat',
     'comments',
-    # 'usercenter',
     'django.contrib.auth',
     'django.contrib.messages',
     'django.contrib.sites',
@@ -46,7 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    'werkzeug',
+    # 'werkzeug',
     'django.contrib.staticfiles',
     'index',
     'product',
@@ -55,6 +54,7 @@ INSTALLED_APPS = [
     'locale',
     'case',
     'news',
+    'like',
     'rest_framework',
     'index.templatetags',
 ]
@@ -298,6 +298,9 @@ HAYSTACK_CONNECTIONS = {
     },
 }
 
+
 HAYSTACK_SEARCH_RESULTS_PER_PAGE = 5
 #当添加、修改、删除数据时，自动生成索引
 HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
+
+HAYSTACK_CUSTOM_HIGHLIGHTER = 'utils.Highlighter.Highlighter'
