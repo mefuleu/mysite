@@ -3,7 +3,6 @@ from django.contrib.contenttypes.models import ContentType
 from django.http import JsonResponse
 from django.db.models import ObjectDoesNotExist
 from django.contrib import auth
-from .forms import LoginForm
 from .models import LikeCount, LikeRecord
 
 
@@ -67,14 +66,3 @@ def like_change(request):
             # 没有点赞过，不能取消
             return ErrorResponse(403, 'you were not liked')
 
-
-def login_for_medal(request):
-    login_form = LoginForm(request.POST)
-    data = {}
-    if login_form.is_valid():
-        user = login_form.cleaned_data['user']
-        auth.login(request, user)
-        data['status'] = 'SUCCESS'
-    else:
-        data['status'] = 'ERROR'
-    return JsonResponse(data)

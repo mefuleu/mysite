@@ -3,5 +3,4 @@ from . import views
 
 urlpatterns = [
     path('like_change', views.like_change, name='like_change'),
-    path('login_for_medal/', views.login_for_medal, name='login_for_medal'),
 ]

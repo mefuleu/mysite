@@ -24,7 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('ckeditor/',include('ckeditor_uploader.urls')),
     path('accounts/', include('allauth.urls')),
-    path('chat/', include(('chat.urls','chat'),namespace='chat')),
+    # path('chat/', include(('chat.urls','chat'),namespace='chat')),
     path('comment/', include('comments.urls')),
     path('search/',include('haystack.urls')),
     path('like/',include('like.urls')),
@@ -37,7 +37,6 @@ urlpatterns+=i18n_patterns(
     path('', include(('index.urls', 'index'), namespace='index')),
     path('product/', include(('product.urls', 'product'), namespace='product')),
     path('case/', include(('case.urls', 'case'), namespace='case')),
-    # path('usercenter/', include(('usercenter.urls', 'usercenter'), namespace='usercenter')),
     path('news/', include(('news.urls', 'news'), namespace='news')),
     prefix_default_language=False,
 )

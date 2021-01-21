@@ -18323,3 +18323,1575 @@ INFO 2021-01-20 23:18:54,843 runserver 147 HTTP GET /product/ 200 [0.03, 127.0.0
 INFO 2021-01-20 23:18:55,470 runserver 147 HTTP GET /product/product_id_1 200 [0.03, 127.0.0.1:57101]
 INFO 2021-01-20 23:18:56,238 runserver 147 HTTP GET /like/like_change?content_type=product&object_id=1&is_like=true&_=1611155935494 200 [0.01, 127.0.0.1:57101]
 INFO 2021-01-20 23:18:56,268 runserver 147 HTTP GET /accounts/login/ 200 [0.02, 127.0.0.1:57101]
+INFO 2021-01-21 09:55:43,281 autoreload 617 Watching for file changes with StatReloader
+INFO 2021-01-21 09:55:55,581 autoreload 617 Watching for file changes with StatReloader
+INFO 2021-01-21 09:55:57,516 runserver 147 HTTP GET / 200 [0.31, 127.0.0.1:52587]
+WARNING 2021-01-21 09:55:57,825 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.06, 127.0.0.1:52588]
+INFO 2021-01-21 09:55:57,832 runserver 147 HTTP GET /api/v1/user/ 200 [0.08, 127.0.0.1:52587]
+WARNING 2021-01-21 09:55:57,879 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.02, 127.0.0.1:52588]
+WARNING 2021-01-21 09:55:57,907 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.01, 127.0.0.1:52588]
+WARNING 2021-01-21 09:55:57,952 log 230 Not Found: /favicon.ico
+WARNING 2021-01-21 09:55:57,957 runserver 155 HTTP GET /favicon.ico 404 [0.03, 127.0.0.1:52588]
+ERROR 2021-01-21 09:55:58,014 log 230 Internal Server Error: /api/v1/message/
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1774, in get_prep_value
+    return int(value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\contrib\auth\models.py", line 414, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 339, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 38, in inner
+    response = await get_response(request)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 231, in _get_response_async
+    response = await wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 304, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "C:\Program Files\Python36\lib\asyncio\tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "C:\Program Files\Python36\lib\concurrent\futures\thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 343, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\chat\api.py", line 41, in list
+    Q(user=request.user))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1244, in build_filter
+    check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\related_lookups.py", line 117, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1778, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x000001791D959EF0>.
+ERROR 2021-01-21 09:55:58,024 runserver 160 HTTP GET /api/v1/message/?target=root 500 [0.18, 127.0.0.1:52587]
+INFO 2021-01-21 09:56:00,542 runserver 147 HTTP GET /product/ 200 [0.05, 127.0.0.1:52597]
+INFO 2021-01-21 09:56:00,568 runserver 147 HTTP GET /static/product/product.css 200 [0.01, 127.0.0.1:52597]
+INFO 2021-01-21 09:56:01,229 runserver 147 HTTP GET /show_sd 200 [0.01, 127.0.0.1:52597]
+INFO 2021-01-21 09:56:02,234 runserver 147 HTTP GET /product/ 200 [0.06, 127.0.0.1:52597]
+INFO 2021-01-21 09:56:02,884 runserver 147 HTTP GET /product/product_id_2 200 [0.07, 127.0.0.1:52597]
+INFO 2021-01-21 09:56:02,910 runserver 147 HTTP GET /static/ckeditor/ckeditor-init.js 200 [0.01, 127.0.0.1:52597]
+INFO 2021-01-21 09:56:02,969 runserver 147 HTTP GET /static/ckeditor/ckeditor/ckeditor.js 200 [0.06, 127.0.0.1:52598]
+INFO 2021-01-21 09:56:04,368 runserver 147 HTTP GET /like/like_change?content_type=product&object_id=2&is_like=true&_=1611194162904 200 [0.01, 127.0.0.1:52598]
+INFO 2021-01-21 09:56:04,441 runserver 147 HTTP GET /accounts/login/ 200 [0.06, 127.0.0.1:52598]
+INFO 2021-01-21 09:56:04,471 runserver 147 HTTP GET /static/facebook/js/fbconnect.js 200 [0.01, 127.0.0.1:52598]
+INFO 2021-01-21 09:56:08,779 runserver 147 HTTP GET /product/ 200 [0.05, 127.0.0.1:52598]
+INFO 2021-01-21 09:56:09,393 runserver 147 HTTP GET / 200 [0.01, 127.0.0.1:52598]
+WARNING 2021-01-21 09:56:09,475 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.02, 127.0.0.1:52597]
+INFO 2021-01-21 09:56:09,483 runserver 147 HTTP GET /api/v1/user/ 200 [0.04, 127.0.0.1:52598]
+WARNING 2021-01-21 09:56:09,510 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.01, 127.0.0.1:52598]
+WARNING 2021-01-21 09:56:09,549 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.01, 127.0.0.1:52598]
+ERROR 2021-01-21 09:56:09,618 log 230 Internal Server Error: /api/v1/message/
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1774, in get_prep_value
+    return int(value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\contrib\auth\models.py", line 414, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 339, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 38, in inner
+    response = await get_response(request)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 231, in _get_response_async
+    response = await wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 304, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "C:\Program Files\Python36\lib\asyncio\tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "C:\Program Files\Python36\lib\concurrent\futures\thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 343, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\chat\api.py", line 41, in list
+    Q(user=request.user))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1244, in build_filter
+    check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\related_lookups.py", line 117, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1778, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x000001791DC254E0>.
+ERROR 2021-01-21 09:56:09,624 runserver 160 HTTP GET /api/v1/message/?target=root 500 [0.12, 127.0.0.1:52597]
+INFO 2021-01-21 09:56:10,142 runserver 147 HTTP GET /product/ 200 [0.05, 127.0.0.1:52612]
+INFO 2021-01-21 09:56:10,165 runserver 151 HTTP GET /static/product/product.css 304 [0.01, 127.0.0.1:52612]
+INFO 2021-01-21 09:56:10,624 runserver 147 HTTP GET /show_sd 200 [0.01, 127.0.0.1:52612]
+INFO 2021-01-21 09:56:11,584 runserver 147 HTTP GET /news/ 200 [0.04, 127.0.0.1:52612]
+WARNING 2021-01-21 09:56:11,617 runserver 155 HTTP GET /static/sd_new_img/1.jpg 404 [0.01, 127.0.0.1:52612]
+WARNING 2021-01-21 09:56:11,636 runserver 155 HTTP GET /static/sd_new_img/2.jpg 404 [0.03, 127.0.0.1:52613]
+WARNING 2021-01-21 09:56:11,649 runserver 155 HTTP GET /static/sd_new_img/3.jpg 404 [0.03, 127.0.0.1:52616]
+WARNING 2021-01-21 09:56:11,657 runserver 155 HTTP GET /static/sd_new_img/5.jpg 404 [0.04, 127.0.0.1:52618]
+WARNING 2021-01-21 09:56:11,672 runserver 155 HTTP GET /static/sd_new_img/4.jpg 404 [0.05, 127.0.0.1:52617]
+WARNING 2021-01-21 09:56:11,688 runserver 155 HTTP GET /static/sd_new_img/6.jpg 404 [0.07, 127.0.0.1:52619]
+WARNING 2021-01-21 09:56:11,751 runserver 155 HTTP GET /static/sd_new_img/7.jpg 404 [0.12, 127.0.0.1:52612]
+WARNING 2021-01-21 09:56:11,758 runserver 155 HTTP GET /static/sd_new_img/12.jpg 404 [0.11, 127.0.0.1:52613]
+WARNING 2021-01-21 09:56:11,767 runserver 155 HTTP GET /static/sd_new_img/11.jpg 404 [0.11, 127.0.0.1:52616]
+WARNING 2021-01-21 09:56:11,775 runserver 155 HTTP GET /static/sd_new_img/8.jpg 404 [0.11, 127.0.0.1:52618]
+WARNING 2021-01-21 09:56:11,786 runserver 155 HTTP GET /static/sd_new_img/9.jpg 404 [0.10, 127.0.0.1:52617]
+WARNING 2021-01-21 09:56:11,796 runserver 155 HTTP GET /static/sd_new_img/10.jpg 404 [0.05, 127.0.0.1:52619]
+INFO 2021-01-21 09:56:12,237 runserver 147 HTTP GET /case/ 200 [0.04, 127.0.0.1:52619]
+INFO 2021-01-21 09:56:12,261 runserver 147 HTTP GET /static/sd_case_img/2.jpg 200 [0.01, 127.0.0.1:52617]
+INFO 2021-01-21 09:56:12,272 runserver 147 HTTP GET /static/sd_case_img/1.jpg 200 [0.02, 127.0.0.1:52619]
+INFO 2021-01-21 09:56:12,285 runserver 147 HTTP GET /static/sd_case_img/4.jpg 200 [0.02, 127.0.0.1:52616]
+INFO 2021-01-21 09:56:12,298 runserver 147 HTTP GET /static/sd_case_img/5.jpg 200 [0.03, 127.0.0.1:52613]
+INFO 2021-01-21 09:56:12,314 runserver 147 HTTP GET /static/sd_case_img/6.jpg 200 [0.05, 127.0.0.1:52612]
+INFO 2021-01-21 09:56:12,329 runserver 147 HTTP GET /static/sd_case_img/3.jpg 200 [0.06, 127.0.0.1:52618]
+INFO 2021-01-21 09:56:12,340 runserver 147 HTTP GET /static/sd_case_img/7.jpg 200 [0.07, 127.0.0.1:52617]
+INFO 2021-01-21 09:56:12,355 runserver 147 HTTP GET /static/sd_case_img/8.jpg 200 [0.08, 127.0.0.1:52619]
+INFO 2021-01-21 09:56:12,366 runserver 147 HTTP GET /static/sd_case_img/9.jpg 200 [0.07, 127.0.0.1:52616]
+INFO 2021-01-21 09:56:12,375 runserver 147 HTTP GET /static/sd_case_img/10.jpg 200 [0.07, 127.0.0.1:52613]
+INFO 2021-01-21 09:56:12,388 runserver 147 HTTP GET /static/sd_case_img/11.jpg 200 [0.06, 127.0.0.1:52612]
+INFO 2021-01-21 09:56:12,396 runserver 147 HTTP GET /static/sd_case_img/12.jpg 200 [0.06, 127.0.0.1:52618]
+INFO 2021-01-21 09:56:12,835 runserver 147 HTTP GET /news/ 200 [0.04, 127.0.0.1:52618]
+WARNING 2021-01-21 09:56:12,861 runserver 155 HTTP GET /static/sd_new_img/1.jpg 404 [0.01, 127.0.0.1:52618]
+WARNING 2021-01-21 09:56:12,874 runserver 155 HTTP GET /static/sd_new_img/2.jpg 404 [0.02, 127.0.0.1:52612]
+WARNING 2021-01-21 09:56:12,890 runserver 155 HTTP GET /static/sd_new_img/4.jpg 404 [0.03, 127.0.0.1:52616]
+WARNING 2021-01-21 09:56:12,902 runserver 155 HTTP GET /static/sd_new_img/3.jpg 404 [0.04, 127.0.0.1:52613]
+WARNING 2021-01-21 09:56:12,915 runserver 155 HTTP GET /static/sd_new_img/5.jpg 404 [0.05, 127.0.0.1:52619]
+WARNING 2021-01-21 09:56:12,930 runserver 155 HTTP GET /static/sd_new_img/6.jpg 404 [0.06, 127.0.0.1:52617]
+WARNING 2021-01-21 09:56:12,941 runserver 155 HTTP GET /static/sd_new_img/7.jpg 404 [0.07, 127.0.0.1:52618]
+WARNING 2021-01-21 09:56:12,954 runserver 155 HTTP GET /static/sd_new_img/11.jpg 404 [0.07, 127.0.0.1:52612]
+WARNING 2021-01-21 09:56:12,963 runserver 155 HTTP GET /static/sd_new_img/12.jpg 404 [0.06, 127.0.0.1:52616]
+WARNING 2021-01-21 09:56:12,973 runserver 155 HTTP GET /static/sd_new_img/8.jpg 404 [0.06, 127.0.0.1:52613]
+WARNING 2021-01-21 09:56:12,984 runserver 155 HTTP GET /static/sd_new_img/10.jpg 404 [0.06, 127.0.0.1:52619]
+WARNING 2021-01-21 09:56:12,992 runserver 155 HTTP GET /static/sd_new_img/9.jpg 404 [0.05, 127.0.0.1:52617]
+INFO 2021-01-21 09:56:14,764 runserver 147 HTTP GET /news/?page=3 200 [0.03, 127.0.0.1:52617]
+WARNING 2021-01-21 09:56:14,790 runserver 155 HTTP GET /static/sd_new_img/25.jpg 404 [0.01, 127.0.0.1:52617]
+WARNING 2021-01-21 09:56:14,804 runserver 155 HTTP GET /static/sd_new_img/26.jpg 404 [0.02, 127.0.0.1:52619]
+WARNING 2021-01-21 09:56:14,820 runserver 155 HTTP GET /static/sd_new_img/28.jpg 404 [0.03, 127.0.0.1:52616]
+WARNING 2021-01-21 09:56:14,827 runserver 155 HTTP GET /static/sd_new_img/29.jpg 404 [0.03, 127.0.0.1:52612]
+WARNING 2021-01-21 09:56:14,840 runserver 155 HTTP GET /static/sd_new_img/27.jpg 404 [0.05, 127.0.0.1:52613]
+INFO 2021-01-21 09:56:16,234 runserver 147 HTTP GET /news/?page=2 200 [0.05, 127.0.0.1:52613]
+WARNING 2021-01-21 09:56:16,270 runserver 155 HTTP GET /static/sd_new_img/13.jpg 404 [0.01, 127.0.0.1:52613]
+WARNING 2021-01-21 09:56:16,283 runserver 155 HTTP GET /static/sd_new_img/14.jpg 404 [0.02, 127.0.0.1:52612]
+WARNING 2021-01-21 09:56:16,297 runserver 155 HTTP GET /static/sd_new_img/17.jpg 404 [0.03, 127.0.0.1:52617]
+WARNING 2021-01-21 09:56:16,308 runserver 155 HTTP GET /static/sd_new_img/15.jpg 404 [0.04, 127.0.0.1:52616]
+WARNING 2021-01-21 09:56:16,322 runserver 155 HTTP GET /static/sd_new_img/16.jpg 404 [0.06, 127.0.0.1:52619]
+WARNING 2021-01-21 09:56:16,336 runserver 155 HTTP GET /static/sd_new_img/18.jpg 404 [0.07, 127.0.0.1:52618]
+WARNING 2021-01-21 09:56:16,349 runserver 155 HTTP GET /static/sd_new_img/22.jpg 404 [0.07, 127.0.0.1:52613]
+WARNING 2021-01-21 09:56:16,358 runserver 155 HTTP GET /static/sd_new_img/23.jpg 404 [0.07, 127.0.0.1:52612]
+WARNING 2021-01-21 09:56:16,368 runserver 155 HTTP GET /static/sd_new_img/20.jpg 404 [0.06, 127.0.0.1:52617]
+WARNING 2021-01-21 09:56:16,376 runserver 155 HTTP GET /static/sd_new_img/19.jpg 404 [0.06, 127.0.0.1:52616]
+WARNING 2021-01-21 09:56:16,386 runserver 155 HTTP GET /static/sd_new_img/24.jpg 404 [0.06, 127.0.0.1:52619]
+WARNING 2021-01-21 09:56:16,392 runserver 155 HTTP GET /static/sd_new_img/21.jpg 404 [0.05, 127.0.0.1:52618]
+INFO 2021-01-21 09:56:17,844 runserver 147 HTTP GET /news/?page=3 200 [0.04, 127.0.0.1:52618]
+WARNING 2021-01-21 09:56:17,872 runserver 155 HTTP GET /static/sd_new_img/26.jpg 404 [0.01, 127.0.0.1:52619]
+WARNING 2021-01-21 09:56:17,882 runserver 155 HTTP GET /static/sd_new_img/25.jpg 404 [0.02, 127.0.0.1:52618]
+WARNING 2021-01-21 09:56:17,891 runserver 155 HTTP GET /static/sd_new_img/28.jpg 404 [0.02, 127.0.0.1:52617]
+WARNING 2021-01-21 09:56:17,901 runserver 155 HTTP GET /static/sd_new_img/27.jpg 404 [0.03, 127.0.0.1:52616]
+WARNING 2021-01-21 09:56:17,914 runserver 155 HTTP GET /static/sd_new_img/29.jpg 404 [0.04, 127.0.0.1:52612]
+INFO 2021-01-21 09:56:19,024 runserver 147 HTTP GET /case/ 200 [0.04, 127.0.0.1:52612]
+INFO 2021-01-21 09:56:20,125 runserver 147 HTTP GET /news/ 200 [0.04, 127.0.0.1:52629]
+WARNING 2021-01-21 09:56:20,157 runserver 155 HTTP GET /static/sd_new_img/1.jpg 404 [0.01, 127.0.0.1:52629]
+WARNING 2021-01-21 09:56:20,172 runserver 155 HTTP GET /static/sd_new_img/2.jpg 404 [0.03, 127.0.0.1:52630]
+WARNING 2021-01-21 09:56:20,186 runserver 155 HTTP GET /static/sd_new_img/4.jpg 404 [0.03, 127.0.0.1:52633]
+WARNING 2021-01-21 09:56:20,201 runserver 155 HTTP GET /static/sd_new_img/3.jpg 404 [0.04, 127.0.0.1:52632]
+WARNING 2021-01-21 09:56:20,217 runserver 155 HTTP GET /static/sd_new_img/6.jpg 404 [0.05, 127.0.0.1:52635]
+WARNING 2021-01-21 09:56:20,232 runserver 155 HTTP GET /static/sd_new_img/5.jpg 404 [0.07, 127.0.0.1:52634]
+WARNING 2021-01-21 09:56:20,245 runserver 155 HTTP GET /static/sd_new_img/7.jpg 404 [0.08, 127.0.0.1:52629]
+WARNING 2021-01-21 09:56:20,258 runserver 155 HTTP GET /static/sd_new_img/9.jpg 404 [0.08, 127.0.0.1:52630]
+WARNING 2021-01-21 09:56:20,272 runserver 155 HTTP GET /static/sd_new_img/8.jpg 404 [0.07, 127.0.0.1:52633]
+WARNING 2021-01-21 09:56:20,290 runserver 155 HTTP GET /static/sd_new_img/11.jpg 404 [0.08, 127.0.0.1:52632]
+WARNING 2021-01-21 09:56:20,303 runserver 155 HTTP GET /static/sd_new_img/12.jpg 404 [0.08, 127.0.0.1:52635]
+WARNING 2021-01-21 09:56:20,314 runserver 155 HTTP GET /static/sd_new_img/10.jpg 404 [0.07, 127.0.0.1:52634]
+INFO 2021-01-21 09:56:20,521 runserver 147 HTTP GET /case/ 200 [0.04, 127.0.0.1:52634]
+INFO 2021-01-21 09:56:23,011 runserver 147 HTTP GET /news/ 200 [0.04, 127.0.0.1:52634]
+WARNING 2021-01-21 09:56:23,038 runserver 155 HTTP GET /static/sd_new_img/2.jpg 404 [0.01, 127.0.0.1:52635]
+WARNING 2021-01-21 09:56:23,050 runserver 155 HTTP GET /static/sd_new_img/1.jpg 404 [0.02, 127.0.0.1:52634]
+WARNING 2021-01-21 09:56:23,064 runserver 155 HTTP GET /static/sd_new_img/5.jpg 404 [0.02, 127.0.0.1:52630]
+WARNING 2021-01-21 09:56:23,074 runserver 155 HTTP GET /static/sd_new_img/6.jpg 404 [0.03, 127.0.0.1:52629]
+WARNING 2021-01-21 09:56:23,087 runserver 155 HTTP GET /static/sd_new_img/3.jpg 404 [0.05, 127.0.0.1:52632]
+WARNING 2021-01-21 09:56:23,103 runserver 155 HTTP GET /static/sd_new_img/4.jpg 404 [0.06, 127.0.0.1:52633]
+WARNING 2021-01-21 09:56:23,116 runserver 155 HTTP GET /static/sd_new_img/7.jpg 404 [0.07, 127.0.0.1:52635]
+WARNING 2021-01-21 09:56:23,126 runserver 155 HTTP GET /static/sd_new_img/9.jpg 404 [0.07, 127.0.0.1:52634]
+WARNING 2021-01-21 09:56:23,136 runserver 155 HTTP GET /static/sd_new_img/11.jpg 404 [0.06, 127.0.0.1:52630]
+WARNING 2021-01-21 09:56:23,146 runserver 155 HTTP GET /static/sd_new_img/10.jpg 404 [0.06, 127.0.0.1:52629]
+WARNING 2021-01-21 09:56:23,155 runserver 155 HTTP GET /static/sd_new_img/8.jpg 404 [0.06, 127.0.0.1:52632]
+WARNING 2021-01-21 09:56:23,166 runserver 155 HTTP GET /static/sd_new_img/12.jpg 404 [0.05, 127.0.0.1:52633]
+INFO 2021-01-21 09:56:23,555 runserver 147 HTTP GET /case/ 200 [0.04, 127.0.0.1:52633]
+INFO 2021-01-21 09:56:25,915 runserver 147 HTTP GET /case/?page=2 200 [0.03, 127.0.0.1:52633]
+INFO 2021-01-21 09:56:25,942 runserver 147 HTTP GET /static/sd_case_img/14.jpg 200 [0.01, 127.0.0.1:52632]
+INFO 2021-01-21 09:56:25,950 runserver 147 HTTP GET /static/sd_case_img/13.jpg 200 [0.02, 127.0.0.1:52633]
+INFO 2021-01-21 09:56:27,644 runserver 147 HTTP GET /accounts/login/ 200 [0.04, 127.0.0.1:52633]
+INFO 2021-01-21 09:56:29,327 runserver 153 HTTP GET /accounts/github/login/?process=login 302 [0.05, 127.0.0.1:52633]
+INFO 2021-01-21 09:56:38,533 runserver 147 HTTP GET /accounts/login/ 200 [0.05, 127.0.0.1:52662]
+INFO 2021-01-21 09:56:48,926 runserver 153 HTTP GET /accounts/github/login/?process=login 302 [0.05, 127.0.0.1:52670]
+INFO 2021-01-21 09:58:02,121 runserver 147 HTTP GET /accounts/login/ 200 [0.04, 127.0.0.1:52712]
+INFO 2021-01-21 09:58:07,852 runserver 147 HTTP GET /case/?page=2 200 [0.06, 127.0.0.1:52712]
+INFO 2021-01-21 09:58:09,287 runserver 147 HTTP GET /product/ 200 [0.05, 127.0.0.1:52712]
+INFO 2021-01-21 09:58:09,310 runserver 151 HTTP GET /static/product/product.css 304 [0.01, 127.0.0.1:52712]
+INFO 2021-01-21 09:58:09,890 runserver 147 HTTP GET /news/ 200 [0.04, 127.0.0.1:52712]
+WARNING 2021-01-21 09:58:09,914 runserver 155 HTTP GET /static/sd_new_img/1.jpg 404 [0.01, 127.0.0.1:52712]
+WARNING 2021-01-21 09:58:09,933 runserver 155 HTTP GET /static/sd_new_img/2.jpg 404 [0.03, 127.0.0.1:52713]
+WARNING 2021-01-21 09:58:09,944 runserver 155 HTTP GET /static/sd_new_img/5.jpg 404 [0.02, 127.0.0.1:52726]
+WARNING 2021-01-21 09:58:09,956 runserver 155 HTTP GET /static/sd_new_img/3.jpg 404 [0.03, 127.0.0.1:52724]
+WARNING 2021-01-21 09:58:09,969 runserver 155 HTTP GET /static/sd_new_img/6.jpg 404 [0.04, 127.0.0.1:52727]
+WARNING 2021-01-21 09:58:09,983 runserver 155 HTTP GET /static/sd_new_img/7.jpg 404 [0.06, 127.0.0.1:52712]
+WARNING 2021-01-21 09:58:09,995 runserver 155 HTTP GET /static/sd_new_img/4.jpg 404 [0.07, 127.0.0.1:52725]
+WARNING 2021-01-21 09:58:10,005 runserver 155 HTTP GET /static/sd_new_img/8.jpg 404 [0.07, 127.0.0.1:52713]
+WARNING 2021-01-21 09:58:10,014 runserver 155 HTTP GET /static/sd_new_img/9.jpg 404 [0.06, 127.0.0.1:52726]
+WARNING 2021-01-21 09:58:10,023 runserver 155 HTTP GET /static/sd_new_img/11.jpg 404 [0.06, 127.0.0.1:52724]
+WARNING 2021-01-21 09:58:10,034 runserver 155 HTTP GET /static/sd_new_img/12.jpg 404 [0.06, 127.0.0.1:52727]
+WARNING 2021-01-21 09:58:10,042 runserver 155 HTTP GET /static/sd_new_img/10.jpg 404 [0.05, 127.0.0.1:52712]
+INFO 2021-01-21 09:58:10,769 runserver 147 HTTP GET /show_sd 200 [0.02, 127.0.0.1:52712]
+INFO 2021-01-21 09:58:12,285 runserver 147 HTTP GET /case/ 200 [0.04, 127.0.0.1:52712]
+INFO 2021-01-21 09:58:14,293 runserver 147 HTTP GET /news/ 200 [0.05, 127.0.0.1:52712]
+WARNING 2021-01-21 09:58:14,320 runserver 155 HTTP GET /static/sd_new_img/1.jpg 404 [0.01, 127.0.0.1:52712]
+WARNING 2021-01-21 09:58:14,330 runserver 155 HTTP GET /static/sd_new_img/2.jpg 404 [0.02, 127.0.0.1:52727]
+WARNING 2021-01-21 09:58:14,344 runserver 155 HTTP GET /static/sd_new_img/3.jpg 404 [0.02, 127.0.0.1:52724]
+WARNING 2021-01-21 09:58:14,359 runserver 155 HTTP GET /static/sd_new_img/4.jpg 404 [0.03, 127.0.0.1:52726]
+WARNING 2021-01-21 09:58:14,370 runserver 155 HTTP GET /static/sd_new_img/6.jpg 404 [0.05, 127.0.0.1:52725]
+WARNING 2021-01-21 09:58:14,386 runserver 155 HTTP GET /static/sd_new_img/5.jpg 404 [0.06, 127.0.0.1:52713]
+WARNING 2021-01-21 09:58:14,398 runserver 155 HTTP GET /static/sd_new_img/11.jpg 404 [0.06, 127.0.0.1:52727]
+WARNING 2021-01-21 09:58:14,408 runserver 155 HTTP GET /static/sd_new_img/7.jpg 404 [0.07, 127.0.0.1:52712]
+WARNING 2021-01-21 09:58:14,420 runserver 155 HTTP GET /static/sd_new_img/10.jpg 404 [0.07, 127.0.0.1:52724]
+WARNING 2021-01-21 09:58:14,429 runserver 155 HTTP GET /static/sd_new_img/8.jpg 404 [0.06, 127.0.0.1:52726]
+WARNING 2021-01-21 09:58:14,438 runserver 155 HTTP GET /static/sd_new_img/9.jpg 404 [0.06, 127.0.0.1:52725]
+WARNING 2021-01-21 09:58:14,449 runserver 155 HTTP GET /static/sd_new_img/12.jpg 404 [0.06, 127.0.0.1:52713]
+INFO 2021-01-21 09:58:15,024 runserver 147 HTTP GET /show_sd 200 [0.02, 127.0.0.1:52713]
+INFO 2021-01-21 09:58:15,734 runserver 147 HTTP GET /product/ 200 [0.05, 127.0.0.1:52713]
+INFO 2021-01-21 09:58:18,497 runserver 147 HTTP GET /accounts/login/ 200 [0.04, 127.0.0.1:52713]
+INFO 2021-01-21 09:58:20,479 runserver 153 HTTP GET /accounts/facebook/login/?process=login 302 [0.04, 127.0.0.1:52736]
+INFO 2021-01-21 09:58:22,671 runserver 153 HTTP GET /accounts/github/login/?process=login 302 [0.04, 127.0.0.1:52736]
+INFO 2021-01-21 09:59:42,714 runserver 153 HTTP GET /accounts/github/login/?process=login 302 [0.05, 127.0.0.1:52895]
+INFO 2021-01-21 10:00:37,617 autoreload 617 Watching for file changes with StatReloader
+INFO 2021-01-21 10:00:39,888 runserver 147 HTTP GET / 200 [0.08, 127.0.0.1:53060]
+WARNING 2021-01-21 10:00:40,120 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.05, 127.0.0.1:53066]
+INFO 2021-01-21 10:00:40,129 runserver 147 HTTP GET /api/v1/user/ 200 [0.07, 127.0.0.1:53064]
+WARNING 2021-01-21 10:00:40,186 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.01, 127.0.0.1:53064]
+WARNING 2021-01-21 10:00:40,240 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.01, 127.0.0.1:53064]
+ERROR 2021-01-21 10:00:40,332 log 230 Internal Server Error: /api/v1/message/
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1774, in get_prep_value
+    return int(value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\contrib\auth\models.py", line 414, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 339, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 38, in inner
+    response = await get_response(request)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 231, in _get_response_async
+    response = await wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 304, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "C:\Program Files\Python36\lib\asyncio\tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "C:\Program Files\Python36\lib\concurrent\futures\thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 343, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\chat\api.py", line 41, in list
+    Q(user=request.user))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1244, in build_filter
+    check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\related_lookups.py", line 117, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1778, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x000001E2C66902E8>.
+ERROR 2021-01-21 10:00:40,342 runserver 160 HTTP GET /api/v1/message/?target=root 500 [0.17, 127.0.0.1:53066]
+INFO 2021-01-21 10:00:49,037 runserver 147 HTTP GET /product/ 200 [0.05, 127.0.0.1:53066]
+INFO 2021-01-21 10:00:49,065 runserver 151 HTTP GET /static/product/product.css 304 [0.00, 127.0.0.1:53066]
+INFO 2021-01-21 10:00:49,933 runserver 147 HTTP GET /show_sd 200 [0.02, 127.0.0.1:53066]
+INFO 2021-01-21 10:00:50,948 runserver 147 HTTP GET /product/ 200 [0.06, 127.0.0.1:53096]
+INFO 2021-01-21 10:00:52,520 runserver 147 HTTP GET /product/product_id_2 200 [0.06, 127.0.0.1:53096]
+INFO 2021-01-21 10:00:55,330 runserver 147 HTTP GET /accounts/login/ 200 [0.05, 127.0.0.1:53096]
+INFO 2021-01-21 10:01:00,402 runserver 147 HTTP POST /accounts/login/ 200 [0.45, 127.0.0.1:53096]
+INFO 2021-01-21 10:01:07,023 runserver 153 HTTP POST /accounts/login/ 302 [0.23, 127.0.0.1:53096]
+INFO 2021-01-21 10:01:07,054 runserver 147 HTTP GET / 200 [0.03, 127.0.0.1:53096]
+WARNING 2021-01-21 10:01:07,361 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.21, 127.0.0.1:53109]
+WARNING 2021-01-21 10:01:07,410 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.01, 127.0.0.1:53109]
+WARNING 2021-01-21 10:01:07,450 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.03, 127.0.0.1:53109]
+INFO 2021-01-21 10:01:07,458 runserver 147 HTTP GET /api/v1/user/ 200 [0.33, 127.0.0.1:53096]
+INFO 2021-01-21 10:01:09,425 runserver 147 HTTP GET /show_sd 200 [0.02, 127.0.0.1:53096]
+INFO 2021-01-21 10:01:10,068 runserver 147 HTTP GET /product/ 200 [0.09, 127.0.0.1:53116]
+INFO 2021-01-21 10:01:10,954 runserver 147 HTTP GET /product/product_id_2 200 [0.09, 127.0.0.1:53116]
+INFO 2021-01-21 10:01:11,050 runserver 147 HTTP GET /static/ckeditor/ckeditor/config.js?t=K5H9 200 [0.01, 127.0.0.1:53116]
+INFO 2021-01-21 10:01:11,081 runserver 147 HTTP GET /static/ckeditor/ckeditor/skins/moono-lisa/editor.css?t=K5H9 200 [0.02, 127.0.0.1:53116]
+INFO 2021-01-21 10:01:11,095 runserver 147 HTTP GET /static/ckeditor/ckeditor/lang/en.js?t=K5H9 200 [0.03, 127.0.0.1:53117]
+INFO 2021-01-21 10:01:11,136 runserver 147 HTTP GET /static/ckeditor/ckeditor/styles.js?t=K5H9 200 [0.01, 127.0.0.1:53117]
+INFO 2021-01-21 10:01:11,159 runserver 147 HTTP GET /static/ckeditor/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css?t=K5H9 200 [0.01, 127.0.0.1:53117]
+INFO 2021-01-21 10:01:11,168 runserver 147 HTTP GET /static/ckeditor/ckeditor/plugins/scayt/dialogs/dialog.css?t=K5H9 200 [0.02, 127.0.0.1:53116]
+INFO 2021-01-21 10:01:11,178 runserver 147 HTTP GET /static/ckeditor/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css?t=K5H9 200 [0.03, 127.0.0.1:53122]
+INFO 2021-01-21 10:01:11,189 runserver 147 HTTP GET /static/ckeditor/ckeditor/plugins/tableselection/styles/tableselection.css 200 [0.04, 127.0.0.1:53121]
+INFO 2021-01-21 10:01:11,197 runserver 147 HTTP GET /static/ckeditor/ckeditor/plugins/dialog/styles/dialog.css 200 [0.05, 127.0.0.1:53123]
+INFO 2021-01-21 10:01:11,204 runserver 147 HTTP GET /static/ckeditor/ckeditor/plugins/copyformatting/styles/copyformatting.css 200 [0.05, 127.0.0.1:53124]
+INFO 2021-01-21 10:01:11,212 runserver 147 HTTP GET /static/ckeditor/ckeditor/skins/moono-lisa/icons.png?t=eb2d11644 200 [0.03, 127.0.0.1:53122]
+INFO 2021-01-21 10:01:11,236 runserver 147 HTTP GET /static/ckeditor/ckeditor/contents.css?t=K5H9 200 [0.01, 127.0.0.1:53122]
+INFO 2021-01-21 10:01:16,362 runserver 147 HTTP GET /product/ 200 [0.06, 127.0.0.1:53122]
+INFO 2021-01-21 10:01:17,793 runserver 147 HTTP GET /product/product_id_11 200 [0.05, 127.0.0.1:53122]
+INFO 2021-01-21 10:01:25,606 runserver 147 HTTP POST /comment/update_comment 200 [0.03, 127.0.0.1:53132]
+INFO 2021-01-21 10:01:30,146 runserver 147 HTTP GET /product/product_id_11 200 [0.07, 127.0.0.1:53135]
+INFO 2021-01-21 10:01:59,066 runserver 153 HTTP GET /admin 301 [0.00, 127.0.0.1:53149]
+INFO 2021-01-21 10:01:59,162 runserver 147 HTTP GET /admin/ 200 [0.09, 127.0.0.1:53149]
+INFO 2021-01-21 10:01:59,207 runserver 147 HTTP GET /static/admin/simpleui-x/css/index.css?_=3.2 200 [0.02, 127.0.0.1:53149]
+INFO 2021-01-21 10:01:59,218 runserver 147 HTTP GET /static/admin/simpleui-x/waves/waves.min.css?_=2.1 200 [0.02, 127.0.0.1:53150]
+WARNING 2021-01-21 10:01:59,228 runserver 155 HTTP GET /static/admin/simpleui-x/locale/en.js?_=2021.1.1 404 [0.03, 127.0.0.1:53159]
+INFO 2021-01-21 10:01:59,242 runserver 147 HTTP GET /static/admin/simpleui-x/automatic/dicts.js?_=2021.1.1 200 [0.04, 127.0.0.1:53156]
+INFO 2021-01-21 10:01:59,253 runserver 147 HTTP GET /static/admin/simpleui-x/automatic/segment.js?_=2021.1.1 200 [0.05, 127.0.0.1:53157]
+INFO 2021-01-21 10:01:59,263 runserver 147 HTTP GET /static/admin/simpleui-x/locale/en-us.js?_=2021.1.1 200 [0.06, 127.0.0.1:53158]
+INFO 2021-01-21 10:01:59,277 runserver 147 HTTP GET /static/admin/simpleui-x/js/cookie.js?_=2021.1.1 200 [0.07, 127.0.0.1:53149]
+INFO 2021-01-21 10:01:59,287 runserver 147 HTTP GET /static/admin/simpleui-x/theme/theme.js?_=2021.1.1 200 [0.06, 127.0.0.1:53150]
+INFO 2021-01-21 10:01:59,296 runserver 147 HTTP GET /static/admin/simpleui-x/waves/waves.min.js?_=2021.1.1 200 [0.06, 127.0.0.1:53159]
+INFO 2021-01-21 10:01:59,311 runserver 147 HTTP GET /static/admin/simpleui-x/js/index.js?_=2021.1.1 200 [0.07, 127.0.0.1:53156]
+WARNING 2021-01-21 10:01:59,580 runserver 155 HTTP GET /static/admin/simpleui-x/locale/en.js?_=2021.1.1 404 [0.00, 127.0.0.1:53156]
+INFO 2021-01-21 10:02:02,643 runserver 147 HTTP GET /admin/sites/site/ 200 [0.09, 127.0.0.1:53162]
+INFO 2021-01-21 10:02:02,677 runserver 147 HTTP GET /static/admin/css/base.css?_=2.7 200 [0.01, 127.0.0.1:53162]
+INFO 2021-01-21 10:02:02,688 runserver 147 HTTP GET /static/admin/simpleui-x/theme/simpleui.css 200 [0.01, 127.0.0.1:53165]
+INFO 2021-01-21 10:02:02,697 runserver 147 HTTP GET /static/admin/simpleui-x/css/base.css?_=2.7 200 [0.02, 127.0.0.1:53164]
+INFO 2021-01-21 10:02:02,705 runserver 147 HTTP GET /static/admin/simpleui-x/locale/en-us.js?_=2.1.2 200 [0.03, 127.0.0.1:53168]
+INFO 2021-01-21 10:02:02,714 runserver 147 HTTP GET /static/admin/css/changelists.css?_=20180905 200 [0.04, 127.0.0.1:53166]
+INFO 2021-01-21 10:02:02,722 runserver 147 HTTP GET /static/admin/simpleui-x/js/language.js?_=2.1.2 200 [0.04, 127.0.0.1:53167]
+INFO 2021-01-21 10:02:02,733 runserver 147 HTTP GET /static/admin/css/responsive.css?_=20180905 200 [0.05, 127.0.0.1:53162]
+INFO 2021-01-21 10:02:02,742 runserver 147 HTTP GET /static/admin/css/fonts.css 200 [0.05, 127.0.0.1:53165]
+WARNING 2021-01-21 10:02:02,753 runserver 155 HTTP GET /static/admin/simpleui-x/locale/en.js 404 [0.05, 127.0.0.1:53164]
+INFO 2021-01-21 10:02:02,763 runserver 147 HTTP GET /static/admin/simpleui-x/elementui/umd/locale/en.js?_=2.1.2 200 [0.06, 127.0.0.1:53168]
+INFO 2021-01-21 10:02:02,771 runserver 147 HTTP GET /static/admin/simpleui-x/js/cookie.js 200 [0.05, 127.0.0.1:53166]
+INFO 2021-01-21 10:02:02,809 runserver 147 HTTP GET /static/admin/js/vendor/jquery/jquery.js 200 [0.07, 127.0.0.1:53162]
+INFO 2021-01-21 10:02:02,820 runserver 147 HTTP GET /static/admin/js/jquery.init.js 200 [0.07, 127.0.0.1:53165]
+INFO 2021-01-21 10:02:02,829 runserver 147 HTTP GET /static/admin/js/core.js 200 [0.07, 127.0.0.1:53164]
+INFO 2021-01-21 10:02:02,841 runserver 147 HTTP GET /static/admin/js/admin/RelatedObjectLookups.js 200 [0.07, 127.0.0.1:53168]
+INFO 2021-01-21 10:02:02,852 runserver 147 HTTP GET /static/admin/js/actions.js 200 [0.08, 127.0.0.1:53166]
+INFO 2021-01-21 10:02:02,861 runserver 147 HTTP GET /static/admin/js/urlify.js 200 [0.04, 127.0.0.1:53165]
+INFO 2021-01-21 10:02:02,873 runserver 147 HTTP GET /static/admin/js/prepopulate.js 200 [0.04, 127.0.0.1:53164]
+INFO 2021-01-21 10:02:02,887 runserver 147 HTTP GET /static/admin/js/vendor/xregexp/xregexp.js 200 [0.04, 127.0.0.1:53168]
+INFO 2021-01-21 10:02:02,902 runserver 147 HTTP GET /static/admin/js/vendor/jquery/jquery.min.js 200 [0.06, 127.0.0.1:53162]
+INFO 2021-01-21 10:02:02,909 runserver 147 HTTP GET /static/admin/simpleui-x/automatic/dicts.js 200 [0.05, 127.0.0.1:53166]
+INFO 2021-01-21 10:02:02,916 runserver 147 HTTP GET /static/admin/simpleui-x/automatic/segment.js 200 [0.05, 127.0.0.1:53165]
+INFO 2021-01-21 10:02:02,926 runserver 147 HTTP GET /static/admin/simpleui-x/js/axios.min.js 200 [0.05, 127.0.0.1:53164]
+INFO 2021-01-21 10:02:02,947 runserver 147 HTTP GET /admin/jsi18n/ 200 [0.22, 127.0.0.1:53167]
+INFO 2021-01-21 10:02:03,063 runserver 147 HTTP GET /static/admin/img/sorting-icons.svg 200 [0.01, 127.0.0.1:53164]
+INFO 2021-01-21 10:02:03,072 runserver 147 HTTP GET /static/admin/fonts/Roboto-Regular-webfont.woff 200 [0.02, 127.0.0.1:53167]
+INFO 2021-01-21 10:02:03,104 runserver 147 HTTP GET /static/admin/fonts/Roboto-Light-webfont.woff 200 [0.01, 127.0.0.1:53167]
+INFO 2021-01-21 10:02:03,113 runserver 147 HTTP GET /static/admin/fonts/Roboto-Bold-webfont.woff 200 [0.02, 127.0.0.1:53164]
+INFO 2021-01-21 10:02:07,032 runserver 147 HTTP GET /admin/socialaccount/socialtoken/ 200 [0.08, 127.0.0.1:53164]
+WARNING 2021-01-21 10:02:07,057 runserver 155 HTTP GET /static/admin/simpleui-x/locale/en.js 404 [0.01, 127.0.0.1:53164]
+WARNING 2021-01-21 10:02:07,090 runserver 155 HTTP GET /static/admin/simpleui-x/locale/en.js 404 [0.01, 127.0.0.1:53164]
+INFO 2021-01-21 10:02:07,094 runserver 147 HTTP GET /admin/jsi18n/ 200 [0.04, 127.0.0.1:53167]
+INFO 2021-01-21 10:02:08,913 runserver 147 HTTP GET /admin/socialaccount/socialapp/ 200 [0.09, 127.0.0.1:53167]
+WARNING 2021-01-21 10:02:08,940 runserver 155 HTTP GET /static/admin/simpleui-x/locale/en.js 404 [0.01, 127.0.0.1:53167]
+INFO 2021-01-21 10:02:08,966 runserver 147 HTTP GET /admin/jsi18n/ 200 [0.04, 127.0.0.1:53164]
+INFO 2021-01-21 10:02:12,408 runserver 147 HTTP GET /admin/socialaccount/socialaccount/ 200 [0.08, 127.0.0.1:53180]
+WARNING 2021-01-21 10:02:12,431 runserver 155 HTTP GET /static/admin/simpleui-x/locale/en.js 404 [0.01, 127.0.0.1:53180]
+INFO 2021-01-21 10:02:12,458 runserver 147 HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:53182]
+INFO 2021-01-21 10:02:14,206 runserver 147 HTTP GET /admin/socialaccount/socialaccount/2/change/ 200 [0.07, 127.0.0.1:53182]
+INFO 2021-01-21 10:02:14,239 runserver 147 HTTP GET /static/admin/css/forms.css 200 [0.01, 127.0.0.1:53182]
+WARNING 2021-01-21 10:02:14,245 runserver 155 HTTP GET /static/admin/simpleui-x/locale/en.js 404 [0.02, 127.0.0.1:53180]
+INFO 2021-01-21 10:02:14,253 runserver 147 HTTP GET /static/admin/js/change_form.js 200 [0.02, 127.0.0.1:53186]
+INFO 2021-01-21 10:02:14,260 runserver 147 HTTP GET /static/admin/js/prepopulate_init.js 200 [0.03, 127.0.0.1:53187]
+INFO 2021-01-21 10:02:14,270 runserver 147 HTTP GET /static/admin/css/widgets.css 200 [0.02, 127.0.0.1:53180]
+INFO 2021-01-21 10:02:14,291 runserver 147 HTTP GET /admin/jsi18n/ 200 [0.06, 127.0.0.1:53188]
+INFO 2021-01-21 10:02:14,337 runserver 147 HTTP GET /static/admin/img/search.svg 200 [0.00, 127.0.0.1:53188]
+INFO 2021-01-21 10:02:25,450 runserver 147 HTTP POST /admin/socialaccount/socialtoken/ 200 [0.08, 127.0.0.1:53196]
+WARNING 2021-01-21 10:02:25,484 runserver 155 HTTP GET /static/admin/simpleui-x/locale/en.js 404 [0.01, 127.0.0.1:53196]
+INFO 2021-01-21 10:02:25,492 runserver 147 HTTP GET /static/admin/js/cancel.js 200 [0.01, 127.0.0.1:53198]
+INFO 2021-01-21 10:02:27,015 runserver 153 HTTP POST /admin/socialaccount/socialtoken/ 302 [0.08, 127.0.0.1:53198]
+INFO 2021-01-21 10:02:27,102 runserver 147 HTTP GET /admin/socialaccount/socialtoken/ 200 [0.08, 127.0.0.1:53198]
+WARNING 2021-01-21 10:02:27,139 runserver 155 HTTP GET /static/admin/simpleui-x/locale/en.js 404 [0.01, 127.0.0.1:53198]
+INFO 2021-01-21 10:02:27,170 runserver 147 HTTP GET /admin/jsi18n/ 200 [0.04, 127.0.0.1:53196]
+INFO 2021-01-21 10:02:29,634 runserver 147 HTTP GET /admin/socialaccount/socialaccount/ 200 [0.08, 127.0.0.1:53196]
+WARNING 2021-01-21 10:02:29,667 runserver 155 HTTP GET /static/admin/simpleui-x/locale/en.js 404 [0.01, 127.0.0.1:53196]
+INFO 2021-01-21 10:02:29,700 runserver 147 HTTP GET /admin/jsi18n/ 200 [0.04, 127.0.0.1:53198]
+INFO 2021-01-21 10:02:32,924 runserver 147 HTTP POST /admin/socialaccount/socialaccount/ 200 [0.07, 127.0.0.1:53211]
+WARNING 2021-01-21 10:02:32,952 runserver 155 HTTP GET /static/admin/simpleui-x/locale/en.js 404 [0.01, 127.0.0.1:53211]
+INFO 2021-01-21 10:02:34,365 runserver 153 HTTP POST /admin/socialaccount/socialaccount/ 302 [0.08, 127.0.0.1:53211]
+INFO 2021-01-21 10:02:34,439 runserver 147 HTTP GET /admin/socialaccount/socialaccount/ 200 [0.07, 127.0.0.1:53211]
+WARNING 2021-01-21 10:02:34,467 runserver 155 HTTP GET /static/admin/simpleui-x/locale/en.js 404 [0.01, 127.0.0.1:53211]
+INFO 2021-01-21 10:02:34,493 runserver 147 HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:53216]
+INFO 2021-01-21 10:02:37,913 runserver 147 HTTP GET /admin/socialaccount/socialapp/3/change/ 200 [0.07, 127.0.0.1:53216]
+WARNING 2021-01-21 10:02:37,939 runserver 155 HTTP GET /static/admin/simpleui-x/locale/en.js 404 [0.01, 127.0.0.1:53216]
+INFO 2021-01-21 10:02:37,949 runserver 147 HTTP GET /static/admin/js/SelectBox.js 200 [0.02, 127.0.0.1:53211]
+INFO 2021-01-21 10:02:37,962 runserver 147 HTTP GET /static/admin/js/SelectFilter2.js 200 [0.03, 127.0.0.1:53220]
+INFO 2021-01-21 10:02:38,012 runserver 147 HTTP GET /static/admin/img/icon-addlink.svg 200 [0.03, 127.0.0.1:53220]
+INFO 2021-01-21 10:02:38,015 runserver 147 HTTP GET /admin/jsi18n/ 200 [0.08, 127.0.0.1:53221]
+INFO 2021-01-21 10:02:38,107 runserver 147 HTTP GET /static/admin/img/selector-icons.svg 200 [0.01, 127.0.0.1:53221]
+INFO 2021-01-21 10:02:42,175 runserver 147 HTTP GET /admin/logout/ 200 [0.08, 127.0.0.1:53223]
+INFO 2021-01-21 10:02:42,271 runserver 147 HTTP GET /admin/login/ 200 [0.02, 127.0.0.1:53223]
+INFO 2021-01-21 10:02:42,316 runserver 147 HTTP GET /static/admin/simpleui-x/css/login.css?_=2.1 200 [0.01, 127.0.0.1:53223]
+INFO 2021-01-21 10:02:42,326 runserver 147 HTTP GET /static/adminlogo.png 200 [0.02, 127.0.0.1:53224]
+INFO 2021-01-21 10:02:42,340 runserver 147 HTTP GET /static/admin/simpleui-x/particles/particles.js 200 [0.03, 127.0.0.1:53228]
+INFO 2021-01-21 10:02:42,352 runserver 147 HTTP GET /static/admin/simpleui-x/js/login.js?_=3.3 200 [0.04, 127.0.0.1:53227]
+INFO 2021-01-21 10:02:42,364 runserver 147 HTTP GET /static/admin/simpleui-x/particles/app.js 200 [0.05, 127.0.0.1:53229]
+INFO 2021-01-21 10:02:42,372 runserver 147 HTTP GET /static/admin/simpleui-x/img/bg.svg 200 [0.02, 127.0.0.1:53228]
+INFO 2021-01-21 10:02:53,067 runserver 147 HTTP GET / 200 [0.02, 127.0.0.1:53238]
+WARNING 2021-01-21 10:02:53,209 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.02, 127.0.0.1:53239]
+INFO 2021-01-21 10:02:53,216 runserver 147 HTTP GET /api/v1/user/ 200 [0.04, 127.0.0.1:53238]
+WARNING 2021-01-21 10:02:53,234 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.01, 127.0.0.1:53239]
+WARNING 2021-01-21 10:02:53,278 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.02, 127.0.0.1:53239]
+ERROR 2021-01-21 10:02:53,341 log 230 Internal Server Error: /api/v1/message/
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1774, in get_prep_value
+    return int(value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\contrib\auth\models.py", line 414, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 339, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 38, in inner
+    response = await get_response(request)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 231, in _get_response_async
+    response = await wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 304, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "C:\Program Files\Python36\lib\asyncio\tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "C:\Program Files\Python36\lib\concurrent\futures\thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 343, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\chat\api.py", line 41, in list
+    Q(user=request.user))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1244, in build_filter
+    check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\related_lookups.py", line 117, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1778, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x000001E2C547D240>.
+ERROR 2021-01-21 10:02:53,351 runserver 160 HTTP GET /api/v1/message/?target=root 500 [0.12, 127.0.0.1:53238]
+INFO 2021-01-21 10:02:55,518 runserver 147 HTTP GET /accounts/login/ 200 [0.04, 127.0.0.1:53238]
+INFO 2021-01-21 10:03:00,929 runserver 153 HTTP GET /accounts/github/login/?process=login 302 [0.04, 127.0.0.1:53245]
+INFO 2021-01-21 10:03:07,632 runserver 147 HTTP GET /accounts/login/ 200 [0.04, 127.0.0.1:53245]
+INFO 2021-01-21 10:03:08,484 runserver 153 HTTP GET /accounts/github/login/?process=login 302 [0.04, 127.0.0.1:53245]
+INFO 2021-01-21 10:03:38,555 runserver 147 HTTP GET /accounts/login/ 200 [0.05, 127.0.0.1:53320]
+INFO 2021-01-21 10:03:46,319 autoreload 617 Watching for file changes with StatReloader
+INFO 2021-01-21 10:03:56,010 runserver 147 HTTP GET /accounts/login/ 200 [0.10, 127.0.0.1:53369]
+INFO 2021-01-21 10:03:57,254 runserver 153 HTTP GET /accounts/github/login/?process=login 302 [0.04, 127.0.0.1:53369]
+INFO 2021-01-21 10:04:10,354 runserver 153 HTTP GET /accounts/github/login/callback/?code=86c5b4a33ea701a2f7be&state=sXAaKVztDQlh 302 [12.35, 127.0.0.1:53369]
+INFO 2021-01-21 10:04:10,389 runserver 147 HTTP GET /accounts/social/signup/ 200 [0.03, 127.0.0.1:53369]
+WARNING 2021-01-21 10:04:10,461 log 230 Not Found: /favicon.ico
+WARNING 2021-01-21 10:04:10,463 runserver 155 HTTP GET /favicon.ico 404 [0.03, 127.0.0.1:53369]
+INFO 2021-01-21 10:04:24,025 runserver 147 HTTP POST /accounts/social/signup/ 200 [0.03, 127.0.0.1:53396]
+INFO 2021-01-21 10:08:38,609 runserver 147 HTTP POST /accounts/social/signup/ 200 [0.03, 127.0.0.1:53499]
+INFO 2021-01-21 10:08:40,506 runserver 147 HTTP POST /accounts/social/signup/ 200 [0.04, 127.0.0.1:53499]
+INFO 2021-01-21 10:08:41,030 runserver 147 HTTP POST /accounts/social/signup/ 200 [0.04, 127.0.0.1:53499]
+INFO 2021-01-21 10:08:41,214 runserver 147 HTTP POST /accounts/social/signup/ 200 [0.03, 127.0.0.1:53499]
+INFO 2021-01-21 10:08:41,398 runserver 147 HTTP POST /accounts/social/signup/ 200 [0.03, 127.0.0.1:53499]
+INFO 2021-01-21 10:09:01,570 runserver 147 HTTP POST /accounts/social/signup/ 200 [0.03, 127.0.0.1:53499]
+INFO 2021-01-21 10:09:05,679 runserver 147 HTTP GET / 200 [0.03, 127.0.0.1:53499]
+INFO 2021-01-21 10:09:05,736 runserver 151 HTTP GET /static/js/apptest.js 304 [0.01, 127.0.0.1:53499]
+INFO 2021-01-21 10:09:05,776 runserver 147 HTTP GET /static/images/%E5%A4%87%E6%A1%88%E5%9B%BE%E6%A0%87.png 200 [0.01, 127.0.0.1:53499]
+WARNING 2021-01-21 10:09:05,903 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.04, 127.0.0.1:53500]
+INFO 2021-01-21 10:09:05,908 runserver 147 HTTP GET /api/v1/user/ 200 [0.05, 127.0.0.1:53499]
+WARNING 2021-01-21 10:09:05,939 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.01, 127.0.0.1:53500]
+WARNING 2021-01-21 10:09:05,989 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.02, 127.0.0.1:53500]
+ERROR 2021-01-21 10:09:06,065 log 230 Internal Server Error: /api/v1/message/
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1774, in get_prep_value
+    return int(value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\contrib\auth\models.py", line 414, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 339, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 38, in inner
+    response = await get_response(request)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 231, in _get_response_async
+    response = await wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 304, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "C:\Program Files\Python36\lib\asyncio\tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "C:\Program Files\Python36\lib\concurrent\futures\thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 343, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\chat\api.py", line 41, in list
+    Q(user=request.user))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1244, in build_filter
+    check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\related_lookups.py", line 117, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1778, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x000002B18F715EB8>.
+ERROR 2021-01-21 10:09:06,074 runserver 160 HTTP GET /api/v1/message/?target=root 500 [0.15, 127.0.0.1:53499]
+INFO 2021-01-21 10:09:07,636 runserver 147 HTTP GET /accounts/login/ 200 [0.04, 127.0.0.1:53499]
+INFO 2021-01-21 10:09:09,370 runserver 153 HTTP GET /accounts/github/login/?process=login 302 [0.04, 127.0.0.1:53499]
+INFO 2021-01-21 10:09:13,310 runserver 153 HTTP GET /accounts/github/login/callback/?code=5572e2df8b145ab0e7ac&state=kbGgyi6Elhco 302 [3.01, 127.0.0.1:53499]
+INFO 2021-01-21 10:09:13,339 runserver 147 HTTP GET /accounts/social/signup/ 200 [0.03, 127.0.0.1:53499]
+INFO 2021-01-21 10:09:15,050 runserver 147 HTTP POST /accounts/social/signup/ 200 [0.03, 127.0.0.1:53499]
+INFO 2021-01-21 10:09:30,391 runserver 147 HTTP POST /accounts/social/signup/ 200 [0.03, 127.0.0.1:53499]
+INFO 2021-01-21 10:09:31,897 runserver 147 HTTP POST /accounts/social/signup/ 200 [0.03, 127.0.0.1:53499]
+INFO 2021-01-21 10:09:32,568 runserver 147 HTTP POST /accounts/social/signup/ 200 [0.03, 127.0.0.1:53499]
+INFO 2021-01-21 10:09:32,737 runserver 147 HTTP POST /accounts/social/signup/ 200 [0.03, 127.0.0.1:53499]
+INFO 2021-01-21 10:09:48,828 runserver 147 HTTP GET /accounts/login/ 200 [0.05, 127.0.0.1:53499]
+INFO 2021-01-21 10:10:12,208 runserver 147 HTTP GET / 200 [0.04, 127.0.0.1:53499]
+WARNING 2021-01-21 10:10:12,414 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.03, 127.0.0.1:53578]
+INFO 2021-01-21 10:10:12,425 runserver 147 HTTP GET /api/v1/user/ 200 [0.05, 127.0.0.1:53499]
+WARNING 2021-01-21 10:10:12,441 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.01, 127.0.0.1:53578]
+WARNING 2021-01-21 10:10:12,486 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.02, 127.0.0.1:53578]
+ERROR 2021-01-21 10:10:12,574 log 230 Internal Server Error: /api/v1/message/
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1774, in get_prep_value
+    return int(value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\contrib\auth\models.py", line 414, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 339, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 38, in inner
+    response = await get_response(request)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 231, in _get_response_async
+    response = await wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 304, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "C:\Program Files\Python36\lib\asyncio\tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "C:\Program Files\Python36\lib\concurrent\futures\thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 343, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\chat\api.py", line 41, in list
+    Q(user=request.user))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1244, in build_filter
+    check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\related_lookups.py", line 117, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1778, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x000002B18F439B70>.
+ERROR 2021-01-21 10:10:12,579 runserver 160 HTTP GET /api/v1/message/?target=root 500 [0.14, 127.0.0.1:53499]
+INFO 2021-01-21 10:10:16,729 runserver 147 HTTP GET /product/ 200 [0.06, 127.0.0.1:53499]
+INFO 2021-01-21 10:10:16,762 runserver 147 HTTP GET /static/product/product.css 200 [0.01, 127.0.0.1:53499]
+INFO 2021-01-21 10:10:21,246 runserver 147 HTTP GET /product/product_id_1 200 [0.05, 127.0.0.1:53499]
+INFO 2021-01-21 10:10:22,618 runserver 147 HTTP GET /like/like_change?content_type=product&object_id=1&is_like=true&_=1611195021266 200 [0.02, 127.0.0.1:53499]
+INFO 2021-01-21 10:10:22,664 runserver 147 HTTP GET /accounts/login/ 200 [0.04, 127.0.0.1:53499]
+INFO 2021-01-21 10:10:31,434 runserver 147 HTTP GET /accounts/login/ 200 [0.04, 127.0.0.1:53499]
+INFO 2021-01-21 10:10:36,308 runserver 147 HTTP POST /accounts/login/ 200 [0.34, 127.0.0.1:53499]
+INFO 2021-01-21 10:11:11,583 runserver 153 HTTP POST /accounts/login/ 302 [0.23, 127.0.0.1:53499]
+INFO 2021-01-21 10:11:11,610 runserver 147 HTTP GET / 200 [0.02, 127.0.0.1:53499]
+WARNING 2021-01-21 10:11:11,753 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.04, 127.0.0.1:53578]
+INFO 2021-01-21 10:11:11,759 runserver 147 HTTP GET /api/v1/user/ 200 [0.05, 127.0.0.1:53499]
+WARNING 2021-01-21 10:11:11,803 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.01, 127.0.0.1:53499]
+WARNING 2021-01-21 10:11:11,824 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.01, 127.0.0.1:53499]
+INFO 2021-01-21 10:37:27,904 runserver 147 HTTP GET /product/ 200 [0.06, 127.0.0.1:53952]
+INFO 2021-01-21 10:37:27,934 runserver 151 HTTP GET /static/product/product.css 304 [0.01, 127.0.0.1:53952]
+INFO 2021-01-21 10:37:29,190 runserver 147 HTTP GET /product/product_id_2 200 [0.08, 127.0.0.1:53952]
+INFO 2021-01-21 10:37:30,739 runserver 147 HTTP GET /like/like_change?content_type=product&object_id=2&is_like=false&_=1611196649218 200 [0.05, 127.0.0.1:53952]
+INFO 2021-01-21 10:37:31,423 runserver 147 HTTP GET /like/like_change?content_type=product&object_id=2&is_like=true&_=1611196649219 200 [0.05, 127.0.0.1:53952]
+INFO 2021-01-21 10:37:34,786 runserver 147 HTTP GET / 200 [0.03, 127.0.0.1:53952]
+WARNING 2021-01-21 10:37:34,902 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.05, 127.0.0.1:53953]
+INFO 2021-01-21 10:37:34,909 runserver 147 HTTP GET /api/v1/user/ 200 [0.07, 127.0.0.1:53952]
+WARNING 2021-01-21 10:37:34,953 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.01, 127.0.0.1:53952]
+WARNING 2021-01-21 10:37:34,974 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.01, 127.0.0.1:53952]
+INFO 2021-01-21 10:37:35,203 runserver 147 HTTP GET /product/ 200 [0.05, 127.0.0.1:53952]
+INFO 2021-01-21 10:37:36,333 runserver 147 HTTP GET /product/product_id_10 200 [0.05, 127.0.0.1:53952]
+INFO 2021-01-21 10:37:39,024 runserver 147 HTTP POST /comment/update_comment 200 [0.03, 127.0.0.1:53952]
+INFO 2021-01-21 10:38:32,808 runserver 147 HTTP GET /product/product_id_10 200 [0.06, 127.0.0.1:53976]
+INFO 2021-01-21 10:42:21,987 autoreload 240 C:\Users\jkwu3\Desktop\mysite\index\urls.py changed, reloading.
+INFO 2021-01-21 10:42:23,717 autoreload 617 Watching for file changes with StatReloader
+ERROR 2021-01-21 10:49:10,682 log 230 Internal Server Error: /product/product_id_10
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 339, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 38, in inner
+    response = await get_response(request)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 231, in _get_response_async
+    response = await wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 304, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "C:\Program Files\Python36\lib\asyncio\tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "C:\Program Files\Python36\lib\concurrent\futures\thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 343, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\product\views.py", line 60, in detailProduct
+    return render(request, 'product_detail.html', context)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 446, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\urls\base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\urls\resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+ERROR 2021-01-21 10:49:10,693 runserver 160 HTTP GET /product/product_id_10 500 [0.22, 127.0.0.1:54168]
+INFO 2021-01-21 10:50:34,917 runserver 147 HTTP GET /product/product_id_10 200 [0.07, 127.0.0.1:54201]
+INFO 2021-01-21 10:50:34,955 runserver 151 HTTP GET /static/product/product.css 304 [0.00, 127.0.0.1:54201]
+INFO 2021-01-21 10:50:41,044 runserver 147 HTTP GET /product/product_id_10 200 [0.06, 127.0.0.1:54205]
+INFO 2021-01-21 10:50:41,078 runserver 147 HTTP GET /static/base.css 200 [0.01, 127.0.0.1:54205]
+INFO 2021-01-21 10:50:41,085 runserver 147 HTTP GET /static/bootstrap-3.3.7/css/bootstrap.min.css 200 [0.02, 127.0.0.1:54206]
+INFO 2021-01-21 10:50:41,095 runserver 147 HTTP GET /static/product/product.css 200 [0.02, 127.0.0.1:54209]
+INFO 2021-01-21 10:50:41,102 runserver 147 HTTP GET /static/ckeditor/ckeditor-init.js 200 [0.03, 127.0.0.1:54211]
+INFO 2021-01-21 10:50:41,110 runserver 147 HTTP GET /static/bootstrap-3.3.7/js/bootstrap.min.js 200 [0.04, 127.0.0.1:54210]
+INFO 2021-01-21 10:50:41,126 runserver 147 HTTP GET /static/jquery-1.12.4.min.js 200 [0.05, 127.0.0.1:54208]
+INFO 2021-01-21 10:50:41,137 runserver 147 HTTP GET /static/ckeditor/ckeditor/ckeditor.js 200 [0.06, 127.0.0.1:54205]
+INFO 2021-01-21 10:50:41,152 runserver 147 HTTP GET /static/images/%E5%A4%87%E6%A1%88%E5%9B%BE%E6%A0%87.png 200 [0.01, 127.0.0.1:54208]
+INFO 2021-01-21 10:50:41,226 runserver 147 HTTP GET /static/bootstrap-3.3.7/fonts/glyphicons-halflings-regular.woff2 200 [0.01, 127.0.0.1:54205]
+INFO 2021-01-21 10:50:41,256 runserver 147 HTTP GET /static/ckeditor/ckeditor/config.js?t=K5H9 200 [0.01, 127.0.0.1:54205]
+WARNING 2021-01-21 10:50:41,285 log 230 Not Found: /favicon.ico
+WARNING 2021-01-21 10:50:41,286 runserver 155 HTTP GET /favicon.ico 404 [0.02, 127.0.0.1:54205]
+INFO 2021-01-21 10:50:45,315 runserver 147 HTTP POST /comment/update_comment 200 [0.05, 127.0.0.1:54205]
+INFO 2021-01-21 10:50:47,405 runserver 147 HTTP GET /like/like_change?content_type=comment&object_id=15&is_like=true&_=1611197441144 200 [0.06, 127.0.0.1:54216]
+INFO 2021-01-21 10:50:48,333 runserver 147 HTTP GET /like/like_change?content_type=comment&object_id=15&is_like=false&_=1611197441145 200 [0.05, 127.0.0.1:54216]
+INFO 2021-01-21 10:50:48,803 runserver 147 HTTP GET /like/like_change?content_type=comment&object_id=15&is_like=true&_=1611197441146 200 [0.04, 127.0.0.1:54216]
+INFO 2021-01-21 10:50:49,476 runserver 147 HTTP GET /like/like_change?content_type=comment&object_id=15&is_like=false&_=1611197441147 200 [0.05, 127.0.0.1:54216]
+INFO 2021-01-21 10:50:50,091 runserver 147 HTTP GET /like/like_change?content_type=comment&object_id=15&is_like=true&_=1611197441148 200 [0.05, 127.0.0.1:54216]
+INFO 2021-01-21 10:50:50,732 runserver 147 HTTP GET /like/like_change?content_type=comment&object_id=15&is_like=false&_=1611197441149 200 [0.05, 127.0.0.1:54216]
+INFO 2021-01-21 10:50:52,204 runserver 147 HTTP GET /usercenter/ 200 [0.04, 127.0.0.1:54216]
+INFO 2021-01-21 10:50:53,706 runserver 153 HTTP GET /user_logout/ 302 [0.04, 127.0.0.1:54216]
+INFO 2021-01-21 10:50:53,722 runserver 147 HTTP GET / 200 [0.01, 127.0.0.1:54216]
+WARNING 2021-01-21 10:50:53,821 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.03, 127.0.0.1:54224]
+INFO 2021-01-21 10:50:53,828 runserver 147 HTTP GET /api/v1/user/ 200 [0.04, 127.0.0.1:54216]
+WARNING 2021-01-21 10:50:53,868 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.01, 127.0.0.1:54224]
+WARNING 2021-01-21 10:50:53,912 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.01, 127.0.0.1:54224]
+ERROR 2021-01-21 10:50:53,979 log 230 Internal Server Error: /api/v1/message/
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1774, in get_prep_value
+    return int(value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\contrib\auth\models.py", line 414, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 339, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 38, in inner
+    response = await get_response(request)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 231, in _get_response_async
+    response = await wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 304, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "C:\Program Files\Python36\lib\asyncio\tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "C:\Program Files\Python36\lib\concurrent\futures\thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 343, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\chat\api.py", line 41, in list
+    Q(user=request.user))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1244, in build_filter
+    check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\related_lookups.py", line 117, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1778, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x000002A1CD0BD390>.
+ERROR 2021-01-21 10:50:53,991 runserver 160 HTTP GET /api/v1/message/?target=root 500 [0.14, 127.0.0.1:54216]
+INFO 2021-01-21 10:50:55,154 runserver 147 HTTP GET /product/ 200 [0.05, 127.0.0.1:54216]
+INFO 2021-01-21 10:50:56,244 runserver 147 HTTP GET /product/product_id_10 200 [0.05, 127.0.0.1:54232]
+INFO 2021-01-21 10:51:24,289 runserver 147 HTTP GET /accounts/login/ 200 [0.06, 127.0.0.1:54248]
+INFO 2021-01-21 10:51:30,535 runserver 153 HTTP POST /accounts/login/ 302 [0.22, 127.0.0.1:54253]
+INFO 2021-01-21 10:51:30,563 runserver 147 HTTP GET / 200 [0.02, 127.0.0.1:54253]
+WARNING 2021-01-21 10:51:30,661 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.03, 127.0.0.1:54254]
+INFO 2021-01-21 10:51:30,668 runserver 147 HTTP GET /api/v1/user/ 200 [0.05, 127.0.0.1:54253]
+WARNING 2021-01-21 10:51:30,691 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.01, 127.0.0.1:54253]
+WARNING 2021-01-21 10:51:30,729 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.01, 127.0.0.1:54253]
+INFO 2021-01-21 10:51:32,149 runserver 147 HTTP GET /news/ 200 [0.04, 127.0.0.1:54253]
+WARNING 2021-01-21 10:51:32,172 runserver 155 HTTP GET /static/sd_new_img/2.jpg 404 [0.01, 127.0.0.1:54254]
+WARNING 2021-01-21 10:51:32,188 runserver 155 HTTP GET /static/sd_new_img/1.jpg 404 [0.02, 127.0.0.1:54253]
+WARNING 2021-01-21 10:51:32,202 runserver 155 HTTP GET /static/sd_new_img/3.jpg 404 [0.02, 127.0.0.1:54262]
+WARNING 2021-01-21 10:51:32,221 runserver 155 HTTP GET /static/sd_new_img/6.jpg 404 [0.04, 127.0.0.1:54265]
+WARNING 2021-01-21 10:51:32,236 runserver 155 HTTP GET /static/sd_new_img/4.jpg 404 [0.06, 127.0.0.1:54263]
+WARNING 2021-01-21 10:51:32,251 runserver 155 HTTP GET /static/sd_new_img/5.jpg 404 [0.07, 127.0.0.1:54264]
+WARNING 2021-01-21 10:51:32,264 runserver 155 HTTP GET /static/sd_new_img/7.jpg 404 [0.08, 127.0.0.1:54254]
+WARNING 2021-01-21 10:51:32,278 runserver 155 HTTP GET /static/sd_new_img/9.jpg 404 [0.09, 127.0.0.1:54253]
+WARNING 2021-01-21 10:51:32,292 runserver 155 HTTP GET /static/sd_new_img/11.jpg 404 [0.08, 127.0.0.1:54262]
+WARNING 2021-01-21 10:51:32,304 runserver 155 HTTP GET /static/sd_new_img/8.jpg 404 [0.08, 127.0.0.1:54265]
+WARNING 2021-01-21 10:51:32,312 runserver 155 HTTP GET /static/sd_new_img/10.jpg 404 [0.07, 127.0.0.1:54263]
+WARNING 2021-01-21 10:51:32,325 runserver 155 HTTP GET /static/sd_new_img/12.jpg 404 [0.07, 127.0.0.1:54264]
+INFO 2021-01-21 10:51:32,889 runserver 147 HTTP GET /show_sd 200 [0.03, 127.0.0.1:54264]
+INFO 2021-01-21 10:51:33,240 runserver 147 HTTP GET /product/ 200 [0.05, 127.0.0.1:54264]
+INFO 2021-01-21 10:51:34,474 runserver 147 HTTP GET /show_sd 200 [0.03, 127.0.0.1:54264]
+INFO 2021-01-21 10:51:35,017 runserver 147 HTTP GET /news/ 200 [0.04, 127.0.0.1:54264]
+WARNING 2021-01-21 10:51:35,047 runserver 155 HTTP GET /static/sd_new_img/1.jpg 404 [0.01, 127.0.0.1:54264]
+WARNING 2021-01-21 10:51:35,070 runserver 155 HTTP GET /static/sd_new_img/2.jpg 404 [0.03, 127.0.0.1:54263]
+WARNING 2021-01-21 10:51:35,086 runserver 155 HTTP GET /static/sd_new_img/3.jpg 404 [0.03, 127.0.0.1:54265]
+WARNING 2021-01-21 10:51:35,104 runserver 155 HTTP GET /static/sd_new_img/4.jpg 404 [0.05, 127.0.0.1:54262]
+WARNING 2021-01-21 10:51:35,115 runserver 155 HTTP GET /static/sd_new_img/5.jpg 404 [0.06, 127.0.0.1:54253]
+WARNING 2021-01-21 10:51:35,130 runserver 155 HTTP GET /static/sd_new_img/6.jpg 404 [0.07, 127.0.0.1:54254]
+WARNING 2021-01-21 10:51:35,144 runserver 155 HTTP GET /static/sd_new_img/7.jpg 404 [0.09, 127.0.0.1:54264]
+WARNING 2021-01-21 10:51:35,157 runserver 155 HTTP GET /static/sd_new_img/9.jpg 404 [0.07, 127.0.0.1:54263]
+WARNING 2021-01-21 10:51:35,168 runserver 155 HTTP GET /static/sd_new_img/11.jpg 404 [0.08, 127.0.0.1:54265]
+WARNING 2021-01-21 10:51:35,178 runserver 155 HTTP GET /static/sd_new_img/12.jpg 404 [0.07, 127.0.0.1:54262]
+WARNING 2021-01-21 10:51:35,191 runserver 155 HTTP GET /static/sd_new_img/8.jpg 404 [0.07, 127.0.0.1:54253]
+WARNING 2021-01-21 10:51:35,200 runserver 155 HTTP GET /static/sd_new_img/10.jpg 404 [0.06, 127.0.0.1:54254]
+INFO 2021-01-21 10:51:36,651 runserver 147 HTTP GET /case/ 200 [0.05, 127.0.0.1:54276]
+INFO 2021-01-21 10:51:36,675 runserver 147 HTTP GET /static/sd_case_img/1.jpg 200 [0.01, 127.0.0.1:54276]
+INFO 2021-01-21 10:51:36,690 runserver 147 HTTP GET /static/sd_case_img/2.jpg 200 [0.02, 127.0.0.1:54277]
+INFO 2021-01-21 10:51:36,701 runserver 147 HTTP GET /static/sd_case_img/5.jpg 200 [0.02, 127.0.0.1:54281]
+INFO 2021-01-21 10:51:36,719 runserver 147 HTTP GET /static/sd_case_img/6.jpg 200 [0.04, 127.0.0.1:54282]
+INFO 2021-01-21 10:51:36,734 runserver 147 HTTP GET /static/sd_case_img/3.jpg 200 [0.05, 127.0.0.1:54279]
+INFO 2021-01-21 10:51:36,747 runserver 147 HTTP GET /static/sd_case_img/4.jpg 200 [0.06, 127.0.0.1:54280]
+INFO 2021-01-21 10:51:36,761 runserver 147 HTTP GET /static/sd_case_img/7.jpg 200 [0.08, 127.0.0.1:54276]
+INFO 2021-01-21 10:51:36,771 runserver 147 HTTP GET /static/sd_case_img/8.jpg 200 [0.08, 127.0.0.1:54277]
+INFO 2021-01-21 10:51:36,780 runserver 147 HTTP GET /static/sd_case_img/9.jpg 200 [0.07, 127.0.0.1:54281]
+INFO 2021-01-21 10:51:36,791 runserver 147 HTTP GET /static/sd_case_img/10.jpg 200 [0.05, 127.0.0.1:54282]
+INFO 2021-01-21 10:51:36,802 runserver 147 HTTP GET /static/sd_case_img/11.jpg 200 [0.06, 127.0.0.1:54279]
+INFO 2021-01-21 10:51:36,811 runserver 147 HTTP GET /static/sd_case_img/12.jpg 200 [0.06, 127.0.0.1:54280]
+INFO 2021-01-21 10:51:37,308 runserver 147 HTTP GET /show_sd 200 [0.03, 127.0.0.1:54280]
+INFO 2021-01-21 10:51:38,490 runserver 147 HTTP GET /case/ 200 [0.04, 127.0.0.1:54280]
+INFO 2021-01-21 10:51:39,469 runserver 147 HTTP GET /show_sd 200 [0.02, 127.0.0.1:54280]
+INFO 2021-01-21 10:51:40,043 runserver 147 HTTP GET /product/ 200 [0.05, 127.0.0.1:54280]
+INFO 2021-01-21 10:51:40,765 runserver 147 HTTP GET /product/product_id_2 200 [0.09, 127.0.0.1:54280]
+INFO 2021-01-21 10:53:38,337 autoreload 617 Watching for file changes with StatReloader
+INFO 2021-01-21 10:53:42,042 runserver 147 HTTP GET /product/product_id_2 200 [0.12, 127.0.0.1:54407]
+INFO 2021-01-21 10:53:42,097 runserver 147 HTTP GET /static/base.css 200 [0.01, 127.0.0.1:54407]
+INFO 2021-01-21 10:53:42,106 runserver 147 HTTP GET /static/bootstrap-3.3.7/css/bootstrap.min.css 200 [0.02, 127.0.0.1:54408]
+INFO 2021-01-21 10:53:42,114 runserver 147 HTTP GET /static/ckeditor/ckeditor-init.js 200 [0.02, 127.0.0.1:54414]
+INFO 2021-01-21 10:53:42,119 runserver 147 HTTP GET /static/bootstrap-3.3.7/js/bootstrap.min.js 200 [0.03, 127.0.0.1:54412]
+INFO 2021-01-21 10:53:42,126 runserver 147 HTTP GET /static/jquery-1.12.4.min.js 200 [0.03, 127.0.0.1:54411]
+INFO 2021-01-21 10:53:42,133 runserver 147 HTTP GET /static/product/product.css 200 [0.04, 127.0.0.1:54413]
+INFO 2021-01-21 10:53:42,144 runserver 147 HTTP GET /static/ckeditor/ckeditor/ckeditor.js 200 [0.05, 127.0.0.1:54407]
+INFO 2021-01-21 10:53:42,153 runserver 147 HTTP GET /static/images/%E5%A4%87%E6%A1%88%E5%9B%BE%E6%A0%87.png 200 [0.01, 127.0.0.1:54411]
+INFO 2021-01-21 10:53:42,258 runserver 147 HTTP GET /static/bootstrap-3.3.7/fonts/glyphicons-halflings-regular.woff2 200 [0.01, 127.0.0.1:54407]
+INFO 2021-01-21 10:53:42,318 runserver 147 HTTP GET /static/ckeditor/ckeditor/config.js?t=K5H9 200 [0.01, 127.0.0.1:54407]
+WARNING 2021-01-21 10:53:42,359 log 230 Not Found: /favicon.ico
+WARNING 2021-01-21 10:53:42,359 runserver 155 HTTP GET /favicon.ico 404 [0.02, 127.0.0.1:54407]
+INFO 2021-01-21 10:53:45,652 runserver 147 HTTP GET /product/ 200 [0.06, 127.0.0.1:54407]
+INFO 2021-01-21 10:53:46,851 runserver 147 HTTP GET /product/product_id_7 200 [0.05, 127.0.0.1:54417]
+INFO 2021-01-21 10:53:51,762 runserver 147 HTTP POST /comment/update_comment 200 [0.04, 127.0.0.1:54417]
+INFO 2021-01-21 10:53:55,401 runserver 147 HTTP GET /like/like_change?content_type=comment&object_id=16&is_like=true&_=1611197626874 200 [0.06, 127.0.0.1:54417]
+INFO 2021-01-21 10:53:56,731 runserver 147 HTTP GET /like/like_change?content_type=comment&object_id=16&is_like=false&_=1611197626875 200 [0.05, 127.0.0.1:54430]
+INFO 2021-01-21 10:53:57,109 runserver 147 HTTP GET /like/like_change?content_type=comment&object_id=16&is_like=true&_=1611197626876 200 [0.05, 127.0.0.1:54430]
+INFO 2021-01-21 10:53:59,497 runserver 147 HTTP GET /like/like_change?content_type=product&object_id=7&is_like=true&_=1611197626877 200 [0.04, 127.0.0.1:54430]
+INFO 2021-01-21 10:53:59,977 runserver 147 HTTP GET /like/like_change?content_type=product&object_id=7&is_like=false&_=1611197626878 200 [0.04, 127.0.0.1:54430]
+INFO 2021-01-21 10:54:44,286 autoreload 617 Watching for file changes with StatReloader
+INFO 2021-01-21 10:54:54,528 runserver 147 HTTP GET /product/product_id_7 200 [0.11, 127.0.0.1:54488]
+INFO 2021-01-21 10:54:55,410 runserver 147 HTTP GET /product/product_id_7 200 [0.07, 127.0.0.1:54488]
+INFO 2021-01-21 10:54:55,684 runserver 147 HTTP GET /product/product_id_7 200 [0.07, 127.0.0.1:54488]
+INFO 2021-01-21 10:54:55,892 runserver 147 HTTP GET /product/product_id_7 200 [0.08, 127.0.0.1:54488]
+INFO 2021-01-21 10:54:58,980 runserver 147 HTTP GET /like/like_change?content_type=product&object_id=7&is_like=true&_=1611197695915 200 [0.05, 127.0.0.1:54488]
+INFO 2021-01-21 10:55:01,097 runserver 147 HTTP GET /product/product_id_7 200 [0.06, 127.0.0.1:54488]
+INFO 2021-01-21 10:55:01,353 runserver 147 HTTP GET /product/product_id_7 200 [0.09, 127.0.0.1:54488]
+INFO 2021-01-21 10:55:01,571 runserver 147 HTTP GET /product/product_id_7 200 [0.09, 127.0.0.1:54488]
+INFO 2021-01-21 10:55:01,900 runserver 147 HTTP GET /product/product_id_7 200 [0.06, 127.0.0.1:54488]
+INFO 2021-01-21 10:55:13,423 runserver 147 HTTP GET /product/product_id_7 200 [0.04, 127.0.0.1:54524]
+INFO 2021-01-21 10:55:13,468 runserver 147 HTTP GET /static/base.css 200 [0.01, 127.0.0.1:54524]
+INFO 2021-01-21 10:55:13,480 runserver 147 HTTP GET /static/bootstrap-3.3.7/css/bootstrap.min.css 200 [0.02, 127.0.0.1:54528]
+INFO 2021-01-21 10:55:13,492 runserver 147 HTTP GET /static/bootstrap-3.3.7/js/bootstrap.min.js 200 [0.02, 127.0.0.1:54529]
+INFO 2021-01-21 10:55:13,501 runserver 147 HTTP GET /static/product/product.css 200 [0.02, 127.0.0.1:54531]
+INFO 2021-01-21 10:55:13,508 runserver 151 HTTP GET /static/jquery-1.12.4.min.js 304 [0.02, 127.0.0.1:54532]
+INFO 2021-01-21 10:55:13,514 runserver 151 HTTP GET /static/ckeditor/ckeditor/ckeditor.js 304 [0.03, 127.0.0.1:54524]
+INFO 2021-01-21 10:55:13,524 runserver 151 HTTP GET /static/ckeditor/ckeditor-init.js 304 [0.03, 127.0.0.1:54533]
+INFO 2021-01-21 10:55:13,538 runserver 147 HTTP GET /static/images/%E5%A4%87%E6%A1%88%E5%9B%BE%E6%A0%87.png 200 [0.01, 127.0.0.1:54528]
+WARNING 2021-01-21 10:55:13,630 log 230 Not Found: /favicon.ico
+INFO 2021-01-21 10:55:13,644 runserver 147 HTTP GET /static/bootstrap-3.3.7/fonts/glyphicons-halflings-regular.woff2 200 [0.01, 127.0.0.1:54529]
+INFO 2021-01-21 10:55:15,016 runserver 147 HTTP GET /like/like_change?content_type=product&object_id=7&is_like=true&_=1611197713551 200 [0.01, 127.0.0.1:54529]
+INFO 2021-01-21 10:55:15,067 runserver 147 HTTP GET /accounts/login/ 200 [0.04, 127.0.0.1:54529]
+INFO 2021-01-21 10:55:15,094 runserver 151 HTTP GET /static/facebook/js/fbconnect.js 304 [0.00, 127.0.0.1:54529]
+INFO 2021-01-21 10:55:52,125 runserver 147 HTTP GET /product/ 200 [0.07, 127.0.0.1:54577]
+INFO 2021-01-21 10:55:53,106 runserver 147 HTTP GET /show_sd 200 [0.06, 127.0.0.1:54577]
+INFO 2021-01-21 10:55:53,692 runserver 147 HTTP GET /product/ 200 [0.05, 127.0.0.1:54577]
+INFO 2021-01-21 10:56:01,102 runserver 147 HTTP GET / 200 [0.03, 127.0.0.1:54583]
+WARNING 2021-01-21 10:56:01,228 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.04, 127.0.0.1:54584]
+INFO 2021-01-21 10:56:01,236 runserver 147 HTTP GET /api/v1/user/ 200 [0.06, 127.0.0.1:54583]
+WARNING 2021-01-21 10:56:01,274 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.01, 127.0.0.1:54583]
+WARNING 2021-01-21 10:56:01,307 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.01, 127.0.0.1:54583]
+INFO 2021-01-21 10:56:01,788 runserver 147 HTTP GET /product/ 200 [0.06, 127.0.0.1:54583]
+INFO 2021-01-21 10:56:02,507 runserver 147 HTTP GET /show_sd 200 [0.02, 127.0.0.1:54583]
+INFO 2021-01-21 10:56:03,039 runserver 147 HTTP GET /news/ 200 [0.06, 127.0.0.1:54583]
+WARNING 2021-01-21 10:56:03,076 runserver 155 HTTP GET /static/sd_new_img/1.jpg 404 [0.01, 127.0.0.1:54583]
+WARNING 2021-01-21 10:56:03,092 runserver 155 HTTP GET /static/sd_new_img/2.jpg 404 [0.02, 127.0.0.1:54584]
+WARNING 2021-01-21 10:56:03,105 runserver 155 HTTP GET /static/sd_new_img/4.jpg 404 [0.03, 127.0.0.1:54594]
+WARNING 2021-01-21 10:56:03,119 runserver 155 HTTP GET /static/sd_new_img/3.jpg 404 [0.04, 127.0.0.1:54593]
+WARNING 2021-01-21 10:56:03,132 runserver 155 HTTP GET /static/sd_new_img/6.jpg 404 [0.05, 127.0.0.1:54596]
+WARNING 2021-01-21 10:56:03,146 runserver 155 HTTP GET /static/sd_new_img/5.jpg 404 [0.06, 127.0.0.1:54595]
+WARNING 2021-01-21 10:56:03,161 runserver 155 HTTP GET /static/sd_new_img/7.jpg 404 [0.08, 127.0.0.1:54583]
+WARNING 2021-01-21 10:56:03,175 runserver 155 HTTP GET /static/sd_new_img/10.jpg 404 [0.08, 127.0.0.1:54584]
+WARNING 2021-01-21 10:56:03,184 runserver 155 HTTP GET /static/sd_new_img/9.jpg 404 [0.07, 127.0.0.1:54594]
+WARNING 2021-01-21 10:56:03,196 runserver 155 HTTP GET /static/sd_new_img/8.jpg 404 [0.07, 127.0.0.1:54593]
+WARNING 2021-01-21 10:56:03,208 runserver 155 HTTP GET /static/sd_new_img/12.jpg 404 [0.07, 127.0.0.1:54596]
+WARNING 2021-01-21 10:56:03,217 runserver 155 HTTP GET /static/sd_new_img/11.jpg 404 [0.06, 127.0.0.1:54595]
+INFO 2021-01-21 10:56:03,522 runserver 147 HTTP GET /show_sd 200 [0.03, 127.0.0.1:54595]
+INFO 2021-01-21 10:56:03,937 runserver 147 HTTP GET /product/ 200 [0.08, 127.0.0.1:54595]
+INFO 2021-01-21 10:56:10,836 runserver 147 HTTP GET /show_sd 200 [0.02, 127.0.0.1:54601]
+INFO 2021-01-21 10:56:11,372 runserver 147 HTTP GET /news/ 200 [0.05, 127.0.0.1:54601]
+WARNING 2021-01-21 10:56:11,404 runserver 155 HTTP GET /static/sd_new_img/1.jpg 404 [0.01, 127.0.0.1:54601]
+WARNING 2021-01-21 10:56:11,421 runserver 155 HTTP GET /static/sd_new_img/2.jpg 404 [0.03, 127.0.0.1:54602]
+WARNING 2021-01-21 10:56:11,439 runserver 155 HTTP GET /static/sd_new_img/4.jpg 404 [0.03, 127.0.0.1:54606]
+WARNING 2021-01-21 10:56:11,454 runserver 155 HTTP GET /static/sd_new_img/6.jpg 404 [0.04, 127.0.0.1:54608]
+WARNING 2021-01-21 10:56:11,467 runserver 155 HTTP GET /static/sd_new_img/3.jpg 404 [0.05, 127.0.0.1:54605]
+WARNING 2021-01-21 10:56:11,482 runserver 155 HTTP GET /static/sd_new_img/5.jpg 404 [0.07, 127.0.0.1:54607]
+WARNING 2021-01-21 10:56:11,497 runserver 155 HTTP GET /static/sd_new_img/7.jpg 404 [0.08, 127.0.0.1:54601]
+WARNING 2021-01-21 10:56:11,508 runserver 155 HTTP GET /static/sd_new_img/10.jpg 404 [0.08, 127.0.0.1:54602]
+WARNING 2021-01-21 10:56:11,519 runserver 155 HTTP GET /static/sd_new_img/11.jpg 404 [0.07, 127.0.0.1:54606]
+WARNING 2021-01-21 10:56:11,532 runserver 155 HTTP GET /static/sd_new_img/12.jpg 404 [0.07, 127.0.0.1:54608]
+WARNING 2021-01-21 10:56:11,542 runserver 155 HTTP GET /static/sd_new_img/8.jpg 404 [0.07, 127.0.0.1:54605]
+WARNING 2021-01-21 10:56:11,555 runserver 155 HTTP GET /static/sd_new_img/9.jpg 404 [0.06, 127.0.0.1:54607]
+INFO 2021-01-21 10:56:11,989 runserver 147 HTTP GET /usercenter/ 200 [0.02, 127.0.0.1:54607]
+INFO 2021-01-21 10:57:21,663 runserver 147 HTTP GET /show_sd 200 [0.02, 127.0.0.1:54641]
+INFO 2021-01-21 10:57:29,608 runserver 147 HTTP GET /product/ 200 [0.06, 127.0.0.1:54652]
+INFO 2021-01-21 10:57:30,631 runserver 147 HTTP GET / 200 [0.03, 127.0.0.1:54652]
+WARNING 2021-01-21 10:57:30,730 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.04, 127.0.0.1:54653]
+INFO 2021-01-21 10:57:30,736 runserver 147 HTTP GET /api/v1/user/ 200 [0.05, 127.0.0.1:54652]
+WARNING 2021-01-21 10:57:30,766 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.01, 127.0.0.1:54652]
+WARNING 2021-01-21 10:57:30,795 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.01, 127.0.0.1:54652]
+INFO 2021-01-21 11:01:46,708 runserver 147 HTTP GET /product/ 200 [0.05, 127.0.0.1:54811]
+INFO 2021-01-21 11:01:46,734 runserver 151 HTTP GET /static/product/product.css 304 [0.01, 127.0.0.1:54811]
+INFO 2021-01-21 11:01:47,490 runserver 147 HTTP GET / 200 [0.03, 127.0.0.1:54811]
+WARNING 2021-01-21 11:01:47,632 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.04, 127.0.0.1:54812]
+INFO 2021-01-21 11:01:47,638 runserver 147 HTTP GET /api/v1/user/ 200 [0.05, 127.0.0.1:54811]
+WARNING 2021-01-21 11:01:47,683 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.01, 127.0.0.1:54811]
+WARNING 2021-01-21 11:01:47,715 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.01, 127.0.0.1:54811]
+INFO 2021-01-21 11:01:49,423 runserver 153 HTTP POST /i18n/setlang/ 302 [0.07, 127.0.0.1:54811]
+INFO 2021-01-21 11:01:49,451 runserver 147 HTTP GET /ja/ 200 [0.02, 127.0.0.1:54811]
+WARNING 2021-01-21 11:01:49,556 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.04, 127.0.0.1:54812]
+INFO 2021-01-21 11:01:49,564 runserver 147 HTTP GET /ja/api/v1/user/ 200 [0.05, 127.0.0.1:54811]
+WARNING 2021-01-21 11:01:49,606 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.01, 127.0.0.1:54811]
+WARNING 2021-01-21 11:01:49,634 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.01, 127.0.0.1:54811]
+INFO 2021-01-21 11:01:50,194 runserver 147 HTTP GET /ja/product/ 200 [0.08, 127.0.0.1:54811]
+INFO 2021-01-21 11:01:51,079 runserver 147 HTTP GET /ja/product/ 200 [0.06, 127.0.0.1:54811]
+INFO 2021-01-21 11:01:51,532 runserver 147 HTTP GET / 200 [0.03, 127.0.0.1:54811]
+WARNING 2021-01-21 11:01:51,616 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.02, 127.0.0.1:54812]
+WARNING 2021-01-21 11:01:51,665 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.03, 127.0.0.1:54812]
+INFO 2021-01-21 11:01:51,672 runserver 147 HTTP GET /api/v1/user/ 200 [0.08, 127.0.0.1:54811]
+WARNING 2021-01-21 11:01:51,714 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.01, 127.0.0.1:54811]
+INFO 2021-01-21 11:01:53,783 runserver 153 HTTP POST /i18n/setlang/ 302 [0.07, 127.0.0.1:54811]
+INFO 2021-01-21 11:01:53,824 runserver 147 HTTP GET /zh-hans/ 200 [0.04, 127.0.0.1:54811]
+WARNING 2021-01-21 11:01:53,944 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.04, 127.0.0.1:54812]
+INFO 2021-01-21 11:01:53,952 runserver 147 HTTP GET /zh-hans/api/v1/user/ 200 [0.06, 127.0.0.1:54811]
+WARNING 2021-01-21 11:01:53,985 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.01, 127.0.0.1:54811]
+WARNING 2021-01-21 11:01:54,011 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.01, 127.0.0.1:54811]
+INFO 2021-01-21 11:01:58,911 runserver 153 HTTP POST /zh-hans/i18n/setlang/ 302 [0.04, 127.0.0.1:54811]
+INFO 2021-01-21 11:01:58,942 runserver 147 HTTP GET / 200 [0.03, 127.0.0.1:54811]
+WARNING 2021-01-21 11:01:59,027 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.03, 127.0.0.1:54812]
+INFO 2021-01-21 11:01:59,033 runserver 147 HTTP GET /api/v1/user/ 200 [0.05, 127.0.0.1:54811]
+WARNING 2021-01-21 11:01:59,072 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.01, 127.0.0.1:54811]
+WARNING 2021-01-21 11:01:59,104 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.01, 127.0.0.1:54811]
+INFO 2021-01-21 11:01:59,904 runserver 147 HTTP GET /product/ 200 [0.06, 127.0.0.1:54811]
+INFO 2021-01-21 11:02:01,893 runserver 147 HTTP GET /product/product_id_11 200 [0.06, 127.0.0.1:54811]
+INFO 2021-01-21 11:02:04,736 runserver 147 HTTP GET /like/like_change?content_type=product&object_id=11&is_like=true&_=1611198121915 200 [0.05, 127.0.0.1:54811]
+INFO 2021-01-21 11:02:05,409 runserver 147 HTTP GET /like/like_change?content_type=product&object_id=11&is_like=false&_=1611198121916 200 [0.04, 127.0.0.1:54811]
+INFO 2021-01-21 11:05:57,443 runserver 147 HTTP GET /static/ckeditor/ckeditor/plugins/smiley/images/regular_smile.png 200 [0.01, 127.0.0.1:55081]
+INFO 2021-01-21 11:23:07,049 autoreload 240 C:\Users\jkwu3\Desktop\mysite\mysite\asgi.py changed, reloading.
+INFO 2021-01-21 11:23:08,482 autoreload 617 Watching for file changes with StatReloader
+INFO 2021-01-21 11:54:23,173 autoreload 617 Watching for file changes with StatReloader
+INFO 2021-01-21 11:55:22,311 autoreload 617 Watching for file changes with StatReloader
+INFO 2021-01-21 11:55:36,204 autoreload 240 C:\Users\jkwu3\Desktop\mysite\like\urls.py changed, reloading.
+INFO 2021-01-21 11:55:37,448 autoreload 617 Watching for file changes with StatReloader
+INFO 2021-01-21 11:56:43,618 autoreload 617 Watching for file changes with StatReloader
+INFO 2021-01-21 11:56:49,779 autoreload 240 C:\Users\jkwu3\Desktop\mysite\mysite\settings\base.py changed, reloading.
+INFO 2021-01-21 11:56:51,266 autoreload 617 Watching for file changes with StatReloader
+INFO 2021-01-21 11:58:14,052 autoreload 617 Watching for file changes with StatReloader
+INFO 2021-01-21 11:58:32,158 autoreload 617 Watching for file changes with StatReloader
+INFO 2021-01-21 11:59:20,563 autoreload 617 Watching for file changes with StatReloader
+INFO 2021-01-21 11:59:58,668 autoreload 617 Watching for file changes with StatReloader
+INFO 2021-01-21 12:00:44,570 autoreload 617 Watching for file changes with StatReloader
+INFO 2021-01-21 12:00:46,578 runserver 147 HTTP GET / 200 [0.15, 127.0.0.1:55823]
+INFO 2021-01-21 12:00:46,645 runserver 151 HTTP GET /static/base.css 304 [0.01, 127.0.0.1:55823]
+INFO 2021-01-21 12:00:46,651 runserver 151 HTTP GET /static/bootstrap-3.3.7/css/bootstrap.min.css 304 [0.01, 127.0.0.1:55824]
+INFO 2021-01-21 12:00:46,658 runserver 151 HTTP GET /static/bootstrap-3.3.7/js/bootstrap.min.js 304 [0.01, 127.0.0.1:55826]
+WARNING 2021-01-21 12:00:46,878 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.05, 127.0.0.1:55824]
+INFO 2021-01-21 12:00:46,883 runserver 147 HTTP GET /api/v1/user/ 200 [0.06, 127.0.0.1:55826]
+WARNING 2021-01-21 12:00:46,896 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.01, 127.0.0.1:55826]
+WARNING 2021-01-21 12:00:46,949 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.01, 127.0.0.1:55826]
+INFO 2021-01-21 12:00:46,984 runserver 151 HTTP GET /static/bootstrap-3.3.7/fonts/glyphicons-halflings-regular.woff2 304 [0.01, 127.0.0.1:55826]
+INFO 2021-01-21 12:00:48,693 runserver 147 HTTP GET /product/ 200 [0.07, 127.0.0.1:55826]
+INFO 2021-01-21 12:00:48,717 runserver 151 HTTP GET /static/product/product.css 304 [0.00, 127.0.0.1:55826]
+INFO 2021-01-21 12:00:49,471 runserver 147 HTTP GET /product/ 200 [0.06, 127.0.0.1:55826]
+INFO 2021-01-21 12:00:49,885 runserver 147 HTTP GET / 200 [0.03, 127.0.0.1:55826]
+WARNING 2021-01-21 12:00:49,951 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.01, 127.0.0.1:55824]
+WARNING 2021-01-21 12:00:49,994 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.03, 127.0.0.1:55824]
+INFO 2021-01-21 12:00:50,001 runserver 147 HTTP GET /api/v1/user/ 200 [0.06, 127.0.0.1:55826]
+WARNING 2021-01-21 12:00:50,039 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.01, 127.0.0.1:55826]
+INFO 2021-01-21 12:00:51,369 runserver 147 HTTP GET /api/v1/message/?target=wUSbBnG6 200 [0.03, 127.0.0.1:55826]
+INFO 2021-01-21 12:00:51,980 runserver 147 HTTP GET /api/v1/message/?target=y02jHp1G 200 [0.03, 127.0.0.1:55843]
+INFO 2021-01-21 12:00:52,651 runserver 147 HTTP GET /api/v1/message/?target=2 200 [0.03, 127.0.0.1:55843]
+INFO 2021-01-21 12:00:54,226 runserver 147 HTTP GET /api/v1/message/?target=test 200 [0.03, 127.0.0.1:55843]
+INFO 2021-01-21 12:00:54,714 runserver 147 HTTP GET /api/v1/message/?target=mefuleu 200 [0.03, 127.0.0.1:55843]
+INFO 2021-01-21 12:00:55,520 runserver 147 HTTP GET /api/v1/message/?target=mefule 200 [0.03, 127.0.0.1:55843]
+INFO 2021-01-21 12:00:55,860 runserver 147 HTTP GET /api/v1/message/?target=mefule 200 [0.02, 127.0.0.1:55843]
+INFO 2021-01-21 12:00:56,104 runserver 147 HTTP GET /api/v1/message/?target=y02jHp1G 200 [0.03, 127.0.0.1:55843]
+INFO 2021-01-21 12:00:56,460 runserver 147 HTTP GET /api/v1/message/?target=y02jHp1G 200 [0.02, 127.0.0.1:55843]
+INFO 2021-01-21 12:00:56,781 runserver 147 HTTP GET /api/v1/message/?target=wUSbBnG6 200 [0.02, 127.0.0.1:55843]
+INFO 2021-01-21 12:00:57,232 runserver 147 HTTP GET /api/v1/message/?target=uDcSHWX0 200 [0.03, 127.0.0.1:55843]
+INFO 2021-01-21 12:00:57,922 runserver 147 HTTP GET /api/v1/message/?target=YmbS8RJo 200 [0.03, 127.0.0.1:55843]
+INFO 2021-01-21 12:00:58,269 runserver 147 HTTP GET /api/v1/message/?target=s5OtbZHL 200 [0.06, 127.0.0.1:55843]
+INFO 2021-01-21 12:01:04,430 runserver 147 HTTP GET /api/v1/message/?target=0BFXvGyq 200 [0.03, 127.0.0.1:55860]
+INFO 2021-01-21 12:01:04,945 runserver 147 HTTP GET /api/v1/message/?target=IcOQuC9h 200 [0.03, 127.0.0.1:55860]
+INFO 2021-01-21 12:01:05,466 runserver 147 HTTP GET /api/v1/message/?target=LQnulTd4 200 [0.03, 127.0.0.1:55860]
+INFO 2021-01-21 12:01:14,036 runserver 147 HTTP GET /product/ 200 [0.07, 127.0.0.1:55866]
+INFO 2021-01-21 12:01:15,230 runserver 147 HTTP GET /usercenter/ 200 [0.03, 127.0.0.1:55866]
+INFO 2021-01-21 12:01:16,535 runserver 147 HTTP GET /product/ 200 [0.06, 127.0.0.1:55866]
+INFO 2021-01-21 12:01:16,943 runserver 147 HTTP GET /show_sd 200 [0.02, 127.0.0.1:55866]
+INFO 2021-01-21 12:01:17,992 runserver 147 HTTP GET /news/ 200 [0.05, 127.0.0.1:55866]
+WARNING 2021-01-21 12:01:18,021 runserver 155 HTTP GET /static/sd_new_img/2.jpg 404 [0.01, 127.0.0.1:55866]
+WARNING 2021-01-21 12:01:18,037 runserver 155 HTTP GET /static/sd_new_img/1.jpg 404 [0.02, 127.0.0.1:55867]
+WARNING 2021-01-21 12:01:18,051 runserver 155 HTTP GET /static/sd_new_img/3.jpg 404 [0.02, 127.0.0.1:55873]
+WARNING 2021-01-21 12:01:18,068 runserver 155 HTTP GET /static/sd_new_img/6.jpg 404 [0.04, 127.0.0.1:55876]
+WARNING 2021-01-21 12:01:18,080 runserver 155 HTTP GET /static/sd_new_img/5.jpg 404 [0.05, 127.0.0.1:55875]
+WARNING 2021-01-21 12:01:18,096 runserver 155 HTTP GET /static/sd_new_img/4.jpg 404 [0.06, 127.0.0.1:55874]
+WARNING 2021-01-21 12:01:18,110 runserver 155 HTTP GET /static/sd_new_img/7.jpg 404 [0.08, 127.0.0.1:55866]
+WARNING 2021-01-21 12:01:18,122 runserver 155 HTTP GET /static/sd_new_img/8.jpg 404 [0.08, 127.0.0.1:55867]
+WARNING 2021-01-21 12:01:18,133 runserver 155 HTTP GET /static/sd_new_img/10.jpg 404 [0.07, 127.0.0.1:55873]
+WARNING 2021-01-21 12:01:18,143 runserver 155 HTTP GET /static/sd_new_img/11.jpg 404 [0.07, 127.0.0.1:55876]
+WARNING 2021-01-21 12:01:18,155 runserver 155 HTTP GET /static/sd_new_img/9.jpg 404 [0.07, 127.0.0.1:55875]
+WARNING 2021-01-21 12:01:18,162 runserver 155 HTTP GET /static/sd_new_img/12.jpg 404 [0.06, 127.0.0.1:55874]
+INFO 2021-01-21 12:01:18,304 runserver 147 HTTP GET /case/ 200 [0.04, 127.0.0.1:55874]
+INFO 2021-01-21 12:01:18,852 runserver 147 HTTP GET /news/ 200 [0.04, 127.0.0.1:55874]
+WARNING 2021-01-21 12:01:18,884 runserver 155 HTTP GET /static/sd_new_img/1.jpg 404 [0.01, 127.0.0.1:55874]
+WARNING 2021-01-21 12:01:18,902 runserver 155 HTTP GET /static/sd_new_img/2.jpg 404 [0.03, 127.0.0.1:55875]
+WARNING 2021-01-21 12:01:18,916 runserver 155 HTTP GET /static/sd_new_img/3.jpg 404 [0.03, 127.0.0.1:55876]
+WARNING 2021-01-21 12:01:18,935 runserver 155 HTTP GET /static/sd_new_img/6.jpg 404 [0.05, 127.0.0.1:55866]
+WARNING 2021-01-21 12:01:18,950 runserver 155 HTTP GET /static/sd_new_img/4.jpg 404 [0.06, 127.0.0.1:55873]
+WARNING 2021-01-21 12:01:18,968 runserver 155 HTTP GET /static/sd_new_img/5.jpg 404 [0.08, 127.0.0.1:55867]
+WARNING 2021-01-21 12:01:18,980 runserver 155 HTTP GET /static/sd_new_img/7.jpg 404 [0.09, 127.0.0.1:55874]
+WARNING 2021-01-21 12:01:19,038 runserver 155 HTTP GET /static/sd_new_img/10.jpg 404 [0.13, 127.0.0.1:55875]
+WARNING 2021-01-21 12:01:19,046 runserver 155 HTTP GET /static/sd_new_img/8.jpg 404 [0.12, 127.0.0.1:55876]
+WARNING 2021-01-21 12:01:19,056 runserver 155 HTTP GET /static/sd_new_img/12.jpg 404 [0.11, 127.0.0.1:55866]
+WARNING 2021-01-21 12:01:19,066 runserver 155 HTTP GET /static/sd_new_img/11.jpg 404 [0.11, 127.0.0.1:55873]
+WARNING 2021-01-21 12:01:19,077 runserver 155 HTTP GET /static/sd_new_img/9.jpg 404 [0.10, 127.0.0.1:55867]
+INFO 2021-01-21 12:01:19,157 runserver 147 HTTP GET /show_sd 200 [0.02, 127.0.0.1:55867]
+INFO 2021-01-21 12:01:19,561 runserver 147 HTTP GET /product/ 200 [0.07, 127.0.0.1:55867]
+INFO 2021-01-21 12:01:19,868 runserver 147 HTTP GET / 200 [0.03, 127.0.0.1:55867]
+WARNING 2021-01-21 12:01:19,959 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.03, 127.0.0.1:55873]
+INFO 2021-01-21 12:01:19,969 runserver 147 HTTP GET /api/v1/user/ 200 [0.05, 127.0.0.1:55867]
+WARNING 2021-01-21 12:01:20,021 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.01, 127.0.0.1:55867]
+WARNING 2021-01-21 12:01:20,061 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.01, 127.0.0.1:55867]
+INFO 2021-01-21 12:01:56,127 runserver 147 HTTP GET /product/ 200 [0.06, 127.0.0.1:55895]
+INFO 2021-01-21 12:01:56,979 runserver 147 HTTP GET /show_sd 200 [0.03, 127.0.0.1:55895]
+INFO 2021-01-21 12:01:57,491 runserver 147 HTTP GET /product/ 200 [0.07, 127.0.0.1:55895]
+INFO 2021-01-21 12:01:58,200 runserver 147 HTTP GET / 200 [0.03, 127.0.0.1:55895]
+WARNING 2021-01-21 12:01:58,313 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.04, 127.0.0.1:55896]
+INFO 2021-01-21 12:01:58,319 runserver 147 HTTP GET /api/v1/user/ 200 [0.06, 127.0.0.1:55895]
+WARNING 2021-01-21 12:01:58,367 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.01, 127.0.0.1:55895]
+WARNING 2021-01-21 12:01:58,400 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.01, 127.0.0.1:55895]
+INFO 2021-01-21 12:02:00,981 runserver 147 HTTP GET /api/v1/message/?target=wUSbBnG6 200 [0.02, 127.0.0.1:55895]
+INFO 2021-01-21 12:04:58,133 runserver 147 HTTP GET /product/ 200 [0.05, 127.0.0.1:56006]
+INFO 2021-01-21 12:04:58,615 runserver 147 HTTP GET /show_sd 200 [0.02, 127.0.0.1:56006]
+INFO 2021-01-21 12:04:59,765 runserver 147 HTTP GET /usercenter/ 200 [0.03, 127.0.0.1:56006]
+INFO 2021-01-21 12:05:01,294 runserver 147 HTTP GET /product/ 200 [0.06, 127.0.0.1:56006]
+INFO 2021-01-21 12:05:01,900 runserver 147 HTTP GET /show_sd 200 [0.02, 127.0.0.1:56006]
+INFO 2021-01-21 12:05:03,182 runserver 147 HTTP GET /usercenter/ 200 [0.03, 127.0.0.1:56006]
+INFO 2021-01-21 12:05:04,269 runserver 147 HTTP GET /case/ 200 [0.06, 127.0.0.1:56006]
+INFO 2021-01-21 12:05:04,625 runserver 147 HTTP GET /show_sd 200 [0.03, 127.0.0.1:56006]
+INFO 2021-01-21 12:05:05,774 runserver 147 HTTP GET /product/ 200 [0.06, 127.0.0.1:56006]
+INFO 2021-01-21 12:05:06,469 runserver 147 HTTP GET / 200 [0.03, 127.0.0.1:56006]
+WARNING 2021-01-21 12:05:06,561 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.03, 127.0.0.1:56007]
+INFO 2021-01-21 12:05:06,568 runserver 147 HTTP GET /api/v1/user/ 200 [0.05, 127.0.0.1:56006]
+WARNING 2021-01-21 12:05:06,601 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.01, 127.0.0.1:56006]
+WARNING 2021-01-21 12:05:06,622 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.01, 127.0.0.1:56006]
+INFO 2021-01-21 12:05:07,061 runserver 147 HTTP GET /product/ 200 [0.06, 127.0.0.1:56006]
+INFO 2021-01-21 12:05:07,658 runserver 147 HTTP GET / 200 [0.02, 127.0.0.1:56006]
+WARNING 2021-01-21 12:05:07,742 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.03, 127.0.0.1:56025]
+INFO 2021-01-21 12:05:07,748 runserver 147 HTTP GET /api/v1/user/ 200 [0.04, 127.0.0.1:56006]
+WARNING 2021-01-21 12:05:07,784 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.01, 127.0.0.1:56006]
+WARNING 2021-01-21 12:05:07,816 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.01, 127.0.0.1:56006]
+INFO 2021-01-21 12:05:09,728 runserver 147 HTTP GET /usercenter/ 200 [0.03, 127.0.0.1:56006]
+INFO 2021-01-21 12:05:11,475 runserver 153 HTTP GET /user_logout/ 302 [0.04, 127.0.0.1:56006]
+INFO 2021-01-21 12:05:11,490 runserver 147 HTTP GET / 200 [0.01, 127.0.0.1:56006]
+WARNING 2021-01-21 12:05:11,581 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.03, 127.0.0.1:56025]
+INFO 2021-01-21 12:05:11,589 runserver 147 HTTP GET /api/v1/user/ 200 [0.04, 127.0.0.1:56006]
+WARNING 2021-01-21 12:05:11,602 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.01, 127.0.0.1:56025]
+WARNING 2021-01-21 12:05:11,651 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.01, 127.0.0.1:56006]
+ERROR 2021-01-21 12:05:11,737 log 230 Internal Server Error: /api/v1/message/
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1774, in get_prep_value
+    return int(value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\contrib\auth\models.py", line 414, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 339, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 38, in inner
+    response = await get_response(request)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 231, in _get_response_async
+    response = await wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 304, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "C:\Program Files\Python36\lib\asyncio\tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "C:\Program Files\Python36\lib\concurrent\futures\thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 343, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\chat\api.py", line 41, in list
+    Q(user=request.user))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1244, in build_filter
+    check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\related_lookups.py", line 117, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1778, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x0000027803570860>.
+ERROR 2021-01-21 12:05:11,748 runserver 160 HTTP GET /api/v1/message/?target=root 500 [0.14, 127.0.0.1:56025]
+INFO 2021-01-21 12:05:17,748 runserver 147 HTTP GET /accounts/login/ 200 [0.05, 127.0.0.1:56039]
+INFO 2021-01-21 12:05:26,383 runserver 147 HTTP GET / 200 [0.02, 127.0.0.1:56039]
+INFO 2021-01-21 12:05:26,486 runserver 147 HTTP GET /api/v1/user/ 200 [0.03, 127.0.0.1:56039]
+ERROR 2021-01-21 12:05:26,603 log 230 Internal Server Error: /api/v1/message/
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1774, in get_prep_value
+    return int(value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\contrib\auth\models.py", line 414, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 339, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 38, in inner
+    response = await get_response(request)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 231, in _get_response_async
+    response = await wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 304, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "C:\Program Files\Python36\lib\asyncio\tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "C:\Program Files\Python36\lib\concurrent\futures\thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 343, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\chat\api.py", line 41, in list
+    Q(user=request.user))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1244, in build_filter
+    check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\related_lookups.py", line 117, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1778, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x000002780366FCC0>.
+ERROR 2021-01-21 12:05:26,611 runserver 160 HTTP GET /api/v1/message/?target=root 500 [0.11, 127.0.0.1:56039]
+INFO 2021-01-21 12:05:27,209 runserver 147 HTTP GET /accounts/login/ 200 [0.05, 127.0.0.1:56039]
+INFO 2021-01-21 12:05:30,138 runserver 147 HTTP GET /accounts/login/ 200 [0.04, 127.0.0.1:56039]
+INFO 2021-01-21 16:54:34,510 autoreload 617 Watching for file changes with StatReloader
+INFO 2021-01-21 16:54:52,953 autoreload 617 Watching for file changes with StatReloader
+INFO 2021-01-21 16:55:00,010 runserver 147 HTTP GET / 200 [0.07, 127.0.0.1:56725]
+INFO 2021-01-21 16:55:00,047 runserver 151 HTTP GET /static/base.css 304 [0.01, 127.0.0.1:56725]
+INFO 2021-01-21 16:55:00,054 runserver 151 HTTP GET /static/bootstrap-3.3.7/css/bootstrap.min.css 304 [0.01, 127.0.0.1:56726]
+INFO 2021-01-21 16:55:00,060 runserver 151 HTTP GET /static/bootstrap-3.3.7/js/bootstrap.min.js 304 [0.01, 127.0.0.1:56733]
+WARNING 2021-01-21 16:55:00,297 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.09, 127.0.0.1:56726]
+INFO 2021-01-21 16:55:00,303 runserver 147 HTTP GET /api/v1/user/ 200 [0.11, 127.0.0.1:56733]
+WARNING 2021-01-21 16:55:00,339 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.01, 127.0.0.1:56726]
+WARNING 2021-01-21 16:55:00,363 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.02, 127.0.0.1:56726]
+INFO 2021-01-21 16:55:00,390 runserver 151 HTTP GET /static/bootstrap-3.3.7/fonts/glyphicons-halflings-regular.woff2 304 [0.01, 127.0.0.1:56726]
+WARNING 2021-01-21 16:55:00,629 log 230 Not Found: /favicon.ico
+WARNING 2021-01-21 16:55:00,630 runserver 155 HTTP GET /favicon.ico 404 [0.25, 127.0.0.1:56725]
+ERROR 2021-01-21 16:55:00,688 log 230 Internal Server Error: /api/v1/message/
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1774, in get_prep_value
+    return int(value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\contrib\auth\models.py", line 414, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 339, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 38, in inner
+    response = await get_response(request)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 231, in _get_response_async
+    response = await wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 304, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "C:\Program Files\Python36\lib\asyncio\tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "C:\Program Files\Python36\lib\concurrent\futures\thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 343, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\chat\api.py", line 41, in list
+    Q(user=request.user))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1244, in build_filter
+    check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\related_lookups.py", line 117, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1778, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x0000018CE56BA358>.
+ERROR 2021-01-21 16:55:00,703 runserver 160 HTTP GET /api/v1/message/?target=root 500 [0.38, 127.0.0.1:56733]
+INFO 2021-01-21 16:55:04,257 runserver 147 HTTP GET /product/ 200 [0.06, 127.0.0.1:56733]
+INFO 2021-01-21 16:55:04,281 runserver 151 HTTP GET /static/product/product.css 304 [0.01, 127.0.0.1:56733]
+INFO 2021-01-21 16:55:04,973 runserver 147 HTTP GET /show_sd 200 [0.01, 127.0.0.1:56733]
+INFO 2021-01-21 16:55:05,988 runserver 147 HTTP GET /show_sd 200 [0.01, 127.0.0.1:56733]
+INFO 2021-01-21 16:55:06,407 runserver 147 HTTP GET /news/ 200 [0.04, 127.0.0.1:56733]
+WARNING 2021-01-21 16:55:06,434 runserver 155 HTTP GET /static/sd_new_img/2.jpg 404 [0.01, 127.0.0.1:56725]
+WARNING 2021-01-21 16:55:06,453 runserver 155 HTTP GET /static/sd_new_img/1.jpg 404 [0.03, 127.0.0.1:56733]
+WARNING 2021-01-21 16:55:06,467 runserver 155 HTTP GET /static/sd_new_img/3.jpg 404 [0.03, 127.0.0.1:56726]
+WARNING 2021-01-21 16:55:06,480 runserver 155 HTTP GET /static/sd_new_img/4.jpg 404 [0.03, 127.0.0.1:56764]
+WARNING 2021-01-21 16:55:06,495 runserver 155 HTTP GET /static/sd_new_img/6.jpg 404 [0.05, 127.0.0.1:56766]
+WARNING 2021-01-21 16:55:06,509 runserver 155 HTTP GET /static/sd_new_img/5.jpg 404 [0.06, 127.0.0.1:56765]
+WARNING 2021-01-21 16:55:06,521 runserver 155 HTTP GET /static/sd_new_img/7.jpg 404 [0.07, 127.0.0.1:56725]
+WARNING 2021-01-21 16:55:06,534 runserver 155 HTTP GET /static/sd_new_img/10.jpg 404 [0.07, 127.0.0.1:56733]
+WARNING 2021-01-21 16:55:06,544 runserver 155 HTTP GET /static/sd_new_img/8.jpg 404 [0.07, 127.0.0.1:56726]
+WARNING 2021-01-21 16:55:06,554 runserver 155 HTTP GET /static/sd_new_img/12.jpg 404 [0.06, 127.0.0.1:56764]
+WARNING 2021-01-21 16:55:06,563 runserver 155 HTTP GET /static/sd_new_img/11.jpg 404 [0.06, 127.0.0.1:56766]
+WARNING 2021-01-21 16:55:06,574 runserver 155 HTTP GET /static/sd_new_img/9.jpg 404 [0.06, 127.0.0.1:56765]
+INFO 2021-01-21 16:55:06,992 runserver 147 HTTP GET /case/ 200 [0.04, 127.0.0.1:56765]
+INFO 2021-01-21 16:55:07,714 runserver 147 HTTP GET /news/ 200 [0.04, 127.0.0.1:56765]
+WARNING 2021-01-21 16:55:07,753 runserver 155 HTTP GET /static/sd_new_img/1.jpg 404 [0.02, 127.0.0.1:56765]
+WARNING 2021-01-21 16:55:07,762 runserver 155 HTTP GET /static/sd_new_img/2.jpg 404 [0.02, 127.0.0.1:56766]
+WARNING 2021-01-21 16:55:07,775 runserver 155 HTTP GET /static/sd_new_img/3.jpg 404 [0.02, 127.0.0.1:56764]
+WARNING 2021-01-21 16:55:07,793 runserver 155 HTTP GET /static/sd_new_img/4.jpg 404 [0.04, 127.0.0.1:56726]
+WARNING 2021-01-21 16:55:07,810 runserver 155 HTTP GET /static/sd_new_img/5.jpg 404 [0.06, 127.0.0.1:56733]
+WARNING 2021-01-21 16:55:07,826 runserver 155 HTTP GET /static/sd_new_img/6.jpg 404 [0.07, 127.0.0.1:56725]
+WARNING 2021-01-21 16:55:07,848 runserver 155 HTTP GET /static/sd_new_img/7.jpg 404 [0.09, 127.0.0.1:56765]
+WARNING 2021-01-21 16:55:07,868 runserver 155 HTTP GET /static/sd_new_img/12.jpg 404 [0.10, 127.0.0.1:56766]
+WARNING 2021-01-21 16:55:07,879 runserver 155 HTTP GET /static/sd_new_img/10.jpg 404 [0.09, 127.0.0.1:56764]
+WARNING 2021-01-21 16:55:07,894 runserver 155 HTTP GET /static/sd_new_img/11.jpg 404 [0.09, 127.0.0.1:56726]
+WARNING 2021-01-21 16:55:07,909 runserver 155 HTTP GET /static/sd_new_img/8.jpg 404 [0.09, 127.0.0.1:56733]
+WARNING 2021-01-21 16:55:07,922 runserver 155 HTTP GET /static/sd_new_img/9.jpg 404 [0.08, 127.0.0.1:56725]
+INFO 2021-01-21 16:55:08,422 runserver 147 HTTP GET /news/news_id_3 200 [0.02, 127.0.0.1:56725]
+INFO 2021-01-21 16:55:10,717 runserver 147 HTTP GET /product/ 200 [0.05, 127.0.0.1:56725]
+INFO 2021-01-21 16:55:11,483 runserver 147 HTTP GET /product/product_id_2 200 [0.07, 127.0.0.1:56725]
+INFO 2021-01-21 16:55:17,952 runserver 147 HTTP GET /product/product_id_2 200 [0.07, 127.0.0.1:56725]
+INFO 2021-01-21 16:55:29,202 runserver 147 HTTP GET /product/ 200 [0.09, 127.0.0.1:56725]
+INFO 2021-01-21 16:55:30,109 runserver 147 HTTP GET /show_sd 200 [0.01, 127.0.0.1:56725]
+INFO 2021-01-21 16:55:30,607 runserver 147 HTTP GET /product/ 200 [0.04, 127.0.0.1:56725]
+INFO 2021-01-21 16:55:47,481 runserver 147 HTTP GET /accounts/login/ 200 [0.13, 127.0.0.1:56725]
+INFO 2021-01-21 16:55:56,134 runserver 147 HTTP GET /accounts/login/ 200 [0.04, 127.0.0.1:56725]
+INFO 2021-01-21 16:56:15,106 runserver 147 HTTP GET /product/product_type/Outdoor%20play%20equipment/Stainless%20steel%20slide 200 [0.05, 127.0.0.1:56725]
+INFO 2021-01-21 16:56:16,522 runserver 147 HTTP GET /product/product_type/Indoor%20play%20equipment/Indoor%20stainless%20steel%20slide 200 [0.05, 127.0.0.1:56725]
+INFO 2021-01-21 16:56:16,550 runserver 147 HTTP GET /static/sd_products_img/62.jpg 200 [0.01, 127.0.0.1:56725]
+INFO 2021-01-21 16:56:16,563 runserver 147 HTTP GET /static/sd_products_img/63.jpg 200 [0.02, 127.0.0.1:56845]
+INFO 2021-01-21 16:56:16,573 runserver 147 HTTP GET /static/sd_products_img/64.jpg 200 [0.02, 127.0.0.1:56725]
+INFO 2021-01-21 16:56:16,588 runserver 147 HTTP GET /static/sd_products_img/67.jpg 200 [0.03, 127.0.0.1:56850]
+INFO 2021-01-21 16:56:16,598 runserver 147 HTTP GET /static/sd_products_img/68.jpg 200 [0.04, 127.0.0.1:56851]
+INFO 2021-01-21 16:56:16,607 runserver 147 HTTP GET /static/sd_products_img/65.jpg 200 [0.05, 127.0.0.1:56848]
+INFO 2021-01-21 16:56:16,617 runserver 147 HTTP GET /static/sd_products_img/66.jpg 200 [0.06, 127.0.0.1:56849]
+INFO 2021-01-21 16:56:18,513 runserver 147 HTTP GET /product/product_type/Other%20preschool%20education%20equipment/Kindergarten%20furniture 200 [0.05, 127.0.0.1:56849]
+INFO 2021-01-21 16:56:18,549 runserver 147 HTTP GET /static/sd_products_img/77.jpg 200 [0.02, 127.0.0.1:56849]
+INFO 2021-01-21 16:56:18,559 runserver 147 HTTP GET /static/sd_products_img/78.jpg 200 [0.02, 127.0.0.1:56848]
+INFO 2021-01-21 16:56:18,568 runserver 147 HTTP GET /static/sd_products_img/79.jpg 200 [0.02, 127.0.0.1:56851]
+INFO 2021-01-21 16:56:18,580 runserver 147 HTTP GET /static/sd_products_img/80.jpg 200 [0.03, 127.0.0.1:56850]
+INFO 2021-01-21 16:56:18,592 runserver 147 HTTP GET /static/sd_products_img/82.jpg 200 [0.04, 127.0.0.1:56845]
+INFO 2021-01-21 16:56:18,604 runserver 147 HTTP GET /static/sd_products_img/81.jpg 200 [0.05, 127.0.0.1:56725]
+INFO 2021-01-21 16:56:18,614 runserver 147 HTTP GET /static/sd_products_img/83.jpg 200 [0.06, 127.0.0.1:56849]
+INFO 2021-01-21 16:56:18,623 runserver 147 HTTP GET /static/sd_products_img/87.jpg 200 [0.06, 127.0.0.1:56848]
+INFO 2021-01-21 16:56:18,635 runserver 147 HTTP GET /static/sd_products_img/84.jpg 200 [0.06, 127.0.0.1:56851]
+INFO 2021-01-21 16:56:18,648 runserver 147 HTTP GET /static/sd_products_img/86.jpg 200 [0.06, 127.0.0.1:56850]
+INFO 2021-01-21 16:56:18,657 runserver 147 HTTP GET /static/sd_products_img/88.jpg 200 [0.06, 127.0.0.1:56845]
+INFO 2021-01-21 16:56:18,668 runserver 147 HTTP GET /static/sd_products_img/85.jpg 200 [0.06, 127.0.0.1:56725]
+INFO 2021-01-21 16:56:35,429 runserver 147 HTTP GET /show_sd 200 [0.01, 127.0.0.1:56725]
+INFO 2021-01-21 16:56:36,131 runserver 147 HTTP GET /product/ 200 [0.05, 127.0.0.1:56725]
+INFO 2021-01-21 16:56:36,593 runserver 147 HTTP GET /show_sd 200 [0.01, 127.0.0.1:56725]
+INFO 2021-01-21 16:56:37,615 runserver 147 HTTP GET /product/ 200 [0.06, 127.0.0.1:56725]
+INFO 2021-01-21 16:56:38,193 runserver 147 HTTP GET /product/product_id_2 200 [0.07, 127.0.0.1:56725]
+INFO 2021-01-21 16:56:43,482 runserver 147 HTTP GET /like/like_change?content_type=product&object_id=2&is_like=true&_=1611219398215 200 [0.01, 127.0.0.1:56725]
+INFO 2021-01-21 16:56:43,528 runserver 147 HTTP GET /accounts/login/ 200 [0.04, 127.0.0.1:56725]
+INFO 2021-01-21 17:04:52,290 autoreload 617 Watching for file changes with StatReloader
+INFO 2021-01-21 17:04:54,415 runserver 147 HTTP GET / 200 [0.07, 127.0.0.1:57584]
+WARNING 2021-01-21 17:04:54,642 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.04, 127.0.0.1:57585]
+INFO 2021-01-21 17:04:54,647 runserver 147 HTTP GET /api/v1/user/ 200 [0.05, 127.0.0.1:57584]
+WARNING 2021-01-21 17:04:54,666 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.01, 127.0.0.1:57585]
+WARNING 2021-01-21 17:04:54,746 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.02, 127.0.0.1:57585]
+ERROR 2021-01-21 17:04:54,865 log 230 Internal Server Error: /api/v1/message/
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1774, in get_prep_value
+    return int(value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\contrib\auth\models.py", line 414, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 339, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 38, in inner
+    response = await get_response(request)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 231, in _get_response_async
+    response = await wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 304, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "C:\Program Files\Python36\lib\asyncio\tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "C:\Program Files\Python36\lib\concurrent\futures\thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 343, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\chat\api.py", line 41, in list
+    Q(user=request.user))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1244, in build_filter
+    check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\related_lookups.py", line 117, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1778, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x0000022B0390A6A0>.
+WARNING 2021-01-21 17:04:54,880 log 230 Not Found: /favicon.ico
+WARNING 2021-01-21 17:04:54,884 runserver 155 HTTP GET /favicon.ico 404 [0.02, 127.0.0.1:57585]
+ERROR 2021-01-21 17:04:54,888 runserver 160 HTTP GET /api/v1/message/?target=root 500 [0.22, 127.0.0.1:57584]
+INFO 2021-01-21 17:04:57,162 runserver 147 HTTP GET /product/ 200 [0.06, 127.0.0.1:57584]
+INFO 2021-01-21 17:04:58,409 runserver 147 HTTP GET /product/product_id_2 200 [0.06, 127.0.0.1:57584]
