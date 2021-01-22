@@ -19895,3 +19895,1805 @@ WARNING 2021-01-21 17:04:54,884 runserver 155 HTTP GET /favicon.ico 404 [0.02, 1
 ERROR 2021-01-21 17:04:54,888 runserver 160 HTTP GET /api/v1/message/?target=root 500 [0.22, 127.0.0.1:57584]
 INFO 2021-01-21 17:04:57,162 runserver 147 HTTP GET /product/ 200 [0.06, 127.0.0.1:57584]
 INFO 2021-01-21 17:04:58,409 runserver 147 HTTP GET /product/product_id_2 200 [0.06, 127.0.0.1:57584]
+INFO 2021-01-22 09:56:17,803 autoreload 617 Watching for file changes with StatReloader
+INFO 2021-01-22 09:56:21,748 runserver 147 HTTP GET / 200 [0.08, 127.0.0.1:51246]
+INFO 2021-01-22 09:56:21,814 runserver 151 HTTP GET /static/base.css 304 [0.01, 127.0.0.1:51246]
+INFO 2021-01-22 09:56:21,819 runserver 151 HTTP GET /static/bootstrap-3.3.7/css/bootstrap.min.css 304 [0.01, 127.0.0.1:51245]
+INFO 2021-01-22 09:56:21,830 runserver 147 HTTP GET /static/home.css 200 [0.02, 127.0.0.1:51247]
+INFO 2021-01-22 09:56:21,833 runserver 151 HTTP GET /static/bootstrap-3.3.7/js/bootstrap.min.js 304 [0.02, 127.0.0.1:51248]
+WARNING 2021-01-22 09:56:22,105 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.06, 127.0.0.1:51248]
+INFO 2021-01-22 09:56:22,110 runserver 147 HTTP GET /api/v1/user/ 200 [0.07, 127.0.0.1:51247]
+WARNING 2021-01-22 09:56:22,140 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.01, 127.0.0.1:51248]
+WARNING 2021-01-22 09:56:22,235 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.06, 127.0.0.1:51248]
+INFO 2021-01-22 09:56:22,422 runserver 151 HTTP GET /static/bootstrap-3.3.7/fonts/glyphicons-halflings-regular.woff2 304 [0.13, 127.0.0.1:51248]
+WARNING 2021-01-22 09:56:22,475 log 230 Not Found: /favicon.ico
+WARNING 2021-01-22 09:56:22,476 runserver 155 HTTP GET /favicon.ico 404 [0.17, 127.0.0.1:51245]
+ERROR 2021-01-22 09:56:22,542 log 230 Internal Server Error: /api/v1/message/
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1774, in get_prep_value
+    return int(value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\contrib\auth\models.py", line 414, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 339, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 38, in inner
+    response = await get_response(request)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 231, in _get_response_async
+    response = await wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 304, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "C:\Program Files\Python36\lib\asyncio\tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "C:\Program Files\Python36\lib\concurrent\futures\thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 343, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\chat\api.py", line 41, in list
+    Q(user=request.user))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1244, in build_filter
+    check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\related_lookups.py", line 117, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1778, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x00000265A8318C88>.
+ERROR 2021-01-22 09:56:22,553 runserver 160 HTTP GET /api/v1/message/?target=root 500 [0.42, 127.0.0.1:51247]
+INFO 2021-01-22 09:59:44,254 runserver 147 HTTP GET / 200 [0.02, 127.0.0.1:51839]
+WARNING 2021-01-22 09:59:44,515 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.03, 127.0.0.1:51838]
+INFO 2021-01-22 09:59:44,522 runserver 147 HTTP GET /api/v1/user/ 200 [0.04, 127.0.0.1:51839]
+WARNING 2021-01-22 09:59:44,558 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.01, 127.0.0.1:51838]
+WARNING 2021-01-22 09:59:44,619 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.02, 127.0.0.1:51838]
+ERROR 2021-01-22 09:59:44,695 log 230 Internal Server Error: /api/v1/message/
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1774, in get_prep_value
+    return int(value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\contrib\auth\models.py", line 414, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 339, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 38, in inner
+    response = await get_response(request)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 231, in _get_response_async
+    response = await wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 304, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "C:\Program Files\Python36\lib\asyncio\tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "C:\Program Files\Python36\lib\concurrent\futures\thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 343, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\chat\api.py", line 41, in list
+    Q(user=request.user))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1244, in build_filter
+    check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\related_lookups.py", line 117, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1778, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x00000265A850DAC8>.
+ERROR 2021-01-22 09:59:44,703 runserver 160 HTTP GET /api/v1/message/?target=root 500 [0.16, 127.0.0.1:51839]
+INFO 2021-01-22 09:59:47,768 runserver 147 HTTP GET /product/ 200 [0.05, 127.0.0.1:51839]
+INFO 2021-01-22 09:59:47,792 runserver 151 HTTP GET /static/product/product.css 304 [0.00, 127.0.0.1:51838]
+INFO 2021-01-22 09:59:47,797 runserver 151 HTTP GET /static/sd_products_img/1.jpg 304 [0.01, 127.0.0.1:51839]
+INFO 2021-01-22 09:59:47,808 runserver 151 HTTP GET /static/sd_products_img/2.jpg 304 [0.01, 127.0.0.1:51838]
+INFO 2021-01-22 09:59:47,814 runserver 151 HTTP GET /static/sd_products_img/5.jpg 304 [0.01, 127.0.0.1:51839]
+INFO 2021-01-22 09:59:47,821 runserver 151 HTTP GET /static/sd_products_img/3.jpg 304 [0.02, 127.0.0.1:51853]
+INFO 2021-01-22 09:59:47,827 runserver 151 HTTP GET /static/sd_products_img/4.jpg 304 [0.02, 127.0.0.1:51854]
+INFO 2021-01-22 09:59:47,835 runserver 151 HTTP GET /static/sd_products_img/6.jpg 304 [0.03, 127.0.0.1:51855]
+INFO 2021-01-22 09:59:47,839 runserver 151 HTTP GET /static/sd_products_img/7.jpg 304 [0.03, 127.0.0.1:51856]
+INFO 2021-01-22 09:59:47,848 runserver 151 HTTP GET /static/sd_products_img/8.jpg 304 [0.03, 127.0.0.1:51838]
+INFO 2021-01-22 09:59:47,856 runserver 151 HTTP GET /static/sd_products_img/9.jpg 304 [0.04, 127.0.0.1:51839]
+INFO 2021-01-22 09:59:47,865 runserver 151 HTTP GET /static/sd_products_img/11.jpg 304 [0.04, 127.0.0.1:51853]
+INFO 2021-01-22 09:59:47,874 runserver 151 HTTP GET /static/sd_products_img/12.jpg 304 [0.04, 127.0.0.1:51854]
+INFO 2021-01-22 09:59:47,880 runserver 151 HTTP GET /static/sd_products_img/10.jpg 304 [0.04, 127.0.0.1:51855]
+INFO 2021-01-22 09:59:48,782 runserver 147 HTTP GET / 200 [0.01, 127.0.0.1:51855]
+WARNING 2021-01-22 09:59:48,846 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.01, 127.0.0.1:51854]
+WARNING 2021-01-22 09:59:48,893 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.04, 127.0.0.1:51854]
+INFO 2021-01-22 09:59:48,899 runserver 147 HTTP GET /api/v1/user/ 200 [0.07, 127.0.0.1:51855]
+WARNING 2021-01-22 09:59:48,933 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.01, 127.0.0.1:51854]
+ERROR 2021-01-22 09:59:49,043 log 230 Internal Server Error: /api/v1/message/
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1774, in get_prep_value
+    return int(value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\contrib\auth\models.py", line 414, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 339, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 38, in inner
+    response = await get_response(request)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 231, in _get_response_async
+    response = await wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 304, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "C:\Program Files\Python36\lib\asyncio\tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "C:\Program Files\Python36\lib\concurrent\futures\thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 343, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\chat\api.py", line 41, in list
+    Q(user=request.user))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1244, in build_filter
+    check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\related_lookups.py", line 117, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1778, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x00000265A8515320>.
+ERROR 2021-01-22 09:59:49,052 runserver 160 HTTP GET /api/v1/message/?target=root 500 [0.14, 127.0.0.1:51855]
+INFO 2021-01-22 09:59:52,981 runserver 147 HTTP GET /accounts/login/ 200 [0.07, 127.0.0.1:51855]
+INFO 2021-01-22 09:59:55,066 runserver 147 HTTP GET /show_sd 200 [0.01, 127.0.0.1:51855]
+INFO 2021-01-22 09:59:55,958 runserver 147 HTTP GET /product/ 200 [0.05, 127.0.0.1:51855]
+INFO 2021-01-22 09:59:56,519 runserver 147 HTTP GET /show_sd 200 [0.01, 127.0.0.1:51855]
+INFO 2021-01-22 09:59:56,996 runserver 147 HTTP GET /news/ 200 [0.04, 127.0.0.1:51855]
+WARNING 2021-01-22 09:59:57,027 runserver 155 HTTP GET /static/sd_new_img/1.jpg 404 [0.01, 127.0.0.1:51855]
+WARNING 2021-01-22 09:59:57,035 runserver 155 HTTP GET /static/sd_new_img/2.jpg 404 [0.02, 127.0.0.1:51854]
+WARNING 2021-01-22 09:59:57,047 runserver 155 HTTP GET /static/sd_new_img/4.jpg 404 [0.03, 127.0.0.1:51839]
+WARNING 2021-01-22 09:59:57,062 runserver 155 HTTP GET /static/sd_new_img/5.jpg 404 [0.04, 127.0.0.1:51838]
+WARNING 2021-01-22 09:59:57,072 runserver 155 HTTP GET /static/sd_new_img/3.jpg 404 [0.05, 127.0.0.1:51853]
+WARNING 2021-01-22 09:59:57,087 runserver 155 HTTP GET /static/sd_new_img/6.jpg 404 [0.06, 127.0.0.1:51856]
+WARNING 2021-01-22 09:59:57,102 runserver 155 HTTP GET /static/sd_new_img/9.jpg 404 [0.07, 127.0.0.1:51855]
+WARNING 2021-01-22 09:59:57,113 runserver 155 HTTP GET /static/sd_new_img/10.jpg 404 [0.07, 127.0.0.1:51854]
+WARNING 2021-01-22 09:59:57,122 runserver 155 HTTP GET /static/sd_new_img/8.jpg 404 [0.07, 127.0.0.1:51839]
+WARNING 2021-01-22 09:59:57,133 runserver 155 HTTP GET /static/sd_new_img/7.jpg 404 [0.07, 127.0.0.1:51838]
+WARNING 2021-01-22 09:59:57,143 runserver 155 HTTP GET /static/sd_new_img/12.jpg 404 [0.06, 127.0.0.1:51853]
+WARNING 2021-01-22 09:59:57,151 runserver 155 HTTP GET /static/sd_new_img/11.jpg 404 [0.06, 127.0.0.1:51856]
+INFO 2021-01-22 09:59:57,513 runserver 147 HTTP GET /case/ 200 [0.03, 127.0.0.1:51856]
+INFO 2021-01-22 09:59:59,858 runserver 147 HTTP GET /case/case_id_7 200 [0.02, 127.0.0.1:51856]
+INFO 2021-01-22 10:00:02,484 runserver 147 HTTP GET /case/case_id_10 200 [0.02, 127.0.0.1:51856]
+INFO 2021-01-22 10:00:05,435 runserver 147 HTTP GET /accounts/login/ 200 [0.03, 127.0.0.1:51856]
+INFO 2021-01-22 10:00:08,099 runserver 147 HTTP GET /product/ 200 [0.06, 127.0.0.1:51856]
+INFO 2021-01-22 10:00:08,746 runserver 147 HTTP GET /product/product_id_2 200 [0.07, 127.0.0.1:51856]
+INFO 2021-01-22 10:00:12,173 runserver 147 HTTP GET /product/product_id_2 200 [0.06, 127.0.0.1:51856]
+INFO 2021-01-22 10:03:42,186 runserver 147 HTTP GET /product/product_id_2 200 [0.06, 127.0.0.1:52645]
+INFO 2021-01-22 10:03:45,075 runserver 147 HTTP GET /accounts/login/ 200 [0.04, 127.0.0.1:52645]
+INFO 2021-01-22 10:03:51,862 runserver 153 HTTP POST /accounts/login/ 302 [0.22, 127.0.0.1:52675]
+INFO 2021-01-22 10:03:51,888 runserver 147 HTTP GET / 200 [0.02, 127.0.0.1:52675]
+WARNING 2021-01-22 10:03:52,015 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.03, 127.0.0.1:52676]
+INFO 2021-01-22 10:03:52,020 runserver 147 HTTP GET /api/v1/user/ 200 [0.04, 127.0.0.1:52675]
+WARNING 2021-01-22 10:03:52,031 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.01, 127.0.0.1:52676]
+WARNING 2021-01-22 10:03:52,068 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.01, 127.0.0.1:52676]
+INFO 2021-01-22 10:03:54,889 runserver 147 HTTP GET /product/ 200 [0.05, 127.0.0.1:52676]
+INFO 2021-01-22 10:03:55,609 runserver 147 HTTP GET /show_sd 200 [0.02, 127.0.0.1:52676]
+INFO 2021-01-22 10:03:56,440 runserver 147 HTTP GET /news/ 200 [0.04, 127.0.0.1:52676]
+WARNING 2021-01-22 10:03:56,466 runserver 155 HTTP GET /static/sd_new_img/2.jpg 404 [0.01, 127.0.0.1:52675]
+WARNING 2021-01-22 10:03:56,480 runserver 155 HTTP GET /static/sd_new_img/1.jpg 404 [0.02, 127.0.0.1:52676]
+WARNING 2021-01-22 10:03:56,489 runserver 155 HTTP GET /static/sd_new_img/7.jpg 404 [0.02, 127.0.0.1:52675]
+WARNING 2021-01-22 10:03:56,503 runserver 155 HTTP GET /static/sd_new_img/4.jpg 404 [0.03, 127.0.0.1:52698]
+WARNING 2021-01-22 10:03:56,518 runserver 155 HTTP GET /static/sd_new_img/6.jpg 404 [0.04, 127.0.0.1:52700]
+WARNING 2021-01-22 10:03:56,535 runserver 155 HTTP GET /static/sd_new_img/3.jpg 404 [0.06, 127.0.0.1:52697]
+WARNING 2021-01-22 10:03:56,547 runserver 155 HTTP GET /static/sd_new_img/5.jpg 404 [0.07, 127.0.0.1:52699]
+WARNING 2021-01-22 10:03:56,556 runserver 155 HTTP GET /static/sd_new_img/8.jpg 404 [0.07, 127.0.0.1:52676]
+WARNING 2021-01-22 10:03:56,566 runserver 155 HTTP GET /static/sd_new_img/9.jpg 404 [0.07, 127.0.0.1:52675]
+WARNING 2021-01-22 10:03:56,578 runserver 155 HTTP GET /static/sd_new_img/11.jpg 404 [0.07, 127.0.0.1:52698]
+WARNING 2021-01-22 10:03:56,588 runserver 155 HTTP GET /static/sd_new_img/12.jpg 404 [0.06, 127.0.0.1:52700]
+WARNING 2021-01-22 10:03:56,599 runserver 155 HTTP GET /static/sd_new_img/10.jpg 404 [0.06, 127.0.0.1:52697]
+INFO 2021-01-22 10:03:57,346 runserver 147 HTTP GET /show_sd 200 [0.02, 127.0.0.1:52697]
+INFO 2021-01-22 10:03:58,076 runserver 147 HTTP GET /product/ 200 [0.06, 127.0.0.1:52697]
+INFO 2021-01-22 10:03:58,914 runserver 147 HTTP GET /product/product_id_2 200 [0.08, 127.0.0.1:52697]
+INFO 2021-01-22 10:04:06,041 runserver 147 HTTP POST /comment/update_comment 200 [0.04, 127.0.0.1:52723]
+INFO 2021-01-22 10:04:08,842 runserver 147 HTTP GET /like/like_change?content_type=comment&object_id=17&is_like=true&_=1611281038934 200 [0.05, 127.0.0.1:52723]
+INFO 2021-01-22 10:04:09,443 runserver 147 HTTP GET /like/like_change?content_type=comment&object_id=17&is_like=false&_=1611281038935 200 [0.04, 127.0.0.1:52723]
+INFO 2021-01-22 10:04:09,871 runserver 147 HTTP GET /like/like_change?content_type=comment&object_id=17&is_like=true&_=1611281038936 200 [0.04, 127.0.0.1:52723]
+INFO 2021-01-22 10:04:10,452 runserver 147 HTTP GET /like/like_change?content_type=comment&object_id=17&is_like=false&_=1611281038937 200 [0.05, 127.0.0.1:52723]
+INFO 2021-01-22 10:04:12,639 runserver 147 HTTP GET /like/like_change?content_type=comment&object_id=17&is_like=true&_=1611281038938 200 [0.04, 127.0.0.1:52739]
+INFO 2021-01-22 10:04:14,847 runserver 147 HTTP GET /product/product_id_2 200 [0.08, 127.0.0.1:52739]
+INFO 2021-01-22 10:04:24,414 runserver 147 HTTP GET /product/product_id_2 200 [0.08, 127.0.0.1:52747]
+INFO 2021-01-22 10:04:27,602 runserver 147 HTTP POST /comment/update_comment 200 [0.04, 127.0.0.1:52747]
+INFO 2021-01-22 10:04:40,102 runserver 147 HTTP GET /product/product_id_2 200 [0.08, 127.0.0.1:52762]
+INFO 2021-01-22 10:04:44,305 runserver 147 HTTP GET /product/product_id_2 200 [0.08, 127.0.0.1:52766]
+INFO 2021-01-22 10:04:45,785 runserver 147 HTTP GET /product/product_id_2 200 [0.08, 127.0.0.1:52766]
+INFO 2021-01-22 10:04:46,034 runserver 147 HTTP GET /product/product_id_2 200 [0.09, 127.0.0.1:52766]
+INFO 2021-01-22 10:04:46,242 runserver 147 HTTP GET /product/product_id_2 200 [0.10, 127.0.0.1:52766]
+INFO 2021-01-22 10:04:46,474 runserver 147 HTTP GET /product/product_id_2 200 [0.13, 127.0.0.1:52766]
+INFO 2021-01-22 10:05:40,007 runserver 147 HTTP GET /like/like_change?content_type=product&object_id=2&is_like=false&_=1611281086497 200 [0.04, 127.0.0.1:52810]
+INFO 2021-01-22 10:05:40,465 runserver 147 HTTP GET /like/like_change?content_type=product&object_id=2&is_like=true&_=1611281086498 200 [0.04, 127.0.0.1:52810]
+INFO 2021-01-22 10:05:40,956 runserver 147 HTTP GET /like/like_change?content_type=product&object_id=2&is_like=false&_=1611281086499 200 [0.04, 127.0.0.1:52810]
+INFO 2021-01-22 10:05:41,826 runserver 147 HTTP GET /like/like_change?content_type=product&object_id=2&is_like=true&_=1611281086500 200 [0.06, 127.0.0.1:52815]
+INFO 2021-01-22 10:05:42,194 runserver 147 HTTP GET /like/like_change?content_type=product&object_id=2&is_like=false&_=1611281086501 200 [0.04, 127.0.0.1:52815]
+INFO 2021-01-22 10:05:47,842 runserver 147 HTTP GET /product/product_id_2 200 [0.07, 127.0.0.1:52815]
+INFO 2021-01-22 10:05:50,924 runserver 147 HTTP GET / 200 [0.02, 127.0.0.1:52815]
+WARNING 2021-01-22 10:05:51,018 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.03, 127.0.0.1:52819]
+INFO 2021-01-22 10:05:51,024 runserver 147 HTTP GET /api/v1/user/ 200 [0.04, 127.0.0.1:52815]
+WARNING 2021-01-22 10:05:51,056 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.02, 127.0.0.1:52815]
+WARNING 2021-01-22 10:05:51,099 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.01, 127.0.0.1:52815]
+INFO 2021-01-22 10:05:51,366 runserver 147 HTTP GET /product/ 200 [0.05, 127.0.0.1:52815]
+INFO 2021-01-22 10:05:53,324 runserver 147 HTTP GET /product/product_id_4 200 [0.05, 127.0.0.1:52827]
+INFO 2021-01-22 10:05:57,488 runserver 147 HTTP POST /comment/update_comment 200 [0.04, 127.0.0.1:52827]
+INFO 2021-01-22 10:06:00,757 runserver 147 HTTP GET /like/like_change?content_type=comment&object_id=19&is_like=true&_=1611281153370 200 [0.05, 127.0.0.1:52827]
+INFO 2021-01-22 10:06:02,534 runserver 147 HTTP GET /product/product_id_4 200 [0.06, 127.0.0.1:52840]
+INFO 2021-01-22 10:06:04,776 runserver 147 HTTP GET /product/product_id_4 200 [0.06, 127.0.0.1:52840]
+INFO 2021-01-22 10:06:04,805 runserver 147 HTTP GET /static/base.css 200 [0.01, 127.0.0.1:52840]
+INFO 2021-01-22 10:06:04,819 runserver 147 HTTP GET /static/bootstrap-3.3.7/css/bootstrap.min.css 200 [0.02, 127.0.0.1:52841]
+INFO 2021-01-22 10:06:04,828 runserver 147 HTTP GET /static/product/product.css 200 [0.03, 127.0.0.1:52846]
+INFO 2021-01-22 10:06:04,841 runserver 147 HTTP GET /static/jquery-1.12.4.min.js 200 [0.04, 127.0.0.1:52844]
+INFO 2021-01-22 10:06:04,850 runserver 147 HTTP GET /static/bootstrap-3.3.7/js/bootstrap.min.js 200 [0.05, 127.0.0.1:52845]
+INFO 2021-01-22 10:06:04,861 runserver 147 HTTP GET /static/ckeditor/ckeditor-init.js 200 [0.06, 127.0.0.1:52847]
+INFO 2021-01-22 10:06:04,918 runserver 147 HTTP GET /static/ckeditor/ckeditor/ckeditor.js 200 [0.11, 127.0.0.1:52840]
+INFO 2021-01-22 10:06:04,926 runserver 147 HTTP GET /static/images/%E5%A4%87%E6%A1%88%E5%9B%BE%E6%A0%87.png 200 [0.06, 127.0.0.1:52847]
+INFO 2021-01-22 10:06:05,009 runserver 147 HTTP GET /static/bootstrap-3.3.7/fonts/glyphicons-halflings-regular.woff2 200 [0.01, 127.0.0.1:52840]
+INFO 2021-01-22 10:06:05,036 runserver 147 HTTP GET /static/ckeditor/ckeditor/config.js?t=K5H9 200 [0.01, 127.0.0.1:52840]
+WARNING 2021-01-22 10:06:05,066 log 230 Not Found: /favicon.ico
+WARNING 2021-01-22 10:06:05,067 runserver 155 HTTP GET /favicon.ico 404 [0.02, 127.0.0.1:52840]
+INFO 2021-01-22 10:08:52,360 runserver 147 HTTP GET /product/product_id_4 200 [0.07, 127.0.0.1:52946]
+ERROR 2021-01-22 10:10:49,625 log 230 Internal Server Error: /product/product_id_4
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'get_comment_form'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 339, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 38, in inner
+    response = await get_response(request)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 231, in _get_response_async
+    response = await wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 304, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "C:\Program Files\Python36\lib\asyncio\tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "C:\Program Files\Python36\lib\concurrent\futures\thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 343, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\product\views.py", line 60, in detailProduct
+    return render(request, 'product_detail.html', context)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader_tags.py", line 270, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader_tags.py", line 213, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 965, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 528, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 67: 'get_comment_form', expected 'elif', 'else' or 'endif'. Did you forget to register or load this tag?
+ERROR 2021-01-22 10:10:49,634 runserver 160 HTTP GET /product/product_id_4 500 [0.14, 127.0.0.1:53048]
+ERROR 2021-01-22 10:13:24,754 log 230 Internal Server Error: /product/product_id_4
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'get_comment_form'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 339, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 38, in inner
+    response = await get_response(request)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 231, in _get_response_async
+    response = await wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 304, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "C:\Program Files\Python36\lib\asyncio\tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "C:\Program Files\Python36\lib\concurrent\futures\thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 343, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\product\views.py", line 60, in detailProduct
+    return render(request, 'product_detail.html', context)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader_tags.py", line 270, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader_tags.py", line 213, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 965, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 528, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 67: 'get_comment_form', expected 'elif', 'else' or 'endif'. Did you forget to register or load this tag?
+ERROR 2021-01-22 10:13:24,764 runserver 160 HTTP GET /product/product_id_4 500 [0.12, 127.0.0.1:53099]
+ERROR 2021-01-22 10:13:26,279 log 230 Internal Server Error: /product/product_id_4
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'get_comment_form'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 339, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 38, in inner
+    response = await get_response(request)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 231, in _get_response_async
+    response = await wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 304, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "C:\Program Files\Python36\lib\asyncio\tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "C:\Program Files\Python36\lib\concurrent\futures\thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 343, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\product\views.py", line 60, in detailProduct
+    return render(request, 'product_detail.html', context)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader_tags.py", line 270, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader_tags.py", line 213, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 965, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 528, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 67: 'get_comment_form', expected 'elif', 'else' or 'endif'. Did you forget to register or load this tag?
+ERROR 2021-01-22 10:13:26,289 runserver 160 HTTP GET /product/product_id_4 500 [0.12, 127.0.0.1:53099]
+ERROR 2021-01-22 10:13:26,757 log 230 Internal Server Error: /product/product_id_4
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'get_comment_form'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 339, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 38, in inner
+    response = await get_response(request)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 231, in _get_response_async
+    response = await wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 304, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "C:\Program Files\Python36\lib\asyncio\tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "C:\Program Files\Python36\lib\concurrent\futures\thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 343, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\product\views.py", line 60, in detailProduct
+    return render(request, 'product_detail.html', context)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader_tags.py", line 270, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader_tags.py", line 213, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 965, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 528, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 67: 'get_comment_form', expected 'elif', 'else' or 'endif'. Did you forget to register or load this tag?
+ERROR 2021-01-22 10:13:26,767 runserver 160 HTTP GET /product/product_id_4 500 [0.12, 127.0.0.1:53099]
+ERROR 2021-01-22 10:13:27,177 log 230 Internal Server Error: /product/product_id_4
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'get_comment_form'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 339, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 38, in inner
+    response = await get_response(request)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 231, in _get_response_async
+    response = await wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 304, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "C:\Program Files\Python36\lib\asyncio\tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "C:\Program Files\Python36\lib\concurrent\futures\thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 343, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\product\views.py", line 60, in detailProduct
+    return render(request, 'product_detail.html', context)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader_tags.py", line 270, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader_tags.py", line 213, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 965, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 528, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 67: 'get_comment_form', expected 'elif', 'else' or 'endif'. Did you forget to register or load this tag?
+ERROR 2021-01-22 10:13:27,185 runserver 160 HTTP GET /product/product_id_4 500 [0.14, 127.0.0.1:53099]
+ERROR 2021-01-22 10:13:27,546 log 230 Internal Server Error: /product/product_id_4
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'get_comment_form'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 339, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 38, in inner
+    response = await get_response(request)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 231, in _get_response_async
+    response = await wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 304, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "C:\Program Files\Python36\lib\asyncio\tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "C:\Program Files\Python36\lib\concurrent\futures\thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 343, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\product\views.py", line 60, in detailProduct
+    return render(request, 'product_detail.html', context)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader_tags.py", line 270, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader_tags.py", line 213, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 965, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 528, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 67: 'get_comment_form', expected 'elif', 'else' or 'endif'. Did you forget to register or load this tag?
+ERROR 2021-01-22 10:13:27,555 runserver 160 HTTP GET /product/product_id_4 500 [0.13, 127.0.0.1:53099]
+ERROR 2021-01-22 10:13:27,942 log 230 Internal Server Error: /product/product_id_4
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'get_comment_form'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 339, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 38, in inner
+    response = await get_response(request)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 231, in _get_response_async
+    response = await wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 304, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "C:\Program Files\Python36\lib\asyncio\tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "C:\Program Files\Python36\lib\concurrent\futures\thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 343, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\product\views.py", line 60, in detailProduct
+    return render(request, 'product_detail.html', context)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader_tags.py", line 270, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader_tags.py", line 213, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 965, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 528, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 67: 'get_comment_form', expected 'elif', 'else' or 'endif'. Did you forget to register or load this tag?
+ERROR 2021-01-22 10:13:27,948 runserver 160 HTTP GET /product/product_id_4 500 [0.16, 127.0.0.1:53099]
+ERROR 2021-01-22 10:15:05,864 log 230 Internal Server Error: /product/product_id_4
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'get_comment_form'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 339, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 38, in inner
+    response = await get_response(request)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 231, in _get_response_async
+    response = await wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 304, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "C:\Program Files\Python36\lib\asyncio\tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "C:\Program Files\Python36\lib\concurrent\futures\thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 343, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\product\views.py", line 60, in detailProduct
+    return render(request, 'product_detail.html', context)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader_tags.py", line 270, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader_tags.py", line 213, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 965, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 528, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 67: 'get_comment_form', expected 'elif', 'else' or 'endif'. Did you forget to register or load this tag?
+ERROR 2021-01-22 10:15:05,872 runserver 160 HTTP GET /product/product_id_4 500 [0.12, 127.0.0.1:53148]
+ERROR 2021-01-22 10:17:00,256 log 230 Internal Server Error: /product/product_id_4
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 1034, in find_library
+    return parser.libraries[name]
+KeyError: 'comment_tags'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 339, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 38, in inner
+    response = await get_response(request)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 231, in _get_response_async
+    response = await wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 304, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "C:\Program Files\Python36\lib\asyncio\tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "C:\Program Files\Python36\lib\concurrent\futures\thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 343, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\product\views.py", line 60, in detailProduct
+    return render(request, 'product_detail.html', context)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader_tags.py", line 270, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 1091, in load
+    lib = find_library(parser, name)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 1038, in find_library
+    name, "\n".join(sorted(parser.libraries)),
+django.template.exceptions.TemplateSyntaxError: 'comment_tags' is not a registered tag library. Must be one of:
+account
+admin_list
+admin_modify
+admin_urls
+cache
+debugger_tags
+highlight
+highlighting
+i18n
+indent_text
+l10n
+like_tags
+log
+more_like_this
+rest_framework
+search_filters
+simpletags
+socialaccount
+static
+syntax_color
+tz
+widont
+ERROR 2021-01-22 10:17:00,262 runserver 160 HTTP GET /product/product_id_4 500 [0.11, 127.0.0.1:53196]
+ERROR 2021-01-22 10:17:01,690 log 230 Internal Server Error: /product/product_id_4
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 1034, in find_library
+    return parser.libraries[name]
+KeyError: 'comment_tags'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 339, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 38, in inner
+    response = await get_response(request)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 231, in _get_response_async
+    response = await wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 304, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "C:\Program Files\Python36\lib\asyncio\tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "C:\Program Files\Python36\lib\concurrent\futures\thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 343, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\product\views.py", line 60, in detailProduct
+    return render(request, 'product_detail.html', context)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader_tags.py", line 270, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 1091, in load
+    lib = find_library(parser, name)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 1038, in find_library
+    name, "\n".join(sorted(parser.libraries)),
+django.template.exceptions.TemplateSyntaxError: 'comment_tags' is not a registered tag library. Must be one of:
+account
+admin_list
+admin_modify
+admin_urls
+cache
+debugger_tags
+highlight
+highlighting
+i18n
+indent_text
+l10n
+like_tags
+log
+more_like_this
+rest_framework
+search_filters
+simpletags
+socialaccount
+static
+syntax_color
+tz
+widont
+ERROR 2021-01-22 10:17:01,695 runserver 160 HTTP GET /product/product_id_4 500 [0.14, 127.0.0.1:53196]
+ERROR 2021-01-22 10:17:02,033 log 230 Internal Server Error: /product/product_id_4
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 1034, in find_library
+    return parser.libraries[name]
+KeyError: 'comment_tags'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 339, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 38, in inner
+    response = await get_response(request)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 231, in _get_response_async
+    response = await wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 304, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "C:\Program Files\Python36\lib\asyncio\tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "C:\Program Files\Python36\lib\concurrent\futures\thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 343, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\product\views.py", line 60, in detailProduct
+    return render(request, 'product_detail.html', context)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\loader_tags.py", line 270, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 1091, in load
+    lib = find_library(parser, name)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 1038, in find_library
+    name, "\n".join(sorted(parser.libraries)),
+django.template.exceptions.TemplateSyntaxError: 'comment_tags' is not a registered tag library. Must be one of:
+account
+admin_list
+admin_modify
+admin_urls
+cache
+debugger_tags
+highlight
+highlighting
+i18n
+indent_text
+l10n
+like_tags
+log
+more_like_this
+rest_framework
+search_filters
+simpletags
+socialaccount
+static
+syntax_color
+tz
+widont
+ERROR 2021-01-22 10:17:02,040 runserver 160 HTTP GET /product/product_id_4 500 [0.11, 127.0.0.1:53196]
+INFO 2021-01-22 10:18:08,968 autoreload 240 C:\Users\jkwu3\Desktop\mysite\mysite\settings\base.py changed, reloading.
+INFO 2021-01-22 10:18:10,504 autoreload 617 Watching for file changes with StatReloader
+INFO 2021-01-22 10:18:25,367 autoreload 617 Watching for file changes with StatReloader
+INFO 2021-01-22 10:19:25,271 autoreload 240 C:\Users\jkwu3\Desktop\mysite\mysite\settings\base.py changed, reloading.
+INFO 2021-01-22 10:19:26,557 autoreload 617 Watching for file changes with StatReloader
+INFO 2021-01-22 10:19:27,377 runserver 147 HTTP GET /product/product_id_4 200 [0.13, 127.0.0.1:53272]
+INFO 2021-01-22 10:19:39,807 autoreload 240 C:\Users\jkwu3\Desktop\mysite\mysite\settings\base.py changed, reloading.
+INFO 2021-01-22 10:19:41,051 autoreload 617 Watching for file changes with StatReloader
+INFO 2021-01-22 10:20:14,175 runserver 147 HTTP GET /product/product_id_4 200 [0.36, 127.0.0.1:53297]
+INFO 2021-01-22 10:20:19,657 runserver 147 HTTP GET /like/like_change?content_type=product&object_id=4&is_like=true&_=1611282014216 200 [0.05, 127.0.0.1:53297]
+INFO 2021-01-22 10:20:20,254 runserver 147 HTTP GET /like/like_change?content_type=product&object_id=4&is_like=false&_=1611282014217 200 [0.11, 127.0.0.1:53297]
+INFO 2021-01-22 10:20:25,970 runserver 147 HTTP GET /product/product_id_6 200 [0.09, 127.0.0.1:53297]
+INFO 2021-01-22 10:20:29,426 runserver 147 HTTP GET /product/product_id_7 200 [0.06, 127.0.0.1:53297]
+INFO 2021-01-22 10:20:33,038 runserver 147 HTTP POST /comment/update_comment 200 [0.03, 127.0.0.1:53297]
+INFO 2021-01-22 10:20:35,281 runserver 147 HTTP GET /product/product_id_7 200 [0.09, 127.0.0.1:53297]
+INFO 2021-01-22 10:24:43,130 runserver 147 HTTP GET /product/product_id_7 200 [0.07, 127.0.0.1:53388]
+INFO 2021-01-22 10:24:48,346 runserver 147 HTTP POST /comment/update_comment 200 [0.03, 127.0.0.1:53388]
+INFO 2021-01-22 10:24:53,669 runserver 147 HTTP GET /usercenter/ 200 [0.03, 127.0.0.1:53388]
+INFO 2021-01-22 10:24:58,487 runserver 147 HTTP GET /usercenter/ 200 [0.03, 127.0.0.1:53388]
+INFO 2021-01-22 10:25:08,113 runserver 147 HTTP GET / 200 [0.03, 127.0.0.1:53388]
+WARNING 2021-01-22 10:25:08,250 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.04, 127.0.0.1:53389]
+INFO 2021-01-22 10:25:08,258 runserver 147 HTTP GET /api/v1/user/ 200 [0.06, 127.0.0.1:53388]
+WARNING 2021-01-22 10:25:08,291 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.01, 127.0.0.1:53388]
+WARNING 2021-01-22 10:25:08,324 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.01, 127.0.0.1:53388]
+INFO 2021-01-22 10:25:08,801 runserver 147 HTTP GET /product/ 200 [0.06, 127.0.0.1:53388]
+INFO 2021-01-22 10:25:09,641 runserver 147 HTTP GET /show_sd 200 [0.02, 127.0.0.1:53388]
+INFO 2021-01-22 10:25:10,502 runserver 147 HTTP GET /product/ 200 [0.05, 127.0.0.1:53388]
+INFO 2021-01-22 10:25:15,651 runserver 147 HTTP GET /show_sd 200 [0.02, 127.0.0.1:53388]
+INFO 2021-01-22 10:25:16,364 runserver 147 HTTP GET /show_sd 200 [0.03, 127.0.0.1:53388]
+INFO 2021-01-22 10:25:16,733 runserver 147 HTTP GET /product/ 200 [0.05, 127.0.0.1:53388]
+INFO 2021-01-22 10:25:17,425 runserver 147 HTTP GET /product/product_id_2 200 [0.19, 127.0.0.1:53388]
+INFO 2021-01-22 10:25:18,879 runserver 147 HTTP GET / 200 [0.03, 127.0.0.1:53388]
+WARNING 2021-01-22 10:25:18,975 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.03, 127.0.0.1:53389]
+INFO 2021-01-22 10:25:18,986 runserver 147 HTTP GET /api/v1/user/ 200 [0.05, 127.0.0.1:53388]
+WARNING 2021-01-22 10:25:19,027 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.01, 127.0.0.1:53388]
+WARNING 2021-01-22 10:25:19,057 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.01, 127.0.0.1:53388]
+INFO 2021-01-22 10:25:20,880 runserver 147 HTTP GET /search/?q=large 200 [0.10, 127.0.0.1:53388]
+INFO 2021-01-22 10:25:23,311 runserver 147 HTTP GET /product/ 200 [0.07, 127.0.0.1:53388]
+INFO 2021-01-22 10:25:24,894 runserver 147 HTTP GET /show_sd 200 [0.02, 127.0.0.1:53388]
+INFO 2021-01-22 10:25:25,960 runserver 147 HTTP GET /show_sd 200 [0.02, 127.0.0.1:53388]
+INFO 2021-01-22 10:25:26,732 runserver 147 HTTP GET /product/ 200 [0.06, 127.0.0.1:53388]
+INFO 2021-01-22 10:25:28,285 runserver 147 HTTP GET /show_sd 200 [0.02, 127.0.0.1:53388]
+INFO 2021-01-22 10:51:32,115 runserver 147 HTTP GET /product/ 200 [0.07, 127.0.0.1:54050]
+INFO 2021-01-22 10:51:32,771 runserver 147 HTTP GET /product/product_id_2 200 [0.10, 127.0.0.1:54053]
+INFO 2021-01-22 10:52:59,025 runserver 147 HTTP GET /product/ 200 [0.06, 127.0.0.1:54087]
+INFO 2021-01-22 10:53:09,675 runserver 147 HTTP GET /product/?page=3 200 [0.06, 127.0.0.1:54093]
+INFO 2021-01-22 10:53:09,706 runserver 147 HTTP GET /static/sd_products_img/25.jpg 200 [0.01, 127.0.0.1:54093]
+INFO 2021-01-22 10:53:09,720 runserver 147 HTTP GET /static/sd_products_img/26.jpg 200 [0.02, 127.0.0.1:54094]
+INFO 2021-01-22 10:53:09,729 runserver 147 HTTP GET /static/sd_products_img/27.jpg 200 [0.02, 127.0.0.1:54093]
+INFO 2021-01-22 10:53:09,739 runserver 147 HTTP GET /static/sd_products_img/28.jpg 200 [0.03, 127.0.0.1:54096]
+INFO 2021-01-22 10:53:09,750 runserver 147 HTTP GET /static/sd_products_img/30.jpg 200 [0.04, 127.0.0.1:54098]
+INFO 2021-01-22 10:53:09,761 runserver 147 HTTP GET /static/sd_products_img/31.jpg 200 [0.05, 127.0.0.1:54099]
+INFO 2021-01-22 10:53:09,775 runserver 147 HTTP GET /static/sd_products_img/29.jpg 200 [0.06, 127.0.0.1:54097]
+INFO 2021-01-22 10:53:09,788 runserver 147 HTTP GET /static/sd_products_img/32.jpg 200 [0.07, 127.0.0.1:54094]
+INFO 2021-01-22 10:53:09,804 runserver 147 HTTP GET /static/sd_products_img/34.jpg 200 [0.07, 127.0.0.1:54093]
+INFO 2021-01-22 10:53:09,817 runserver 147 HTTP GET /static/sd_products_img/35.jpg 200 [0.08, 127.0.0.1:54096]
+INFO 2021-01-22 10:53:09,829 runserver 147 HTTP GET /static/sd_products_img/36.jpg 200 [0.07, 127.0.0.1:54098]
+INFO 2021-01-22 10:53:09,843 runserver 147 HTTP GET /static/sd_products_img/33.jpg 200 [0.08, 127.0.0.1:54099]
+INFO 2021-01-22 10:53:11,297 runserver 147 HTTP GET /product/?page=4 200 [0.05, 127.0.0.1:54099]
+INFO 2021-01-22 10:53:11,327 runserver 147 HTTP GET /static/sd_products_img/37.jpg 200 [0.01, 127.0.0.1:54099]
+INFO 2021-01-22 10:53:11,343 runserver 147 HTTP GET /static/sd_products_img/38.jpg 200 [0.02, 127.0.0.1:54098]
+INFO 2021-01-22 10:53:11,357 runserver 147 HTTP GET /static/sd_products_img/39.jpg 200 [0.03, 127.0.0.1:54096]
+INFO 2021-01-22 10:53:11,370 runserver 147 HTTP GET /static/sd_products_img/40.jpg 200 [0.04, 127.0.0.1:54093]
+INFO 2021-01-22 10:53:11,385 runserver 147 HTTP GET /static/sd_products_img/42.jpg 200 [0.05, 127.0.0.1:54097]
+INFO 2021-01-22 10:53:11,397 runserver 147 HTTP GET /static/sd_products_img/41.jpg 200 [0.06, 127.0.0.1:54094]
+INFO 2021-01-22 10:53:11,422 runserver 147 HTTP GET /static/sd_products_img/43.jpg 200 [0.08, 127.0.0.1:54099]
+INFO 2021-01-22 10:53:11,435 runserver 147 HTTP GET /static/sd_products_img/46.jpg 200 [0.09, 127.0.0.1:54098]
+INFO 2021-01-22 10:53:11,446 runserver 147 HTTP GET /static/sd_products_img/47.jpg 200 [0.09, 127.0.0.1:54096]
+INFO 2021-01-22 10:53:11,459 runserver 147 HTTP GET /static/sd_products_img/45.jpg 200 [0.08, 127.0.0.1:54093]
+INFO 2021-01-22 10:53:11,471 runserver 147 HTTP GET /static/sd_products_img/44.jpg 200 [0.08, 127.0.0.1:54097]
+INFO 2021-01-22 10:53:11,483 runserver 147 HTTP GET /static/sd_products_img/48.jpg 200 [0.08, 127.0.0.1:54094]
+INFO 2021-01-22 10:53:14,470 runserver 147 HTTP GET /product/?page=5 200 [0.06, 127.0.0.1:54102]
+INFO 2021-01-22 10:53:14,495 runserver 147 HTTP GET /static/sd_products_img/49.jpg 200 [0.01, 127.0.0.1:54102]
+INFO 2021-01-22 10:53:14,508 runserver 147 HTTP GET /static/sd_products_img/50.jpg 200 [0.02, 127.0.0.1:54103]
+INFO 2021-01-22 10:53:14,520 runserver 147 HTTP GET /static/sd_products_img/54.jpg 200 [0.02, 127.0.0.1:54108]
+INFO 2021-01-22 10:53:14,533 runserver 147 HTTP GET /static/sd_products_img/51.jpg 200 [0.03, 127.0.0.1:54105]
+INFO 2021-01-22 10:53:14,545 runserver 147 HTTP GET /static/sd_products_img/53.jpg 200 [0.04, 127.0.0.1:54107]
+INFO 2021-01-22 10:53:14,560 runserver 147 HTTP GET /static/sd_products_img/52.jpg 200 [0.05, 127.0.0.1:54106]
+INFO 2021-01-22 10:53:14,572 runserver 147 HTTP GET /static/sd_products_img/55.jpg 200 [0.07, 127.0.0.1:54102]
+INFO 2021-01-22 10:53:14,585 runserver 147 HTTP GET /static/sd_products_img/60.jpg 200 [0.07, 127.0.0.1:54103]
+INFO 2021-01-22 10:53:14,597 runserver 147 HTTP GET /static/sd_products_img/56.jpg 200 [0.07, 127.0.0.1:54108]
+INFO 2021-01-22 10:53:14,611 runserver 147 HTTP GET /static/sd_products_img/57.jpg 200 [0.08, 127.0.0.1:54105]
+INFO 2021-01-22 10:53:14,623 runserver 147 HTTP GET /static/sd_products_img/59.jpg 200 [0.08, 127.0.0.1:54107]
+INFO 2021-01-22 10:53:14,638 runserver 147 HTTP GET /static/sd_products_img/58.jpg 200 [0.07, 127.0.0.1:54106]
+INFO 2021-01-22 10:54:17,471 runserver 147 HTTP GET /show_sd 200 [0.02, 127.0.0.1:54145]
+INFO 2021-01-22 10:54:18,028 runserver 147 HTTP GET /product/ 200 [0.05, 127.0.0.1:54145]
+INFO 2021-01-22 10:54:18,906 runserver 147 HTTP GET / 200 [0.03, 127.0.0.1:54145]
+WARNING 2021-01-22 10:54:19,003 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.03, 127.0.0.1:54146]
+INFO 2021-01-22 10:54:19,010 runserver 147 HTTP GET /api/v1/user/ 200 [0.05, 127.0.0.1:54145]
+WARNING 2021-01-22 10:54:19,061 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.01, 127.0.0.1:54145]
+WARNING 2021-01-22 10:54:19,095 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.01, 127.0.0.1:54145]
+INFO 2021-01-22 10:54:19,700 runserver 147 HTTP GET /product/ 200 [0.06, 127.0.0.1:54145]
+INFO 2021-01-22 10:55:19,958 runserver 147 HTTP GET /product/ 200 [0.06, 127.0.0.1:54168]
+INFO 2021-01-22 10:55:21,276 runserver 147 HTTP GET /product/product_id_2 200 [0.10, 127.0.0.1:54168]
+INFO 2021-01-22 10:55:46,794 runserver 147 HTTP GET /product/product_id_2 200 [0.12, 127.0.0.1:54179]
+INFO 2021-01-22 10:59:10,858 autoreload 617 Watching for file changes with StatReloader
+INFO 2021-01-22 10:59:17,979 runserver 147 HTTP GET /product/product_id_2 200 [0.17, 127.0.0.1:54268]
+INFO 2021-01-22 11:02:01,372 runserver 147 HTTP GET /product/ 200 [0.06, 127.0.0.1:54302]
+INFO 2021-01-22 11:02:03,847 runserver 147 HTTP GET /show_sd 200 [0.02, 127.0.0.1:54306]
+INFO 2021-01-22 11:02:04,295 runserver 147 HTTP GET /product/ 200 [0.06, 127.0.0.1:54306]
+INFO 2021-01-22 11:02:08,766 runserver 147 HTTP GET /show_sd 200 [0.02, 127.0.0.1:54306]
+INFO 2021-01-22 11:02:09,242 runserver 147 HTTP GET /news/ 200 [0.04, 127.0.0.1:54306]
+WARNING 2021-01-22 11:02:09,286 runserver 155 HTTP GET /static/sd_new_img/1.jpg 404 [0.03, 127.0.0.1:54306]
+WARNING 2021-01-22 11:02:09,301 runserver 155 HTTP GET /static/sd_new_img/2.jpg 404 [0.04, 127.0.0.1:54307]
+WARNING 2021-01-22 11:02:09,313 runserver 155 HTTP GET /static/sd_new_img/5.jpg 404 [0.04, 127.0.0.1:54314]
+WARNING 2021-01-22 11:02:09,328 runserver 155 HTTP GET /static/sd_new_img/6.jpg 404 [0.05, 127.0.0.1:54315]
+WARNING 2021-01-22 11:02:09,341 runserver 155 HTTP GET /static/sd_new_img/4.jpg 404 [0.07, 127.0.0.1:54313]
+WARNING 2021-01-22 11:02:09,356 runserver 155 HTTP GET /static/sd_new_img/3.jpg 404 [0.08, 127.0.0.1:54312]
+WARNING 2021-01-22 11:02:09,368 runserver 155 HTTP GET /static/sd_new_img/8.jpg 404 [0.07, 127.0.0.1:54306]
+WARNING 2021-01-22 11:02:09,377 runserver 155 HTTP GET /static/sd_new_img/9.jpg 404 [0.07, 127.0.0.1:54307]
+WARNING 2021-01-22 11:02:09,391 runserver 155 HTTP GET /static/sd_new_img/10.jpg 404 [0.07, 127.0.0.1:54314]
+WARNING 2021-01-22 11:02:09,403 runserver 155 HTTP GET /static/sd_new_img/11.jpg 404 [0.07, 127.0.0.1:54315]
+WARNING 2021-01-22 11:02:09,416 runserver 155 HTTP GET /static/sd_new_img/7.jpg 404 [0.07, 127.0.0.1:54313]
+WARNING 2021-01-22 11:02:09,426 runserver 155 HTTP GET /static/sd_new_img/12.jpg 404 [0.06, 127.0.0.1:54312]
+INFO 2021-01-22 11:02:09,830 runserver 147 HTTP GET /case/ 200 [0.05, 127.0.0.1:54312]
+INFO 2021-01-22 11:02:11,049 runserver 147 HTTP GET /product/ 200 [0.06, 127.0.0.1:54312]
+INFO 2021-01-22 11:02:12,915 runserver 147 HTTP GET /case/ 200 [0.05, 127.0.0.1:54319]
+INFO 2021-01-22 11:02:15,923 runserver 147 HTTP GET /news/ 200 [0.05, 127.0.0.1:54319]
+WARNING 2021-01-22 11:02:15,948 runserver 155 HTTP GET /static/sd_new_img/1.jpg 404 [0.01, 127.0.0.1:54319]
+WARNING 2021-01-22 11:02:15,965 runserver 155 HTTP GET /static/sd_new_img/2.jpg 404 [0.02, 127.0.0.1:54320]
+WARNING 2021-01-22 11:02:15,978 runserver 155 HTTP GET /static/sd_new_img/3.jpg 404 [0.02, 127.0.0.1:54323]
+WARNING 2021-01-22 11:02:15,992 runserver 155 HTTP GET /static/sd_new_img/5.jpg 404 [0.04, 127.0.0.1:54325]
+WARNING 2021-01-22 11:02:16,005 runserver 155 HTTP GET /static/sd_new_img/4.jpg 404 [0.05, 127.0.0.1:54324]
+WARNING 2021-01-22 11:02:16,019 runserver 155 HTTP GET /static/sd_new_img/7.jpg 404 [0.06, 127.0.0.1:54319]
+WARNING 2021-01-22 11:02:16,032 runserver 155 HTTP GET /static/sd_new_img/6.jpg 404 [0.07, 127.0.0.1:54326]
+WARNING 2021-01-22 11:02:16,042 runserver 155 HTTP GET /static/sd_new_img/12.jpg 404 [0.07, 127.0.0.1:54320]
+WARNING 2021-01-22 11:02:16,053 runserver 155 HTTP GET /static/sd_new_img/11.jpg 404 [0.07, 127.0.0.1:54323]
+WARNING 2021-01-22 11:02:16,062 runserver 155 HTTP GET /static/sd_new_img/8.jpg 404 [0.07, 127.0.0.1:54325]
+WARNING 2021-01-22 11:02:16,073 runserver 155 HTTP GET /static/sd_new_img/9.jpg 404 [0.06, 127.0.0.1:54324]
+WARNING 2021-01-22 11:02:16,083 runserver 155 HTTP GET /static/sd_new_img/10.jpg 404 [0.06, 127.0.0.1:54319]
+INFO 2021-01-22 11:02:16,768 runserver 147 HTTP GET /case/ 200 [0.08, 127.0.0.1:54319]
+INFO 2021-01-22 11:02:19,035 runserver 147 HTTP GET /product/ 200 [0.07, 127.0.0.1:54319]
+INFO 2021-01-22 11:06:57,465 runserver 147 HTTP GET /news/ 200 [0.05, 127.0.0.1:55121]
+WARNING 2021-01-22 11:06:57,492 runserver 155 HTTP GET /static/sd_new_img/2.jpg 404 [0.01, 127.0.0.1:55121]
+WARNING 2021-01-22 11:06:57,508 runserver 155 HTTP GET /static/sd_new_img/1.jpg 404 [0.02, 127.0.0.1:55122]
+WARNING 2021-01-22 11:06:57,525 runserver 155 HTTP GET /static/sd_new_img/3.jpg 404 [0.02, 127.0.0.1:55124]
+WARNING 2021-01-22 11:06:57,542 runserver 155 HTTP GET /static/sd_new_img/6.jpg 404 [0.04, 127.0.0.1:55127]
+WARNING 2021-01-22 11:06:57,560 runserver 155 HTTP GET /static/sd_new_img/7.jpg 404 [0.06, 127.0.0.1:55121]
+WARNING 2021-01-22 11:06:57,576 runserver 155 HTTP GET /static/sd_new_img/5.jpg 404 [0.07, 127.0.0.1:55126]
+WARNING 2021-01-22 11:06:57,591 runserver 155 HTTP GET /static/sd_new_img/4.jpg 404 [0.09, 127.0.0.1:55125]
+WARNING 2021-01-22 11:06:57,603 runserver 155 HTTP GET /static/sd_new_img/8.jpg 404 [0.08, 127.0.0.1:55122]
+WARNING 2021-01-22 11:06:57,615 runserver 155 HTTP GET /static/sd_new_img/11.jpg 404 [0.08, 127.0.0.1:55124]
+WARNING 2021-01-22 11:06:57,630 runserver 155 HTTP GET /static/sd_new_img/12.jpg 404 [0.08, 127.0.0.1:55127]
+WARNING 2021-01-22 11:06:57,652 runserver 155 HTTP GET /static/sd_new_img/10.jpg 404 [0.08, 127.0.0.1:55121]
+WARNING 2021-01-22 11:06:57,666 runserver 155 HTTP GET /static/sd_new_img/9.jpg 404 [0.08, 127.0.0.1:55126]
+INFO 2021-01-22 11:07:00,407 runserver 147 HTTP GET /news/?page=3 200 [0.05, 127.0.0.1:55126]
+WARNING 2021-01-22 11:07:00,433 runserver 155 HTTP GET /static/sd_new_img/25.jpg 404 [0.01, 127.0.0.1:55126]
+WARNING 2021-01-22 11:07:00,444 runserver 155 HTTP GET /static/sd_new_img/26.jpg 404 [0.02, 127.0.0.1:55121]
+WARNING 2021-01-22 11:07:00,454 runserver 155 HTTP GET /static/sd_new_img/27.jpg 404 [0.02, 127.0.0.1:55127]
+WARNING 2021-01-22 11:07:00,463 runserver 155 HTTP GET /static/sd_new_img/29.jpg 404 [0.03, 127.0.0.1:55122]
+WARNING 2021-01-22 11:07:00,479 runserver 155 HTTP GET /static/sd_new_img/28.jpg 404 [0.04, 127.0.0.1:55124]
+INFO 2021-01-22 11:07:01,504 runserver 147 HTTP GET /case/ 200 [0.04, 127.0.0.1:55124]
+INFO 2021-01-22 11:07:03,576 runserver 147 HTTP GET /case/?page=2 200 [0.04, 127.0.0.1:55124]
+INFO 2021-01-22 11:07:03,603 runserver 147 HTTP GET /static/sd_case_img/13.jpg 200 [0.01, 127.0.0.1:55124]
+INFO 2021-01-22 11:07:03,611 runserver 147 HTTP GET /static/sd_case_img/14.jpg 200 [0.02, 127.0.0.1:55122]
+INFO 2021-01-22 11:07:05,360 runserver 147 HTTP GET /case/?page=1 200 [0.05, 127.0.0.1:55122]
+INFO 2021-01-22 11:07:06,736 runserver 147 HTTP GET /news/ 200 [0.05, 127.0.0.1:55122]
+WARNING 2021-01-22 11:07:06,766 runserver 155 HTTP GET /static/sd_new_img/2.jpg 404 [0.01, 127.0.0.1:55124]
+WARNING 2021-01-22 11:07:06,779 runserver 155 HTTP GET /static/sd_new_img/1.jpg 404 [0.02, 127.0.0.1:55122]
+WARNING 2021-01-22 11:07:06,793 runserver 155 HTTP GET /static/sd_new_img/3.jpg 404 [0.03, 127.0.0.1:55127]
+WARNING 2021-01-22 11:07:06,808 runserver 155 HTTP GET /static/sd_new_img/6.jpg 404 [0.04, 127.0.0.1:55125]
+WARNING 2021-01-22 11:07:06,820 runserver 155 HTTP GET /static/sd_new_img/5.jpg 404 [0.05, 127.0.0.1:55126]
+WARNING 2021-01-22 11:07:06,835 runserver 155 HTTP GET /static/sd_new_img/4.jpg 404 [0.07, 127.0.0.1:55121]
+WARNING 2021-01-22 11:07:06,849 runserver 155 HTTP GET /static/sd_new_img/7.jpg 404 [0.08, 127.0.0.1:55124]
+WARNING 2021-01-22 11:07:06,860 runserver 155 HTTP GET /static/sd_new_img/9.jpg 404 [0.07, 127.0.0.1:55122]
+WARNING 2021-01-22 11:07:06,872 runserver 155 HTTP GET /static/sd_new_img/12.jpg 404 [0.07, 127.0.0.1:55127]
+WARNING 2021-01-22 11:07:06,885 runserver 155 HTTP GET /static/sd_new_img/8.jpg 404 [0.07, 127.0.0.1:55125]
+WARNING 2021-01-22 11:07:06,899 runserver 155 HTTP GET /static/sd_new_img/10.jpg 404 [0.07, 127.0.0.1:55126]
+WARNING 2021-01-22 11:07:06,909 runserver 155 HTTP GET /static/sd_new_img/11.jpg 404 [0.07, 127.0.0.1:55121]
+INFO 2021-01-22 11:07:07,154 runserver 147 HTTP GET /show_sd 200 [0.02, 127.0.0.1:55121]
+INFO 2021-01-22 11:07:07,973 runserver 147 HTTP GET /product/ 200 [0.08, 127.0.0.1:55121]
+INFO 2021-01-22 11:07:09,749 runserver 147 HTTP GET / 200 [0.03, 127.0.0.1:55121]
+WARNING 2021-01-22 11:07:09,864 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.04, 127.0.0.1:55126]
+INFO 2021-01-22 11:07:09,871 runserver 147 HTTP GET /api/v1/user/ 200 [0.06, 127.0.0.1:55121]
+WARNING 2021-01-22 11:07:09,900 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.01, 127.0.0.1:55121]
+WARNING 2021-01-22 11:07:09,933 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.01, 127.0.0.1:55121]
+INFO 2021-01-22 11:07:19,262 runserver 147 HTTP GET /api/v1/message/?target=mefuleu 200 [0.03, 127.0.0.1:55121]
+INFO 2021-01-22 11:07:19,739 runserver 147 HTTP GET /api/v1/message/?target=test 200 [0.02, 127.0.0.1:55121]
+INFO 2021-01-22 11:07:21,133 runserver 147 HTTP GET /product/ 200 [0.06, 127.0.0.1:55121]
+INFO 2021-01-22 11:07:22,235 runserver 147 HTTP GET /product/product_id_2 200 [0.10, 127.0.0.1:55121]
+INFO 2021-01-22 11:07:26,922 runserver 147 HTTP GET / 200 [0.03, 127.0.0.1:55121]
+WARNING 2021-01-22 11:07:27,052 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.04, 127.0.0.1:55126]
+INFO 2021-01-22 11:07:27,058 runserver 147 HTTP GET /api/v1/user/ 200 [0.06, 127.0.0.1:55121]
+WARNING 2021-01-22 11:07:27,108 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.02, 127.0.0.1:55121]
+WARNING 2021-01-22 11:07:27,153 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.01, 127.0.0.1:55121]
+INFO 2021-01-22 11:07:32,745 runserver 147 HTTP GET /product/ 200 [0.06, 127.0.0.1:55121]
+INFO 2021-01-22 11:08:53,441 runserver 147 HTTP GET /show_sd 200 [0.02, 127.0.0.1:55156]
+INFO 2021-01-22 11:08:54,301 runserver 147 HTTP GET /product/ 200 [0.06, 127.0.0.1:55156]
+INFO 2021-01-22 11:08:56,140 runserver 147 HTTP GET /product/product_id_6 200 [0.07, 127.0.0.1:55156]
+INFO 2021-01-22 11:09:01,763 runserver 147 HTTP GET /product/ 200 [0.05, 127.0.0.1:55156]
+INFO 2021-01-22 11:09:04,066 runserver 147 HTTP GET /product/product_id_1 200 [0.10, 127.0.0.1:55156]
+INFO 2021-01-22 11:18:13,123 runserver 147 HTTP GET /usercenter/ 200 [0.12, 127.0.0.1:55195]
+INFO 2021-01-22 11:18:44,102 runserver 147 HTTP GET /product/ 200 [0.11, 127.0.0.1:55195]
+INFO 2021-01-22 11:18:45,163 runserver 147 HTTP GET /show_sd 200 [0.07, 127.0.0.1:55195]
+INFO 2021-01-22 11:18:46,296 runserver 147 HTTP GET /news/ 200 [0.16, 127.0.0.1:55195]
+WARNING 2021-01-22 11:18:46,331 runserver 155 HTTP GET /static/sd_new_img/1.jpg 404 [0.01, 127.0.0.1:55195]
+WARNING 2021-01-22 11:18:46,350 runserver 155 HTTP GET /static/sd_new_img/2.jpg 404 [0.03, 127.0.0.1:55196]
+WARNING 2021-01-22 11:18:46,368 runserver 155 HTTP GET /static/sd_new_img/6.jpg 404 [0.02, 127.0.0.1:55210]
+WARNING 2021-01-22 11:18:46,382 runserver 155 HTTP GET /static/sd_new_img/7.jpg 404 [0.04, 127.0.0.1:55195]
+WARNING 2021-01-22 11:18:46,393 runserver 155 HTTP GET /static/sd_new_img/4.jpg 404 [0.05, 127.0.0.1:55208]
+WARNING 2021-01-22 11:18:46,411 runserver 155 HTTP GET /static/sd_new_img/5.jpg 404 [0.07, 127.0.0.1:55209]
+WARNING 2021-01-22 11:18:46,426 runserver 155 HTTP GET /static/sd_new_img/3.jpg 404 [0.08, 127.0.0.1:55207]
+WARNING 2021-01-22 11:18:46,438 runserver 155 HTTP GET /static/sd_new_img/9.jpg 404 [0.07, 127.0.0.1:55196]
+WARNING 2021-01-22 11:18:46,451 runserver 155 HTTP GET /static/sd_new_img/8.jpg 404 [0.08, 127.0.0.1:55210]
+WARNING 2021-01-22 11:18:46,462 runserver 155 HTTP GET /static/sd_new_img/12.jpg 404 [0.08, 127.0.0.1:55195]
+WARNING 2021-01-22 11:18:46,473 runserver 155 HTTP GET /static/sd_new_img/10.jpg 404 [0.07, 127.0.0.1:55208]
+WARNING 2021-01-22 11:18:46,485 runserver 155 HTTP GET /static/sd_new_img/11.jpg 404 [0.06, 127.0.0.1:55209]
+INFO 2021-01-22 11:18:46,959 runserver 147 HTTP GET /case/ 200 [0.17, 127.0.0.1:55209]
+INFO 2021-01-22 11:18:57,699 runserver 147 HTTP GET /usercenter/ 200 [0.04, 127.0.0.1:55209]
+INFO 2021-01-22 14:01:06,811 runserver 147 HTTP GET /product/ 200 [0.10, 127.0.0.1:56085]
+INFO 2021-01-22 14:01:06,843 runserver 151 HTTP GET /static/base.css 304 [0.00, 127.0.0.1:56085]
+INFO 2021-01-22 14:01:06,851 runserver 151 HTTP GET /static/product/product.css 304 [0.01, 127.0.0.1:56088]
+INFO 2021-01-22 14:01:06,860 runserver 151 HTTP GET /static/bootstrap-3.3.7/css/bootstrap.min.css 304 [0.01, 127.0.0.1:56086]
+INFO 2021-01-22 14:01:06,865 runserver 151 HTTP GET /static/bootstrap-3.3.7/js/bootstrap.min.js 304 [0.02, 127.0.0.1:56089]
+INFO 2021-01-22 14:01:06,920 runserver 151 HTTP GET /static/bootstrap-3.3.7/fonts/glyphicons-halflings-regular.woff2 304 [0.01, 127.0.0.1:56089]
+INFO 2021-01-22 14:01:08,238 runserver 147 HTTP GET / 200 [0.05, 127.0.0.1:56089]
+INFO 2021-01-22 14:01:08,263 runserver 151 HTTP GET /static/home.css 304 [0.00, 127.0.0.1:56089]
+WARNING 2021-01-22 14:01:08,356 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.01, 127.0.0.1:56086]
+WARNING 2021-01-22 14:01:08,412 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.05, 127.0.0.1:56086]
+INFO 2021-01-22 14:01:08,423 runserver 147 HTTP GET /api/v1/user/ 200 [0.08, 127.0.0.1:56089]
+WARNING 2021-01-22 14:01:08,481 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.01, 127.0.0.1:56089]
+INFO 2021-01-22 14:01:09,094 runserver 147 HTTP GET /product/ 200 [0.23, 127.0.0.1:56089]
+INFO 2021-01-22 14:01:10,398 runserver 147 HTTP GET /show_sd 200 [0.05, 127.0.0.1:56089]
+INFO 2021-01-22 14:01:11,459 runserver 147 HTTP GET /show_sd 200 [0.11, 127.0.0.1:56089]
+INFO 2021-01-22 14:01:12,339 runserver 147 HTTP GET /show_sd 200 [0.03, 127.0.0.1:56089]
+INFO 2021-01-22 14:01:12,739 runserver 147 HTTP GET /product/ 200 [0.07, 127.0.0.1:56089]
+INFO 2021-01-22 14:01:14,408 runserver 147 HTTP GET /usercenter/ 200 [0.12, 127.0.0.1:56089]
+INFO 2021-01-22 14:01:16,138 runserver 153 HTTP GET /user_logout/ 302 [0.07, 127.0.0.1:56089]
+INFO 2021-01-22 14:01:16,158 runserver 147 HTTP GET / 200 [0.02, 127.0.0.1:56089]
+WARNING 2021-01-22 14:01:16,244 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.03, 127.0.0.1:56086]
+INFO 2021-01-22 14:01:16,253 runserver 147 HTTP GET /api/v1/user/ 200 [0.04, 127.0.0.1:56089]
+WARNING 2021-01-22 14:01:16,292 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.01, 127.0.0.1:56086]
+WARNING 2021-01-22 14:01:16,327 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.01, 127.0.0.1:56086]
+ERROR 2021-01-22 14:01:16,455 log 230 Internal Server Error: /api/v1/message/
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1774, in get_prep_value
+    return int(value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\contrib\auth\models.py", line 414, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 339, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 38, in inner
+    response = await get_response(request)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 231, in _get_response_async
+    response = await wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 304, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "C:\Program Files\Python36\lib\asyncio\tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "C:\Program Files\Python36\lib\concurrent\futures\thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 343, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\chat\api.py", line 41, in list
+    Q(user=request.user))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1244, in build_filter
+    check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\related_lookups.py", line 117, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1778, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x0000022356F64EF0>.
+ERROR 2021-01-22 14:01:16,467 runserver 160 HTTP GET /api/v1/message/?target=root 500 [0.19, 127.0.0.1:56089]
+INFO 2021-01-22 14:01:17,826 runserver 147 HTTP GET /product/ 200 [0.21, 127.0.0.1:56089]
+INFO 2021-01-22 14:01:18,636 runserver 147 HTTP GET /show_sd 200 [0.05, 127.0.0.1:56089]
+INFO 2021-01-22 14:01:27,643 runserver 147 HTTP GET /show_sd 200 [0.06, 127.0.0.1:56089]
+INFO 2021-01-22 14:01:28,201 runserver 147 HTTP GET /product/ 200 [0.16, 127.0.0.1:56089]
+INFO 2021-01-22 14:01:28,763 runserver 147 HTTP GET / 200 [0.07, 127.0.0.1:56089]
+WARNING 2021-01-22 14:01:29,074 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.04, 127.0.0.1:56086]
+INFO 2021-01-22 14:01:29,080 runserver 147 HTTP GET /api/v1/user/ 200 [0.05, 127.0.0.1:56089]
+WARNING 2021-01-22 14:01:29,114 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.01, 127.0.0.1:56089]
+WARNING 2021-01-22 14:01:29,169 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.02, 127.0.0.1:56089]
+ERROR 2021-01-22 14:01:29,234 log 230 Internal Server Error: /api/v1/message/
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1774, in get_prep_value
+    return int(value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\contrib\auth\models.py", line 414, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 339, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 38, in inner
+    response = await get_response(request)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 231, in _get_response_async
+    response = await wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 304, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "C:\Program Files\Python36\lib\asyncio\tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "C:\Program Files\Python36\lib\concurrent\futures\thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 343, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\chat\api.py", line 41, in list
+    Q(user=request.user))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1244, in build_filter
+    check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\related_lookups.py", line 117, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1778, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x0000022356D192E8>.
+ERROR 2021-01-22 14:01:29,243 runserver 160 HTTP GET /api/v1/message/?target=root 500 [0.13, 127.0.0.1:56086]
+INFO 2021-01-22 14:01:55,758 runserver 147 HTTP GET /product/ 200 [0.08, 127.0.0.1:56086]
+INFO 2021-01-22 14:01:57,107 runserver 147 HTTP GET / 200 [0.02, 127.0.0.1:56086]
+WARNING 2021-01-22 14:01:57,209 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.03, 127.0.0.1:56089]
+INFO 2021-01-22 14:01:57,214 runserver 147 HTTP GET /api/v1/user/ 200 [0.04, 127.0.0.1:56086]
+WARNING 2021-01-22 14:01:57,227 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.01, 127.0.0.1:56089]
+WARNING 2021-01-22 14:01:57,289 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.01, 127.0.0.1:56086]
+ERROR 2021-01-22 14:01:57,405 log 230 Internal Server Error: /api/v1/message/
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1774, in get_prep_value
+    return int(value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\contrib\auth\models.py", line 414, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 339, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 38, in inner
+    response = await get_response(request)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 231, in _get_response_async
+    response = await wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 304, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "C:\Program Files\Python36\lib\asyncio\tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "C:\Program Files\Python36\lib\concurrent\futures\thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 343, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\chat\api.py", line 41, in list
+    Q(user=request.user))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1244, in build_filter
+    check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\related_lookups.py", line 117, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1778, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x0000022356F7B5F8>.
+ERROR 2021-01-22 14:01:57,421 runserver 160 HTTP GET /api/v1/message/?target=root 500 [0.18, 127.0.0.1:56089]
+INFO 2021-01-22 14:01:57,776 runserver 147 HTTP GET /product/ 200 [0.07, 127.0.0.1:56089]
+INFO 2021-01-22 14:01:58,217 runserver 147 HTTP GET /show_sd 200 [0.02, 127.0.0.1:56089]
+INFO 2021-01-22 14:01:59,338 runserver 147 HTTP GET /news/ 200 [0.11, 127.0.0.1:56089]
+WARNING 2021-01-22 14:01:59,370 runserver 155 HTTP GET /static/sd_new_img/1.jpg 404 [0.01, 127.0.0.1:56089]
+WARNING 2021-01-22 14:01:59,393 runserver 155 HTTP GET /static/sd_new_img/2.jpg 404 [0.03, 127.0.0.1:56086]
+WARNING 2021-01-22 14:01:59,408 runserver 155 HTTP GET /static/sd_new_img/3.jpg 404 [0.04, 127.0.0.1:56088]
+WARNING 2021-01-22 14:01:59,424 runserver 155 HTTP GET /static/sd_new_img/4.jpg 404 [0.05, 127.0.0.1:56085]
+WARNING 2021-01-22 14:01:59,434 runserver 155 HTTP GET /static/sd_new_img/5.jpg 404 [0.05, 127.0.0.1:56119]
+WARNING 2021-01-22 14:01:59,452 runserver 155 HTTP GET /static/sd_new_img/6.jpg 404 [0.07, 127.0.0.1:56120]
+WARNING 2021-01-22 14:01:59,469 runserver 155 HTTP GET /static/sd_new_img/7.jpg 404 [0.09, 127.0.0.1:56089]
+WARNING 2021-01-22 14:01:59,483 runserver 155 HTTP GET /static/sd_new_img/12.jpg 404 [0.08, 127.0.0.1:56086]
+WARNING 2021-01-22 14:01:59,494 runserver 155 HTTP GET /static/sd_new_img/8.jpg 404 [0.08, 127.0.0.1:56088]
+WARNING 2021-01-22 14:01:59,506 runserver 155 HTTP GET /static/sd_new_img/11.jpg 404 [0.08, 127.0.0.1:56085]
+WARNING 2021-01-22 14:01:59,517 runserver 155 HTTP GET /static/sd_new_img/9.jpg 404 [0.07, 127.0.0.1:56119]
+WARNING 2021-01-22 14:01:59,530 runserver 155 HTTP GET /static/sd_new_img/10.jpg 404 [0.07, 127.0.0.1:56120]
+INFO 2021-01-22 14:02:00,090 runserver 147 HTTP GET /case/ 200 [0.15, 127.0.0.1:56120]
+INFO 2021-01-22 14:03:45,157 runserver 147 HTTP GET /show_sd 200 [0.05, 127.0.0.1:56180]
+INFO 2021-01-22 14:03:45,846 runserver 147 HTTP GET /product/ 200 [0.06, 127.0.0.1:56180]
+INFO 2021-01-22 14:07:14,697 runserver 147 HTTP GET /accounts/login/ 200 [0.17, 127.0.0.1:56200]
+INFO 2021-01-22 14:07:22,530 runserver 153 HTTP GET /accounts/github/login/?process=login 302 [0.13, 127.0.0.1:56200]
+INFO 2021-01-22 14:07:33,129 runserver 153 HTTP GET /accounts/github/login/callback/?code=e9c561d3ec7b615b6f73&state=nVTX4EnArOU2 302 [9.67, 127.0.0.1:56200]
+INFO 2021-01-22 14:07:33,169 runserver 147 HTTP GET /accounts/social/signup/ 200 [0.04, 127.0.0.1:56200]
+INFO 2021-01-22 14:07:40,409 runserver 147 HTTP GET /accounts/login/ 200 [0.10, 127.0.0.1:56200]
+INFO 2021-01-22 14:07:42,444 runserver 147 HTTP GET /accounts/login/ 200 [0.20, 127.0.0.1:56200]
+INFO 2021-01-22 14:07:43,877 runserver 147 HTTP GET /accounts/signup/ 200 [0.04, 127.0.0.1:56200]
+INFO 2021-01-22 14:07:45,585 runserver 147 HTTP GET /accounts/login/ 200 [0.06, 127.0.0.1:56200]
+INFO 2021-01-22 14:07:47,709 runserver 147 HTTP GET /product/ 200 [0.14, 127.0.0.1:56200]
+INFO 2021-01-22 14:07:49,088 runserver 147 HTTP GET /show_sd 200 [0.06, 127.0.0.1:56200]
+INFO 2021-01-22 17:52:55,313 autoreload 617 Watching for file changes with StatReloader
+INFO 2021-01-22 17:52:59,812 runserver 147 HTTP GET / 200 [0.09, 127.0.0.1:60899]
+INFO 2021-01-22 17:52:59,857 runserver 151 HTTP GET /static/bootstrap-3.3.7/css/bootstrap.min.css 304 [0.01, 127.0.0.1:60899]
+INFO 2021-01-22 17:52:59,862 runserver 151 HTTP GET /static/base.css 304 [0.01, 127.0.0.1:60901]
+INFO 2021-01-22 17:52:59,867 runserver 151 HTTP GET /static/home.css 304 [0.02, 127.0.0.1:60912]
+INFO 2021-01-22 17:52:59,872 runserver 151 HTTP GET /static/bootstrap-3.3.7/js/bootstrap.min.js 304 [0.02, 127.0.0.1:60913]
+WARNING 2021-01-22 17:53:00,206 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.18, 127.0.0.1:60912]
+WARNING 2021-01-22 17:53:00,331 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.04, 127.0.0.1:60912]
+INFO 2021-01-22 17:53:00,335 runserver 147 HTTP GET /api/v1/user/ 200 [0.32, 127.0.0.1:60913]
+WARNING 2021-01-22 17:53:00,349 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.01, 127.0.0.1:60912]
+INFO 2021-01-22 17:53:00,392 runserver 151 HTTP GET /static/bootstrap-3.3.7/fonts/glyphicons-halflings-regular.woff2 304 [0.02, 127.0.0.1:60901]
+WARNING 2021-01-22 17:53:00,420 log 230 Not Found: /favicon.ico
+WARNING 2021-01-22 17:53:00,423 runserver 155 HTTP GET /favicon.ico 404 [0.06, 127.0.0.1:60912]
+ERROR 2021-01-22 17:53:00,507 log 230 Internal Server Error: /api/v1/message/
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1774, in get_prep_value
+    return int(value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\contrib\auth\models.py", line 414, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 339, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 38, in inner
+    response = await get_response(request)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 231, in _get_response_async
+    response = await wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 304, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "C:\Program Files\Python36\lib\asyncio\tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "C:\Program Files\Python36\lib\concurrent\futures\thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 343, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\chat\api.py", line 41, in list
+    Q(user=request.user))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1244, in build_filter
+    check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\related_lookups.py", line 117, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1778, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x0000022434C4D4A8>.
+ERROR 2021-01-22 17:53:00,518 runserver 160 HTTP GET /api/v1/message/?target=root 500 [0.17, 127.0.0.1:60913]
+INFO 2021-01-22 17:53:01,342 runserver 147 HTTP GET /show_sd 200 [0.03, 127.0.0.1:60913]
+INFO 2021-01-22 17:53:01,364 runserver 151 HTTP GET /static/images/compans.png 304 [0.00, 127.0.0.1:60913]
+INFO 2021-01-22 17:53:02,105 runserver 147 HTTP GET / 200 [0.03, 127.0.0.1:60913]
+WARNING 2021-01-22 17:53:02,176 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.01, 127.0.0.1:60912]
+WARNING 2021-01-22 17:53:02,251 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.07, 127.0.0.1:60912]
+INFO 2021-01-22 17:53:02,261 runserver 147 HTTP GET /api/v1/user/ 200 [0.10, 127.0.0.1:60913]
+WARNING 2021-01-22 17:53:02,314 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.01, 127.0.0.1:60912]
+ERROR 2021-01-22 17:53:02,437 log 230 Internal Server Error: /api/v1/message/
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1774, in get_prep_value
+    return int(value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\contrib\auth\models.py", line 414, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 339, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 38, in inner
+    response = await get_response(request)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 231, in _get_response_async
+    response = await wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 304, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "C:\Program Files\Python36\lib\asyncio\tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "C:\Program Files\Python36\lib\concurrent\futures\thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 343, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\chat\api.py", line 41, in list
+    Q(user=request.user))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1244, in build_filter
+    check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\related_lookups.py", line 117, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1778, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x0000022434EC5EF0>.
+ERROR 2021-01-22 17:53:02,446 runserver 160 HTTP GET /api/v1/message/?target=root 500 [0.15, 127.0.0.1:60913]
+INFO 2021-01-22 17:53:02,675 runserver 147 HTTP GET /product/ 200 [0.06, 127.0.0.1:60913]
+INFO 2021-01-22 17:53:02,699 runserver 151 HTTP GET /static/product/product.css 304 [0.00, 127.0.0.1:60913]
+INFO 2021-01-22 17:53:04,318 runserver 147 HTTP GET /product/product_id_4 200 [0.07, 127.0.0.1:60913]
+INFO 2021-01-22 17:53:07,612 runserver 147 HTTP GET / 200 [0.03, 127.0.0.1:60913]
+WARNING 2021-01-22 17:53:07,706 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff2 404 [0.04, 127.0.0.1:60912]
+INFO 2021-01-22 17:53:07,713 runserver 147 HTTP GET /api/v1/user/ 200 [0.05, 127.0.0.1:60913]
+WARNING 2021-01-22 17:53:07,751 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.woff 404 [0.01, 127.0.0.1:60913]
+WARNING 2021-01-22 17:53:07,805 runserver 155 HTTP GET /static/fonts/glyphicons-halflings-regular.ttf 404 [0.02, 127.0.0.1:60913]
+ERROR 2021-01-22 17:53:07,878 log 230 Internal Server Error: /api/v1/message/
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1774, in get_prep_value
+    return int(value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\contrib\auth\models.py", line 414, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 339, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 38, in inner
+    response = await get_response(request)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 231, in _get_response_async
+    response = await wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 304, in __call__
+    ret = await asyncio.wait_for(future, timeout=None)
+  File "C:\Program Files\Python36\lib\asyncio\tasks.py", line 339, in wait_for
+    return (yield from fut)
+  File "C:\Program Files\Python36\lib\concurrent\futures\thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\asgiref\sync.py", line 343, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\chat\api.py", line 41, in list
+    Q(user=request.user))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1244, in build_filter
+    check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\sql\query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\related_lookups.py", line 117, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\jkwu3\Desktop\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1778, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x0000022434ED3B00>.
+ERROR 2021-01-22 17:53:07,888 runserver 160 HTTP GET /api/v1/message/?target=root 500 [0.15, 127.0.0.1:60912]
+INFO 2021-01-22 17:53:08,264 runserver 147 HTTP GET /product/ 200 [0.05, 127.0.0.1:60912]
+INFO 2021-01-22 17:58:42,866 runserver 147 HTTP GET /show_sd 200 [0.03, 127.0.0.1:61269]
