@@ -57,6 +57,8 @@ INSTALLED_APPS = [
     'like',
     'rest_framework',
     'index.templatetags',
+    'notifications',
+    'my_notifications',
 ]
 
 #app django.contrib.sites需要的设置
@@ -304,3 +306,7 @@ HAYSTACK_SEARCH_RESULTS_PER_PAGE = 5
 HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 
 HAYSTACK_CUSTOM_HIGHLIGHTER = 'utils.Highlighter.Highlighter'
+
+DJANGO_NOTIFICATIONS_CONFIG = {
+    'USE_JSONFIELD': True,
+}

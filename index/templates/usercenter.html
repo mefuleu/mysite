@@ -29,7 +29,7 @@
                         <p>you are tourists,Your password is the same as your user name</p>
                     {% endif %}
                     go,<a href="{% url 'index:index' %}">index</a>
-                    <a href="{% url 'index:tourist_logout' %}">logout</a>
+                    <a href="{% url 'account_logout' %}">logout</a>
                 {% else %}
                     <span>Not logged in, jump to home page</span>
                     <script type="text/javascript">

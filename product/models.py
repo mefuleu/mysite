@@ -1,6 +1,7 @@
 from django.db import models
-# from django.contrib.auth.models import User
+from django.contrib.auth.models import User
 from django.utils import timezone
+from django.urls import reverse
 from ckeditor_uploader.fields import RichTextUploadingField
 
 
@@ -34,6 +35,17 @@ class Product(models.Model):
     content = RichTextUploadingField(config_name='comment_ckeditor')
     modelname=models.CharField(default='product',max_length=50)
     typename_second = models.ForeignKey(ProductTypeSecond, on_delete=models.CASCADE, verbose_name='typename_second')
+    author = models.ForeignKey(User, on_delete=models.CASCADE,default=1)
+
+
+    def get_url(self):
+        return reverse('product:detailProduct', kwargs={'product_pk': self.pk})
+
+    def get_user(self):
+        return self.author
+
+    # def get_email(self):
+    #     return self.author.email
 
     def __str__(self):
         return "{product_title: %s}" % self.title

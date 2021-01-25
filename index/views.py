@@ -37,8 +37,3 @@ def tourist_land(request):
     for each_dict in tourists_init_list:
         tourists_list.append(each_dict['visitor_name'])
     return render(request,'usercenter.html',locals())
-
-def tourist_logout(request):
-    logout(request)
-    return HttpResponseRedirect(reverse("index:index"))
-
