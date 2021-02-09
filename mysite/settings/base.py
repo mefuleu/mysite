@@ -57,6 +57,8 @@ INSTALLED_APPS = [
     'like',
     'rest_framework',
     'index.templatetags',
+    'notifications',
+    'my_notifications',
 ]
 
 #app django.contrib.sites需要的设置
@@ -272,7 +274,7 @@ LOGGING = {
             # 日志位置,日志文件名,日志保存目录必须手动创建
             'filename': os.path.join(BASE_DIR, "mysite/logs/site.log"),  # 注意，你的文件应该有读写权限。
             # 日志文件的最大值,这里我们设置300M
-            'maxBytes': 300 * 1024 * 1024,
+            'maxBytes': 5 * 1024 * 1024,
             # 日志文件的数量,设置最大日志数量为10
             'backupCount': 10,
             # 日志格式:详细格式
@@ -304,3 +306,7 @@ HAYSTACK_SEARCH_RESULTS_PER_PAGE = 5
 HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 
 HAYSTACK_CUSTOM_HIGHLIGHTER = 'utils.Highlighter.Highlighter'
+
+DJANGO_NOTIFICATIONS_CONFIG = {
+    'USE_JSONFIELD': True,
+}

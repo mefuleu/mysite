@@ -60,7 +60,7 @@
                     <h3 class="comment-area-title">Submit comments</h3>
                     {% if user.is_authenticated %}
                         <form id="comment_form" action="{% url 'update_comment' %}" method="POST" style="overflow:hidden">
-                            <label>{{ user.get_nickname_or_username }}，Welcome to comment~</label>
+                            <label>{{ user.username }}，Welcome to comment~</label>
                             <div id="reply_content_container" style="display:none;">
                                 <p id="reply_title">reply：</p>
                                 <div id="reply_content"></div>
@@ -75,9 +75,9 @@
                         </form>
                     {% else %}
                         You haven't signed in yet. You can comment after signing in~
-                        <a class="btn btn-primary" href="{% url 'account_login' %}">登录</a>
+                        <a class="btn btn-primary" href="{% url 'account_login' %}">login</a>
                         <span> or </span>
-                        <a class="btn btn-danger" href="{% url 'account_signup' %}">注册</a>
+                        <a class="btn btn-danger" href="{% url 'account_signup' %}">logout</a>
                     {% endif %}
                 </div>
                 <div class="comment-area">
@@ -86,7 +86,7 @@
                         {% get_comment_list product as comments %}
                         {% for comment in comments %}
                             <div id="root_{{ comment.pk }}" class="comment">
-                                <span>{{ comment.user.get_nickname_or_username }}</span>
+                                <span>{{ comment.user.username }}</span>
                                 <span>({{ comment.comment_time|date:"Y-m-d H:i:s" }})：</span>
                                 <div id="comment_{{ comment.pk }}">
                                     {{ comment.text|safe }}
@@ -100,10 +100,10 @@
 
                                 {% for reply in comment.root_comment.all %}
                                     <div class="reply">
-                                        <span>{{ reply.user.get_nickname_or_username }}</span>
+                                        <span>{{ reply.user.username }}</span>
                                         <span>({{ reply.comment_time|date:"Y-m-d H:i:s" }})</span>
                                         <span>reply</span>
-                                        <span>{{ reply.reply_to.get_nickname_or_username }}：</span>
+                                        <span>{{ reply.reply_to.username }}：</span>
                                         <div id="comment_{{ reply.pk }}">
                                             {{ reply.text|safe }}
                                         </div>

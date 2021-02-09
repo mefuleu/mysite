@@ -9,11 +9,11 @@ from .models import LikeRecord
 def send_notification(sender, instance, **kwargs):
     if instance.content_type.model == 'product':
         product = instance.content_object
-        verb = '{0} 点赞了你的《{1}》'.format(instance.user.username(), product.title)
+        verb = '{0} give the thumbs-up《{1}》'.format(instance.user.username, product.title)
     elif instance.content_type.model == 'comment':
         comment = instance.content_object
-        verb = '{0} 点赞了你的评论“{1}”'.format(
-                instance.user.username(),
+        verb = '{0} give the thumbs-up your comment“{1}”'.format(
+                instance.user.username,
                 strip_tags(comment.text)
             )
 
@@ -32,7 +32,7 @@ from notifications.signals import notify
 @receiver(post_save, sender=User)
 def send_notification(sender, instance, **kwargs):
     if kwargs['created'] == True:
-        verb = '注册成功，更多精彩内容等你发现'
+        verb = 'Successful registration, more wonderful content waiting for you to find'
         url = reverse('index:usercenter')
         notify.send(instance, recipient=instance, verb=verb, action_object=instance, url=url)
 

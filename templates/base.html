@@ -1,4 +1,5 @@
 {% load static %}
+{% load notifications_tags %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,24 +56,35 @@
                     <li><a href="{% url 'index:usercenter' %}">Landing as tourists</a></li>
                 {% endif %}
                 {% if user.is_authenticated %}
-                    <li>
-                        <a href="{% url 'index:usercenter' %}">
-                            hello，<checkroot id="checkroot">{{ user.username }}</checkroot>
+                    {% notifications_unread as unread_count %}
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                            hello，
+                            <checkroot id="checkroot">{{ user.username }}</checkroot>
+                            <span class="badge unread-count live_notify_badge">{% if unread_count > 0 %}
+                                {{ unread_count }}{% endif %}</span>
+                            <span class="caret"></span>
                         </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'index:usercenter' %}">个人资料</a></li>
+                            <li><a href="{% url 'my_notifications' %}">我的消息 <span
+                                    class="badge unread-count live_notify_badge">{% if unread_count > 0 %}
+                                {{ unread_count }}{% endif %}</span></a></li>
+                            {% if user.is_staff or user.is_superuser %}
+                                <li><a href="{% url 'admin:index' %}">后台管理</a></li>
+                            {% endif %}
+                            <li><a href="{% url 'account_logout' %}">退出</a></li>
+                        </ul>
                     </li>
                 {% endif %}
                 <li>
                     <form class="navbar-form search-form" action="{% url 'haystack_search' %}" method="get">
-                                                <div class="form-group">
-                                                    <input type="text" name="q" class="form-control" placeholder="Key words please input">
-                                                </div>
-                                                <button type="submit" class="btn btn-default">
-                                                    <span class="glyphicon glyphicon-search"></span>
-                                                </button>
-{#                        <form action="{% url 'haystack_search' %}" method="get">#}
-{#                            <input type="text" name="q" placeholder="Key words please input">#}
-{#                            <input type="submit" id="search" value="search">#}
-{#                        </form>#}
+                        <div class="form-group">
+                            <input type="text" name="q" class="form-control" placeholder="Key words please input">
+                        </div>
+                        <button type="submit" class="btn btn-default">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
                     </form>
                 </li>
             </ul>
@@ -101,6 +113,51 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    //底部栏置底
+    //窗体改变大小事件
+    $(window).resize(function () {
+        //正文高度
+        var body_height = $(document.body).outerHeight(true);
+
+        //底部元素高度
+        var bottom_height = $("#footer").outerHeight(true);
+
+        //浏览器页面高度
+        var window_height = $(window).height();
+
+        //判断并调整底部元素的样式
+        if ($(".footer").hasClass('page-bottom')) {
+            //若包含有page-bottom类，就应用了position设置
+            //当position为absolute时，body高度不包含这个元素
+            //所以页面高度需要判断body和footer之和若小于浏览器窗口
+            //则移除样式，让footer自然跟随在正文后面
+            if (body_height + bottom_height >= window_height) {
+                $(".footer").removeClass('page-bottom');
+            }
+        } else {
+            //若没有page-bottom类，body高度包含footer
+            //判断body高度小于浏览器时，则悬浮于底部
+            if (body_height < window_height) {
+                $(".footer").addClass('page-bottom');
+            }
+        }
+    });
+
+    //页面加载时，模拟触发一下resize事件
+    $(window).trigger('resize');
+
+    //自定义实时获取未读消息
+    function my_special_notification_callback(data) {
+        unread_count = data['unread_count'];
+        if (unread_count == 0) {
+            unread_count = '';
+        }
+        $('.live_notify_badge').text(unread_count);
+    }
+</script>
+{% register_notify_callbacks callbacks='my_special_notification_callback' %}
 {% block script_extends %}{% endblock %}
 </body>
 </html>

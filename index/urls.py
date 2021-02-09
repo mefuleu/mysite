@@ -12,6 +12,5 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('show_sd', views.show_sd, name='show_sd'),
     path('usercenter/',views.tourist_land,name='usercenter'),
-    path('user_logout/',views.tourist_logout,name='tourist_logout'),
     path('api/v1/', include(router.urls)),
 ]

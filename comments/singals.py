@@ -17,14 +17,14 @@ def send_notification(sender, instance, **kwargs):
         recipient = instance.content_object.get_user()
         if instance.content_type.model == 'product':
             product = instance.content_object
-            verb = '{0} 评论了你的《{1}》'.format(instance.user.username, product.title)
+            verb = '{0} comment your《{1}》'.format(instance.user.username, product.title)
         else:
             raise Exception('unkown comment object type')
     else:
         # 回复
         recipient = instance.reply_to
-        verb = '{0} 回复了你的评论“{1}”'.format(
-            instance.user.username(),
+        verb = '{0} replied to your comments“{1}”'.format(
+            instance.user.username,
             strip_tags(instance.parent.text)
         )
     url = instance.content_object.get_url() + "#comment_" + str(instance.pk)

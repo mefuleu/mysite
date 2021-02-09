@@ -30123,3 +30123,7 @@ INFO 2021-02-09 14:10:26,160 autoreload 240 C:\Users\jackeyhate\Desktop\mysite\l
 INFO 2021-02-09 14:10:27,488 autoreload 617 Watching for file changes with StatReloader
 INFO 2021-02-09 14:12:25,367 autoreload 240 C:\Users\jackeyhate\Desktop\mysite\comments\models.py changed, reloading.
 INFO 2021-02-09 14:12:26,632 autoreload 617 Watching for file changes with StatReloader
+INFO 2021-02-09 14:13:36,575 autoreload 240 C:\Users\jackeyhate\Desktop\mysite\index\urls.py changed, reloading.
+INFO 2021-02-09 14:13:37,794 autoreload 617 Watching for file changes with StatReloader
+INFO 2021-02-09 14:13:48,432 autoreload 240 C:\Users\jackeyhate\Desktop\mysite\comments\singals.py changed, reloading.
+INFO 2021-02-09 14:13:49,400 autoreload 617 Watching for file changes with StatReloader

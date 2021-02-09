@@ -27,6 +27,8 @@ urlpatterns = [
     # path('chat/', include(('chat.urls','chat'),namespace='chat')),
     path('comment/', include('comments.urls')),
     path('search/',include('haystack.urls')),
+    path('notifications/', include('notifications.urls', namespace='notifications')),
+    path('my_notifications/', include('my_notifications.urls')),
     path('like/',include('like.urls')),
     re_path('media/(?P<path>.*)', serve, {'document_root': settings.MEDIA_ROOT}, name='media'),
     re_path('static/(?P<path>.*)', serve, {'document_root': settings.STATIC_ROOT}, name='static'),
