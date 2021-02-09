@@ -5,6 +5,6 @@ static_root/
 __pycache__/
 supervisor_log/
 *.sql
-*.log
+mysite/logs
 
 

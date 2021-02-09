@@ -66,14 +66,15 @@
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="{% url 'index:usercenter' %}">个人资料</a></li>
-                            <li><a href="{% url 'my_notifications' %}">我的消息 <span
+                            <li><a href="{% url 'index:usercenter' %}">personal information</a></li>
+                            <li><a href="{% url 'index:mycollection' %}">my collection</a></li>
+                            <li><a href="{% url 'my_notifications' %}">My message <span
                                     class="badge unread-count live_notify_badge">{% if unread_count > 0 %}
                                 {{ unread_count }}{% endif %}</span></a></li>
                             {% if user.is_staff or user.is_superuser %}
-                                <li><a href="{% url 'admin:index' %}">后台管理</a></li>
+                                <li><a href="{% url 'admin:index' %}">Backstage management</a></li>
                             {% endif %}
-                            <li><a href="{% url 'account_logout' %}">退出</a></li>
+                            <li><a href="{% url 'account_logout' %}">logout</a></li>
                         </ul>
                     </li>
                 {% endif %}

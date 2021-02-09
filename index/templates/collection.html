@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}my collection{% endblock %}
+
+{% block nav_home_active %}active{% endblock %}
+
+{% block content %}
+    <div class="container">
+        {% for each in collection_list %}
+            <a href="{% url 'product:detailProduct' each.content_object.id %}">
+                <div class="row">
+                    {{ each.content_object.title }}
+                </div>
+            </a>
+        {% empty %}
+            No collection, go to the <a href="{% url 'product:product_home' %}">product page</a>
+        {% endfor %}
+    </div>
+{% endblock %}

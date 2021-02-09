@@ -28,8 +28,12 @@
                     {% if user.username in tourists_list %}
                         <p>you are tourists,Your password is the same as your user name</p>
                     {% endif %}
-                    go,<a href="{% url 'index:index' %}">index</a>
-                    <a href="{% url 'account_logout' %}">logout</a>
+                    go,<a href="{% url 'index:index' %}">index</a><br>
+                    <a href="{% url 'account_logout' %}">logout</a><br>
+                    <a href="{% url 'account_change_password' %}">change your password</a><br>
+                    <a href="{% url 'account_email' %}">set your email</a><br>
+
+
                 {% else %}
                     <span>Not logged in, jump to home page</span>
                     <script type="text/javascript">

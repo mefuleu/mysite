@@ -10,7 +10,7 @@ from haystack.views import SearchView
 
 from .models import Tourist
 from django.contrib.auth import authenticate, login,logout
-
+from like.models import LikeRecord
 
 
 def index(request):
@@ -37,3 +37,6 @@ def tourist_land(request):
     for each_dict in tourists_init_list:
         tourists_list.append(each_dict['visitor_name'])
     return render(request,'usercenter.html',locals())
+def collection(request):
+    collection_list=LikeRecord.objects.filter(user_id=request.user.id,content_type_id='9')
+    return render(request,'collection.html',locals())
