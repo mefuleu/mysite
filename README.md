@@ -8,7 +8,6 @@
 
 数据库:mysql,redis
 
-项目测试部署网站：www.jackdaydayup.com  测试用户名:root  测试密码：123456  网站后台：www.jackdaydayup.com/admin/
 
 项目在本地运行步骤：
 
